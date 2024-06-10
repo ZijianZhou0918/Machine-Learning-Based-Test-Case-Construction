@@ -1,0 +1,248 @@
+
+[
+    {
+        "id": 0,
+        "name": "param0.Defined='Yes'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AllOf",
+        "path": "/allOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "header",
+                "style": "simple",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "XXX"
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "param0.Defined='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AllOf",
+        "path": "/allOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "header",
+                "style": "simple",
+                "explode": false,
+                "data": null,
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "param0.Alternative.0.Value.Length='> 3'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AllOf",
+        "path": "/allOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "header",
+                "style": "simple",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2,{r[wp4k9sI;5(@jgGr%5`+=w*aG)@b&1avN2IsK#EWAwleN\"]Y,9fw7?5 KJYu$s]/HfvwpDFT Dsdo=T.~p4;!D6|${Go|hn\";j^)1=$}o%zg\\bD`dep5FtnA\":SD4:uw,pGY`UWA9GqrV'Au!L.sq*Pf%z&b?lK{2hFEDXXX t<P]#{k%AlU1l`p?H|Q~4%@~[NgZ> 9M3>cv.$m]f7qH["
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "param0.Alternative.1.Type='string'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AllOf",
+        "path": "/allOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "header",
+                "style": "simple",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "A"
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "param0.Alternative.1.Value='B'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AllOf",
+        "path": "/allOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "header",
+                "style": "simple",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "B"
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "param0.Alternative.1.Value='C'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AllOf",
+        "path": "/allOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "header",
+                "style": "simple",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "C"
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "param0.Alternative.0.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AllOf",
+        "path": "/allOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "header",
+                "style": "simple",
+                "explode": false,
+                "data": {
+                    "type": "null",
+                    "value": null
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Alternative.0.Type=null"
+    },
+    {
+        "id": 7,
+        "name": "param0.Alternative.0.Type='Not string'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AllOf",
+        "path": "/allOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "header",
+                "style": "simple",
+                "explode": false,
+                "data": {
+                    "type": "integer",
+                    "value": 918,
+                    "format": "int32"
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Alternative.0.Type=Not string"
+    },
+    {
+        "id": 8,
+        "name": "param0.Alternative.0.Value.Length='2'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AllOf",
+        "path": "/allOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "header",
+                "style": "simple",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": ".G"
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Alternative.0.Value.Length=2"
+    },
+    {
+        "id": 10,
+        "name": "param0.Alternative.0.Value.Matches-Patterns.1='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AllOf",
+        "path": "/allOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "header",
+                "style": "simple",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "<vL"
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Alternative.0.Value.Matches-Patterns.1=No"
+    },
+    {
+        "id": 11,
+        "name": "param0.Alternative.1.Value='Other'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AllOf",
+        "path": "/allOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "header",
+                "style": "simple",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "R?m;8\"^AGUJuCdt>qO<lB$(a[|i)cea%B'<HOD+=-KY:\"3oc6S>)Ei0=:fm{U-!Je6J{-j\"yqMjqm.>dMy+3j(,c3f?l~5\"g;U?MK=?k1R*M{ndXxU87+C\"b&{3hXJ}JJxA#t%0Q%#/#s8:!rS>n=>Fy}!|EE!;/NcB4@B8j3f8l'~7  *ZE\"E"
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Alternative.1.Value=Other"
+    }
+]

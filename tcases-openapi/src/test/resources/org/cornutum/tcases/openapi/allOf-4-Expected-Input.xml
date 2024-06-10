@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<System name="AllOf">
+  <Has name="server" value="/"/>
+  <Has name="title" value="AllOf"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="POST_allOf">
+    <Has name="operation" value="POST"/>
+    <Has name="path" value="/allOf"/>
+    <Input type="header">
+      <VarSet name="param0">
+        <Has name="paramName" value="param0"/>
+        <Var name="Defined">
+          <Has name="style" value="simple"/>
+          <Value name="Yes" property="param0"/>
+          <Value name="No"/>
+        </Var>
+        <Var name="Type" when="param0">
+          <Value name="number" property="param0Value"/>
+          <Value name="null" failure="true"/>
+          <Value name="Not number" failure="true"/>
+        </Var>
+        <VarSet name="Value" when="param0Value">
+          <Var name="Is">
+            <Value name="0" failure="true"/>
+            <Value name="10"/>
+            <Value name="&gt; 10" property="param0Unbounded"/>
+          </Var>
+          <VarSet name="Multiple-Of" when="param0Unbounded">
+            <Var name="10">
+              <Value name="Yes">
+                <Has name="multipleOf" value="10"/>
+              </Value>
+              <Value name="No" failure="true">
+                <Has name="multipleOf" value="10"/>
+              </Value>
+            </Var>
+          </VarSet>
+        </VarSet>
+      </VarSet>
+    </Input>
+  </Function>
+</System>

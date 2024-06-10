@@ -1,0 +1,242 @@
+
+[
+    {
+        "id": 0,
+        "name": "param0.Defined='Yes'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "string",
+                            "value": ">#<KFcS(=UPgf1ur(vw[!&aWx6Pp{za|Kpne}]0nW0v+vSzABaBn'*TqsjaV#]X-ST`V}(1/*8V-S%cq{VHyTpYF/IOaB'"
+                        }
+                    }
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "param0.Defined='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": false,
+                "data": null,
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "param0.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "null",
+                    "value": null
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "param0.Value.Properties.myString.Value.Length='0'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "string",
+                            "value": ""
+                        }
+                    }
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "param0.Type='Not object'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "number",
+                    "value": 190.9
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Type=Not object"
+    },
+    {
+        "id": 5,
+        "name": "param0.Value.Properties.myString.Defined='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "object",
+                    "value": {
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.myString.Defined=No"
+    },
+    {
+        "id": 6,
+        "name": "param0.Value.Properties.myString.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "null",
+                            "value": null
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.myString.Type=null"
+    },
+    {
+        "id": 7,
+        "name": "param0.Value.Properties.myString.Type='Not string'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "number",
+                            "value": 485.3
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.myString.Type=Not string"
+    },
+    {
+        "id": 8,
+        "name": "param0.Value.Properties.Additional='Yes'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "string",
+                            "value": "IgL%a0A>zG/b}'P|H}:Lt@N2:0Ln#`{']_6{q)_azDfneBI)3hWE0UXk`&vxx*U/bX9hjt2aw|o}Qg86e1kU`o&$eT4n_h]^A9=f22xRDHJh`(o/2WA(+9zu~jh(b)=v.TgJJsN'@XM<"
+                        },
+                        "cgaahwfeixd": {
+                            "type": "object",
+                            "value": {
+                                "mpqfusqjwpdih": {
+                                    "type": "boolean",
+                                    "value": true
+                                }
+                            }
+                        },
+                        "zmnaiwmybjkac": {
+                            "type": "string",
+                            "value": "jKD"
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.Additional=Yes"
+    }
+]

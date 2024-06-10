@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<System name="AnyOf">
+  <Has name="server" value="/"/>
+  <Has name="title" value="AnyOf"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="POST_anyOf">
+    <Has name="operation" value="POST"/>
+    <Has name="path" value="/anyOf"/>
+    <Input type="request">
+      <VarSet name="Body">
+        <Var name="Defined">
+          <Value name="Yes" property="bodyContent"/>
+          <Value name="No" failure="true"/>
+        </Var>
+        <Var name="Media-Type" when="bodyContent">
+          <Value name="application-json" property="bodyApplication-json">
+            <Has name="mediaType" value="application/json"/>
+          </Value>
+          <Value name="Other" failure="true">
+            <Has name="excluded" value="&apos;application/json&apos;"/>
+          </Value>
+        </Var>
+        <VarSet name="application-json" when="bodyApplication-json">
+          <VarSet name="Alternative">
+            <Var name="Used">
+              <Value name="0" property="bodyApplication-jsonAlternative0"/>
+              <Value name="1" property="bodyApplication-jsonAlternative1"/>
+            </Var>
+            <VarSet name="0" when="bodyApplication-jsonAlternative0">
+              <Var name="Type">
+                <Value name="number" property="bodyApplication-jsonValue"/>
+                <Value name="null" once="true"/>
+                <Value name="Not number" failure="true"/>
+              </Var>
+              <VarSet name="Value" when="bodyApplication-jsonValue">
+                <Var name="Is">
+                  <Value name="-0.1" failure="true"/>
+                  <Value name="0.0"/>
+                  <Value name="100.0"/>
+                  <Value name="100.1" failure="true"/>
+                </Var>
+              </VarSet>
+            </VarSet>
+            <VarSet name="1" when="bodyApplication-jsonAlternative1">
+              <Var name="Type">
+                <Value name="number" property="bodyApplication-jsonValue"/>
+              </Var>
+              <VarSet name="Value" when="bodyApplication-jsonValue">
+                <Var name="Is">
+                  <Value name="-0.1"/>
+                  <Value name="0.0" failure="true"/>
+                  <Value name="&lt; -0.1"/>
+                </Var>
+              </VarSet>
+            </VarSet>
+          </VarSet>
+        </VarSet>
+      </VarSet>
+    </Input>
+  </Function>
+</System>

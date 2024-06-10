@@ -1,0 +1,77 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Object",
+        "version": "0.0.0"
+    },
+    "paths": {
+        "/object": {
+            "post": {
+                "parameters": [
+                    {
+                        "name": "param0",
+                        "in": "query",
+
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "alpha": {
+                                    "type": "string",
+                                    "readOnly": true
+                                },
+                                "bravo": {
+                                    "type": "string",
+                                    "writeOnly": true
+                                },
+                                "charlie": {
+                                    "type": "boolean",
+                                    "readOnly": true
+                                },
+                                "delta": {
+                                    "type": "string",
+                                    "writeOnly": true
+                                },
+                                "echo": {
+                                    "type": "integer",
+                                    "readOnly": true
+                                },
+                                "foxtrot": {
+                                    "type": "number",
+                                    "readOnly": true
+                                },
+                                "golf": {
+                                    "type": "object",
+                                    "readOnly": true
+                                },
+                                "hotel": {
+                                    "type": "object",
+                                    "properties": {
+                                        "rooms": {
+                                            "type": "integer",
+                                            "readOnly": true
+                                        }
+                                    }
+                                }
+                            },
+                            "required": [ "charlie" ],
+                            "minProperties": 2,
+                            "additionalProperties": true
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

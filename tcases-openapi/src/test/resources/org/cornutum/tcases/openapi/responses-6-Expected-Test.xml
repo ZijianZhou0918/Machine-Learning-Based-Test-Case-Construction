@@ -1,0 +1,1433 @@
+<?xml version="1.0"?>
+<TestCases system="Responses">
+  <Has name="server" value="/"/>
+  <Has name="title" value="Responses"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="GET_responses">
+    <Has name="server" value="/"/>
+    <Has name="title" value="Responses"/>
+    <Has name="version" value="0.0.0"/>
+    <TestCase id="0" name="Status-Code=&apos;Other&apos;">
+      <Has name="properties" value="defaultApplication-json,defaultApplication-jsonValue,defaultContent,statusOther"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="Other">
+          <Has name="excluded" value=""/>
+        </Var>
+        <Var name="Other.Content.Defined" value="Yes"/>
+        <Var name="Other.Content.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="Other.Content.application-json.Type" value="integer"/>
+        <Var name="Other.Content.application-json.Value.Is" value="16"/>
+        <Var name="Other.Content.text-javascript.Type" NA="true"/>
+        <Var name="Other.Content.text-javascript.Value.Is" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="1" name="Other.Content.Media-Type=&apos;text-javascript&apos;">
+      <Has name="properties" value="defaultContent,defaultText-javascript,defaultText-javascriptValue,statusOther"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="Other">
+          <Has name="excluded" value=""/>
+        </Var>
+        <Var name="Other.Content.Defined" value="Yes"/>
+        <Var name="Other.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="Other.Content.application-json.Type" NA="true"/>
+        <Var name="Other.Content.application-json.Value.Is" NA="true"/>
+        <Var name="Other.Content.text-javascript.Type" value="integer"/>
+        <Var name="Other.Content.text-javascript.Value.Is" value="&lt; 0"/>
+      </Input>
+    </TestCase>
+    <TestCase id="2" name="Other.Content.text-javascript.Type=null">
+      <Has name="properties" value="defaultContent,defaultText-javascript,statusOther"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="Other">
+          <Has name="excluded" value=""/>
+        </Var>
+        <Var name="Other.Content.Defined" value="Yes"/>
+        <Var name="Other.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="Other.Content.application-json.Type" NA="true"/>
+        <Var name="Other.Content.application-json.Value.Is" NA="true"/>
+        <Var name="Other.Content.text-javascript.Type" value="null"/>
+        <Var name="Other.Content.text-javascript.Value.Is" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="3" name="Other.Content.text-javascript.Value.Is=&apos;0&apos;">
+      <Has name="properties" value="defaultContent,defaultText-javascript,defaultText-javascriptValue,statusOther"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="Other">
+          <Has name="excluded" value=""/>
+        </Var>
+        <Var name="Other.Content.Defined" value="Yes"/>
+        <Var name="Other.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="Other.Content.application-json.Type" NA="true"/>
+        <Var name="Other.Content.application-json.Value.Is" NA="true"/>
+        <Var name="Other.Content.text-javascript.Type" value="integer"/>
+        <Var name="Other.Content.text-javascript.Value.Is" value="0"/>
+      </Input>
+    </TestCase>
+    <TestCase id="4" name="Other.Content.text-javascript.Value.Is=&apos;&gt; 0&apos;">
+      <Has name="properties" value="defaultContent,defaultText-javascript,defaultText-javascriptValue,statusOther"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="Other">
+          <Has name="excluded" value=""/>
+        </Var>
+        <Var name="Other.Content.Defined" value="Yes"/>
+        <Var name="Other.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="Other.Content.application-json.Type" NA="true"/>
+        <Var name="Other.Content.application-json.Value.Is" NA="true"/>
+        <Var name="Other.Content.text-javascript.Type" value="integer"/>
+        <Var name="Other.Content.text-javascript.Value.Is" value="&gt; 0"/>
+      </Input>
+    </TestCase>
+    <TestCase id="5" failure="true" name="Other.Content.Defined=&apos;No&apos;">
+      <Has name="properties" value="statusOther"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="Other">
+          <Has name="excluded" value=""/>
+        </Var>
+        <Var name="Other.Content.Defined" value="No" failure="true"/>
+        <Var name="Other.Content.Media-Type" NA="true"/>
+        <Var name="Other.Content.application-json.Type" NA="true"/>
+        <Var name="Other.Content.application-json.Value.Is" NA="true"/>
+        <Var name="Other.Content.text-javascript.Type" NA="true"/>
+        <Var name="Other.Content.text-javascript.Value.Is" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="6" failure="true" name="Other.Content.Media-Type=&apos;Other&apos;">
+      <Has name="properties" value="defaultContent,statusOther"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="Other">
+          <Has name="excluded" value=""/>
+        </Var>
+        <Var name="Other.Content.Defined" value="Yes"/>
+        <Var name="Other.Content.Media-Type" value="Other" failure="true">
+          <Has name="excluded" value="&apos;application/json&apos;,&apos;text/javascript&apos;"/>
+        </Var>
+        <Var name="Other.Content.application-json.Type" NA="true"/>
+        <Var name="Other.Content.application-json.Value.Is" NA="true"/>
+        <Var name="Other.Content.text-javascript.Type" NA="true"/>
+        <Var name="Other.Content.text-javascript.Value.Is" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="7" failure="true" name="Other.Content.application-json.Type=null">
+      <Has name="properties" value="defaultApplication-json,defaultContent,statusOther"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="Other">
+          <Has name="excluded" value=""/>
+        </Var>
+        <Var name="Other.Content.Defined" value="Yes"/>
+        <Var name="Other.Content.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="Other.Content.application-json.Type" value="null" failure="true"/>
+        <Var name="Other.Content.application-json.Value.Is" NA="true"/>
+        <Var name="Other.Content.text-javascript.Type" NA="true"/>
+        <Var name="Other.Content.text-javascript.Value.Is" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="8" failure="true" name="Other.Content.application-json.Type=&apos;Not integer&apos;">
+      <Has name="properties" value="defaultApplication-json,defaultContent,statusOther"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="Other">
+          <Has name="excluded" value=""/>
+        </Var>
+        <Var name="Other.Content.Defined" value="Yes"/>
+        <Var name="Other.Content.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="Other.Content.application-json.Type" value="Not integer" failure="true"/>
+        <Var name="Other.Content.application-json.Value.Is" NA="true"/>
+        <Var name="Other.Content.text-javascript.Type" NA="true"/>
+        <Var name="Other.Content.text-javascript.Value.Is" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="9" failure="true" name="Other.Content.application-json.Value.Is=&apos;15&apos;">
+      <Has name="properties" value="defaultApplication-json,defaultApplication-jsonValue,defaultContent,statusOther"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="Other">
+          <Has name="excluded" value=""/>
+        </Var>
+        <Var name="Other.Content.Defined" value="Yes"/>
+        <Var name="Other.Content.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="Other.Content.application-json.Type" value="integer"/>
+        <Var name="Other.Content.application-json.Value.Is" value="15" failure="true"/>
+        <Var name="Other.Content.text-javascript.Type" NA="true"/>
+        <Var name="Other.Content.text-javascript.Value.Is" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="10" failure="true" name="Other.Content.application-json.Value.Is=&apos;17&apos;">
+      <Has name="properties" value="defaultApplication-json,defaultApplication-jsonValue,defaultContent,statusOther"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="Other">
+          <Has name="excluded" value=""/>
+        </Var>
+        <Var name="Other.Content.Defined" value="Yes"/>
+        <Var name="Other.Content.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="Other.Content.application-json.Type" value="integer"/>
+        <Var name="Other.Content.application-json.Value.Is" value="17" failure="true"/>
+        <Var name="Other.Content.text-javascript.Type" NA="true"/>
+        <Var name="Other.Content.text-javascript.Value.Is" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="11" failure="true" name="Other.Content.text-javascript.Type=&apos;Not integer&apos;">
+      <Has name="properties" value="defaultContent,defaultText-javascript,statusOther"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="Other">
+          <Has name="excluded" value=""/>
+        </Var>
+        <Var name="Other.Content.Defined" value="Yes"/>
+        <Var name="Other.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="Other.Content.application-json.Type" NA="true"/>
+        <Var name="Other.Content.application-json.Value.Is" NA="true"/>
+        <Var name="Other.Content.text-javascript.Type" value="Not integer" failure="true"/>
+        <Var name="Other.Content.text-javascript.Value.Is" NA="true"/>
+      </Input>
+    </TestCase>
+  </Function>
+  <Function name="DELETE_responses">
+    <Has name="server" value="/"/>
+    <Has name="title" value="Responses"/>
+    <Has name="version" value="0.0.0"/>
+    <TestCase id="0" name="Status-Code=&apos;2XX&apos;">
+      <Has name="properties" value="2XXContent,2XXHeaderX-extra-header,2XXHeaderX-extra-headerValue,2XXHeaderX-standard-header,2XXHeaderX-standard-headerValue,2XXText-plain,2XXText-plainItemsNone,2XXText-plainValue,status2XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="2XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" value="1"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" value="1"/>
+        <Var name="2XX.Content.Defined" value="Yes"/>
+        <Var name="2XX.Content.Media-Type" value="text-plain">
+          <Has name="mediaType" value="text/plain"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Type" value="array"/>
+        <Var name="2XX.Content.text-plain.Items.Size" value="0"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" NA="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Value.Length" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="1" name="Status-Code=&apos;4XX&apos;">
+      <Has name="properties" value="4XXContent,4XXText-plain,4XXText-plainLengthValid,4XXText-plainNotEmpty,4XXText-plainValue,status4XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="4XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" NA="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" NA="true"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" NA="true"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" NA="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" NA="true"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" NA="true"/>
+        <Var name="2XX.Content.Defined" NA="true"/>
+        <Var name="2XX.Content.Media-Type" NA="true"/>
+        <Var name="2XX.Content.text-plain.Type" NA="true"/>
+        <Var name="2XX.Content.text-plain.Items.Size" NA="true"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" NA="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" NA="true"/>
+        <Var name="4XX.Content.Defined" value="Yes"/>
+        <Var name="4XX.Content.Media-Type" value="text-plain">
+          <Has name="mediaType" value="text/plain"/>
+        </Var>
+        <Var name="4XX.Content.text-plain.Type" value="string"/>
+        <Var name="4XX.Content.text-plain.Value.Length" value="&gt; 0"/>
+      </Input>
+    </TestCase>
+    <TestCase id="2" name="Status-Code=&apos;Other&apos;">
+      <Has name="properties" value="statusOther"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="Other">
+          <Has name="excluded" value="&apos;2XX&apos;,&apos;4XX&apos;"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Defined" NA="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" NA="true"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" NA="true"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" NA="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" NA="true"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" NA="true"/>
+        <Var name="2XX.Content.Defined" NA="true"/>
+        <Var name="2XX.Content.Media-Type" NA="true"/>
+        <Var name="2XX.Content.text-plain.Type" NA="true"/>
+        <Var name="2XX.Content.text-plain.Items.Size" NA="true"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" NA="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Value.Length" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="3" name="2XX.Headers.x-standard-header.Value.Is=&apos;10&apos;">
+      <Has name="properties" value="2XXContent,2XXHeaderX-standard-header,2XXHeaderX-standard-headerValue,2XXText-plain,2XXText-plainItemsValue,2XXText-plainValue,status2XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="2XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" value="10"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" value="No">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" NA="true"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" NA="true"/>
+        <Var name="2XX.Content.Defined" value="Yes"/>
+        <Var name="2XX.Content.Media-Type" value="text-plain">
+          <Has name="mediaType" value="text/plain"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Type" value="array"/>
+        <Var name="2XX.Content.text-plain.Items.Size" value="1"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" value="boolean">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" value="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Value.Length" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="4" name="2XX.Headers.x-standard-header.Value.Is=&apos;100&apos;">
+      <Has name="properties" value="2XXContent,2XXHeaderX-extra-header,2XXHeaderX-extra-headerValue,2XXHeaderX-standard-header,2XXHeaderX-standard-headerValue,2XXText-plain,2XXText-plainItemsMany,2XXText-plainItemsValue,2XXText-plainValue,status2XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="2XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" value="100"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" value="&gt; 1"/>
+        <Var name="2XX.Content.Defined" value="Yes"/>
+        <Var name="2XX.Content.Media-Type" value="text-plain">
+          <Has name="mediaType" value="text/plain"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Type" value="array"/>
+        <Var name="2XX.Content.text-plain.Items.Size" value="&gt; 1"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" value="boolean">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" value="false">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" value="Yes"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Value.Length" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="5" name="2XX.Content.text-plain.Items.Unique=&apos;No&apos;">
+      <Has name="properties" value="2XXContent,2XXHeaderX-standard-header,2XXHeaderX-standard-headerValue,2XXText-plain,2XXText-plainItemsMany,2XXText-plainItemsValue,2XXText-plainValue,status2XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="2XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" value="1"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" value="No">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" NA="true"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" NA="true"/>
+        <Var name="2XX.Content.Defined" value="Yes"/>
+        <Var name="2XX.Content.Media-Type" value="text-plain">
+          <Has name="mediaType" value="text/plain"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Type" value="array"/>
+        <Var name="2XX.Content.text-plain.Items.Size" value="&gt; 1"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" value="boolean">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" value="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" value="No"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Value.Length" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="6" name="4XX.Content.text-plain.Type=null">
+      <Has name="properties" value="4XXContent,4XXText-plain,status4XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="4XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" NA="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" NA="true"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" NA="true"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" NA="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" NA="true"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" NA="true"/>
+        <Var name="2XX.Content.Defined" NA="true"/>
+        <Var name="2XX.Content.Media-Type" NA="true"/>
+        <Var name="2XX.Content.text-plain.Type" NA="true"/>
+        <Var name="2XX.Content.text-plain.Items.Size" NA="true"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" NA="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" NA="true"/>
+        <Var name="4XX.Content.Defined" value="Yes"/>
+        <Var name="4XX.Content.Media-Type" value="text-plain">
+          <Has name="mediaType" value="text/plain"/>
+        </Var>
+        <Var name="4XX.Content.text-plain.Type" value="null"/>
+        <Var name="4XX.Content.text-plain.Value.Length" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="7" name="4XX.Content.text-plain.Value.Length=&apos;0&apos;">
+      <Has name="properties" value="4XXContent,4XXText-plain,4XXText-plainLengthValid,4XXText-plainValue,status4XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="4XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" NA="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" NA="true"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" NA="true"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" NA="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" NA="true"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" NA="true"/>
+        <Var name="2XX.Content.Defined" NA="true"/>
+        <Var name="2XX.Content.Media-Type" NA="true"/>
+        <Var name="2XX.Content.text-plain.Type" NA="true"/>
+        <Var name="2XX.Content.text-plain.Items.Size" NA="true"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" NA="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" NA="true"/>
+        <Var name="4XX.Content.Defined" value="Yes"/>
+        <Var name="4XX.Content.Media-Type" value="text-plain">
+          <Has name="mediaType" value="text/plain"/>
+        </Var>
+        <Var name="4XX.Content.text-plain.Type" value="string"/>
+        <Var name="4XX.Content.text-plain.Value.Length" value="0"/>
+      </Input>
+    </TestCase>
+    <TestCase id="8" failure="true" name="2XX.Headers.x-standard-header.Defined=&apos;No&apos;">
+      <Has name="properties" value="2XXContent,2XXHeaderX-extra-header,2XXHeaderX-extra-headerValue,2XXText-plain,2XXText-plainItemsNone,2XXText-plainValue,status2XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="2XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" value="No" failure="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" NA="true"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" NA="true"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" value="1"/>
+        <Var name="2XX.Content.Defined" value="Yes"/>
+        <Var name="2XX.Content.Media-Type" value="text-plain">
+          <Has name="mediaType" value="text/plain"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Type" value="array"/>
+        <Var name="2XX.Content.text-plain.Items.Size" value="0"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" NA="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Value.Length" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="9" failure="true" name="2XX.Headers.x-standard-header.Type=null">
+      <Has name="properties" value="2XXContent,2XXHeaderX-extra-header,2XXHeaderX-extra-headerValue,2XXHeaderX-standard-header,2XXText-plain,2XXText-plainItemsNone,2XXText-plainValue,status2XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="2XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" value="null" failure="true"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" NA="true"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" value="1"/>
+        <Var name="2XX.Content.Defined" value="Yes"/>
+        <Var name="2XX.Content.Media-Type" value="text-plain">
+          <Has name="mediaType" value="text/plain"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Type" value="array"/>
+        <Var name="2XX.Content.text-plain.Items.Size" value="0"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" NA="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Value.Length" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="10" failure="true" name="2XX.Headers.x-standard-header.Type=&apos;Not integer&apos;">
+      <Has name="properties" value="2XXContent,2XXHeaderX-extra-header,2XXHeaderX-extra-headerValue,2XXHeaderX-standard-header,2XXText-plain,2XXText-plainItemsNone,2XXText-plainValue,status2XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="2XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" value="Not integer" failure="true"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" NA="true"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" value="1"/>
+        <Var name="2XX.Content.Defined" value="Yes"/>
+        <Var name="2XX.Content.Media-Type" value="text-plain">
+          <Has name="mediaType" value="text/plain"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Type" value="array"/>
+        <Var name="2XX.Content.text-plain.Items.Size" value="0"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" NA="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Value.Length" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="11" failure="true" name="2XX.Headers.x-standard-header.Value.Is=&apos;Other&apos;">
+      <Has name="properties" value="2XXContent,2XXHeaderX-extra-header,2XXHeaderX-extra-headerValue,2XXHeaderX-standard-header,2XXHeaderX-standard-headerValue,2XXText-plain,2XXText-plainItemsNone,2XXText-plainValue,status2XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="2XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" value="Other" failure="true">
+          <Has name="excluded" value="&apos;1&apos;,&apos;10&apos;,&apos;100&apos;"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" value="1"/>
+        <Var name="2XX.Content.Defined" value="Yes"/>
+        <Var name="2XX.Content.Media-Type" value="text-plain">
+          <Has name="mediaType" value="text/plain"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Type" value="array"/>
+        <Var name="2XX.Content.text-plain.Items.Size" value="0"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" NA="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Value.Length" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="12" failure="true" name="2XX.Headers.x-extra-header.Type=null">
+      <Has name="properties" value="2XXContent,2XXHeaderX-extra-header,2XXHeaderX-standard-header,2XXHeaderX-standard-headerValue,2XXText-plain,2XXText-plainItemsNone,2XXText-plainValue,status2XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="2XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" value="10"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" value="null" failure="true"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" NA="true"/>
+        <Var name="2XX.Content.Defined" value="Yes"/>
+        <Var name="2XX.Content.Media-Type" value="text-plain">
+          <Has name="mediaType" value="text/plain"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Type" value="array"/>
+        <Var name="2XX.Content.text-plain.Items.Size" value="0"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" NA="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Value.Length" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="13" failure="true" name="2XX.Headers.x-extra-header.Type=&apos;Not integer&apos;">
+      <Has name="properties" value="2XXContent,2XXHeaderX-extra-header,2XXHeaderX-standard-header,2XXHeaderX-standard-headerValue,2XXText-plain,2XXText-plainItemsNone,2XXText-plainValue,status2XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="2XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" value="10"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" value="Not integer" failure="true"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" NA="true"/>
+        <Var name="2XX.Content.Defined" value="Yes"/>
+        <Var name="2XX.Content.Media-Type" value="text-plain">
+          <Has name="mediaType" value="text/plain"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Type" value="array"/>
+        <Var name="2XX.Content.text-plain.Items.Size" value="0"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" NA="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Value.Length" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="14" failure="true" name="2XX.Headers.x-extra-header.Value.Is=&apos;0&apos;">
+      <Has name="properties" value="2XXContent,2XXHeaderX-extra-header,2XXHeaderX-extra-headerValue,2XXHeaderX-standard-header,2XXHeaderX-standard-headerValue,2XXText-plain,2XXText-plainItemsNone,2XXText-plainValue,status2XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="2XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" value="10"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" value="0" failure="true"/>
+        <Var name="2XX.Content.Defined" value="Yes"/>
+        <Var name="2XX.Content.Media-Type" value="text-plain">
+          <Has name="mediaType" value="text/plain"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Type" value="array"/>
+        <Var name="2XX.Content.text-plain.Items.Size" value="0"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" NA="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Value.Length" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="15" failure="true" name="2XX.Content.Defined=&apos;No&apos;">
+      <Has name="properties" value="2XXHeaderX-extra-header,2XXHeaderX-extra-headerValue,2XXHeaderX-standard-header,2XXHeaderX-standard-headerValue,status2XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="2XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" value="10"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" value="1"/>
+        <Var name="2XX.Content.Defined" value="No" failure="true"/>
+        <Var name="2XX.Content.Media-Type" NA="true"/>
+        <Var name="2XX.Content.text-plain.Type" NA="true"/>
+        <Var name="2XX.Content.text-plain.Items.Size" NA="true"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" NA="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Value.Length" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="16" failure="true" name="2XX.Content.Media-Type=&apos;Other&apos;">
+      <Has name="properties" value="2XXContent,2XXHeaderX-extra-header,2XXHeaderX-extra-headerValue,2XXHeaderX-standard-header,2XXHeaderX-standard-headerValue,status2XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="2XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" value="10"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" value="1"/>
+        <Var name="2XX.Content.Defined" value="Yes"/>
+        <Var name="2XX.Content.Media-Type" value="Other" failure="true">
+          <Has name="excluded" value="&apos;text/plain&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Type" NA="true"/>
+        <Var name="2XX.Content.text-plain.Items.Size" NA="true"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" NA="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Value.Length" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="17" failure="true" name="2XX.Content.text-plain.Type=null">
+      <Has name="properties" value="2XXContent,2XXHeaderX-extra-header,2XXHeaderX-extra-headerValue,2XXHeaderX-standard-header,2XXHeaderX-standard-headerValue,2XXText-plain,status2XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="2XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" value="10"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" value="1"/>
+        <Var name="2XX.Content.Defined" value="Yes"/>
+        <Var name="2XX.Content.Media-Type" value="text-plain">
+          <Has name="mediaType" value="text/plain"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Type" value="null" failure="true"/>
+        <Var name="2XX.Content.text-plain.Items.Size" NA="true"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" NA="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Value.Length" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="18" failure="true" name="2XX.Content.text-plain.Type=&apos;Not array&apos;">
+      <Has name="properties" value="2XXContent,2XXHeaderX-extra-header,2XXHeaderX-extra-headerValue,2XXHeaderX-standard-header,2XXHeaderX-standard-headerValue,2XXText-plain,status2XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="2XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" value="10"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" value="1"/>
+        <Var name="2XX.Content.Defined" value="Yes"/>
+        <Var name="2XX.Content.Media-Type" value="text-plain">
+          <Has name="mediaType" value="text/plain"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Type" value="Not array" failure="true"/>
+        <Var name="2XX.Content.text-plain.Items.Size" NA="true"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" NA="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Value.Length" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="19" failure="true" name="2XX.Content.text-plain.Items.Contains.Type=null">
+      <Has name="properties" value="2XXContent,2XXHeaderX-extra-header,2XXHeaderX-extra-headerValue,2XXHeaderX-standard-header,2XXHeaderX-standard-headerValue,2XXText-plain,2XXText-plainValue,status2XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="2XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" value="10"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" value="1"/>
+        <Var name="2XX.Content.Defined" value="Yes"/>
+        <Var name="2XX.Content.Media-Type" value="text-plain">
+          <Has name="mediaType" value="text/plain"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Type" value="array"/>
+        <Var name="2XX.Content.text-plain.Items.Size" value="1"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" value="null" failure="true">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" NA="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Value.Length" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="20" failure="true" name="2XX.Content.text-plain.Items.Contains.Type=&apos;Not boolean&apos;">
+      <Has name="properties" value="2XXContent,2XXHeaderX-extra-header,2XXHeaderX-extra-headerValue,2XXHeaderX-standard-header,2XXHeaderX-standard-headerValue,2XXText-plain,2XXText-plainValue,status2XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="2XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" value="10"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" value="integer"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" value="1"/>
+        <Var name="2XX.Content.Defined" value="Yes"/>
+        <Var name="2XX.Content.Media-Type" value="text-plain">
+          <Has name="mediaType" value="text/plain"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Type" value="array"/>
+        <Var name="2XX.Content.text-plain.Items.Size" value="1"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" value="Not boolean" failure="true">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" NA="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Value.Length" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="21" failure="true" name="4XX.Content.Defined=&apos;No&apos;">
+      <Has name="properties" value="status4XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="4XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" NA="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" NA="true"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" NA="true"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" NA="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" NA="true"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" NA="true"/>
+        <Var name="2XX.Content.Defined" NA="true"/>
+        <Var name="2XX.Content.Media-Type" NA="true"/>
+        <Var name="2XX.Content.text-plain.Type" NA="true"/>
+        <Var name="2XX.Content.text-plain.Items.Size" NA="true"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" NA="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" NA="true"/>
+        <Var name="4XX.Content.Defined" value="No" failure="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Value.Length" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="22" failure="true" name="4XX.Content.Media-Type=&apos;Other&apos;">
+      <Has name="properties" value="4XXContent,status4XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="4XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" NA="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" NA="true"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" NA="true"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" NA="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" NA="true"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" NA="true"/>
+        <Var name="2XX.Content.Defined" NA="true"/>
+        <Var name="2XX.Content.Media-Type" NA="true"/>
+        <Var name="2XX.Content.text-plain.Type" NA="true"/>
+        <Var name="2XX.Content.text-plain.Items.Size" NA="true"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" NA="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" NA="true"/>
+        <Var name="4XX.Content.Defined" value="Yes"/>
+        <Var name="4XX.Content.Media-Type" value="Other" failure="true">
+          <Has name="excluded" value="&apos;text/plain&apos;"/>
+        </Var>
+        <Var name="4XX.Content.text-plain.Type" NA="true"/>
+        <Var name="4XX.Content.text-plain.Value.Length" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="23" failure="true" name="4XX.Content.text-plain.Type=&apos;Not string&apos;">
+      <Has name="properties" value="4XXContent,4XXText-plain,status4XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="4XX"/>
+        <Var name="2XX.Headers.x-standard-header.Defined" NA="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-standard-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-standard-header.Type" NA="true"/>
+        <Var name="2XX.Headers.x-standard-header.Value.Is" NA="true"/>
+        <Var name="2XX.Headers.x-extra-header.Defined" NA="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-extra-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="2XX.Headers.x-extra-header.Type" NA="true"/>
+        <Var name="2XX.Headers.x-extra-header.Value.Is" NA="true"/>
+        <Var name="2XX.Content.Defined" NA="true"/>
+        <Var name="2XX.Content.Media-Type" NA="true"/>
+        <Var name="2XX.Content.text-plain.Type" NA="true"/>
+        <Var name="2XX.Content.text-plain.Items.Size" NA="true"/>
+        <Var name="2XX.Content.text-plain.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="boolean"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Contains.Value" NA="true">
+          <Has name="itemEnums" value="&apos;true&apos;,&apos;false&apos;"/>
+        </Var>
+        <Var name="2XX.Content.text-plain.Items.Unique" NA="true"/>
+        <Var name="4XX.Content.Defined" value="Yes"/>
+        <Var name="4XX.Content.Media-Type" value="text-plain">
+          <Has name="mediaType" value="text/plain"/>
+        </Var>
+        <Var name="4XX.Content.text-plain.Type" value="Not string" failure="true"/>
+        <Var name="4XX.Content.text-plain.Value.Length" NA="true"/>
+      </Input>
+    </TestCase>
+  </Function>
+  <Function name="HEAD_responses">
+    <Has name="server" value="/"/>
+    <Has name="title" value="Responses"/>
+    <Has name="version" value="0.0.0"/>
+    <TestCase id="0" name="Status-Code=&apos;202&apos;">
+      <Has name="properties" value="202Content,202HeaderX-my-app-header,202HeaderX-my-app-headerProperties,202HeaderX-my-app-headerValue,202Text-javascript,202Text-javascriptProperties,202Text-javascriptValue,status202"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="202"/>
+        <Var name="202.Headers.x-my-app-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-app-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="202.Headers.x-my-app-header.Type" value="object"/>
+        <Var name="202.Headers.x-my-app-header.Value.Properties.Additional" value="Yes"/>
+        <Var name="202.Content.Defined" value="Yes"/>
+        <Var name="202.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="202.Content.text-javascript.Type" value="object"/>
+        <Var name="202.Content.text-javascript.Value.Properties.Additional" value="Yes"/>
+        <Var name="Other.Content.Defined" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="1" name="Status-Code=&apos;Other&apos;">
+      <Has name="properties" value="statusOther"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="Other">
+          <Has name="excluded" value="&apos;202&apos;"/>
+        </Var>
+        <Var name="202.Headers.x-my-app-header.Defined" NA="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-app-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="202.Headers.x-my-app-header.Type" NA="true"/>
+        <Var name="202.Headers.x-my-app-header.Value.Properties.Additional" NA="true"/>
+        <Var name="202.Content.Defined" NA="true"/>
+        <Var name="202.Content.Media-Type" NA="true"/>
+        <Var name="202.Content.text-javascript.Type" NA="true"/>
+        <Var name="202.Content.text-javascript.Value.Properties.Additional" NA="true"/>
+        <Var name="Other.Content.Defined" value="No"/>
+      </Input>
+    </TestCase>
+    <TestCase id="2" name="202.Headers.x-my-app-header.Value.Properties.Additional=&apos;No&apos;">
+      <Has name="properties" value="202Content,202HeaderX-my-app-header,202HeaderX-my-app-headerValue,202Text-javascript,202Text-javascriptValue,status202"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="202"/>
+        <Var name="202.Headers.x-my-app-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-app-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="202.Headers.x-my-app-header.Type" value="object"/>
+        <Var name="202.Headers.x-my-app-header.Value.Properties.Additional" value="No"/>
+        <Var name="202.Content.Defined" value="Yes"/>
+        <Var name="202.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="202.Content.text-javascript.Type" value="object"/>
+        <Var name="202.Content.text-javascript.Value.Properties.Additional" value="No"/>
+        <Var name="Other.Content.Defined" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="3" failure="true" name="202.Headers.x-my-app-header.Defined=&apos;No&apos;">
+      <Has name="properties" value="202Content,202Text-javascript,202Text-javascriptProperties,202Text-javascriptValue,status202"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="202"/>
+        <Var name="202.Headers.x-my-app-header.Defined" value="No" failure="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-app-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="202.Headers.x-my-app-header.Type" NA="true"/>
+        <Var name="202.Headers.x-my-app-header.Value.Properties.Additional" NA="true"/>
+        <Var name="202.Content.Defined" value="Yes"/>
+        <Var name="202.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="202.Content.text-javascript.Type" value="object"/>
+        <Var name="202.Content.text-javascript.Value.Properties.Additional" value="Yes"/>
+        <Var name="Other.Content.Defined" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="4" failure="true" name="202.Headers.x-my-app-header.Type=null">
+      <Has name="properties" value="202Content,202HeaderX-my-app-header,202Text-javascript,202Text-javascriptProperties,202Text-javascriptValue,status202"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="202"/>
+        <Var name="202.Headers.x-my-app-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-app-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="202.Headers.x-my-app-header.Type" value="null" failure="true"/>
+        <Var name="202.Headers.x-my-app-header.Value.Properties.Additional" NA="true"/>
+        <Var name="202.Content.Defined" value="Yes"/>
+        <Var name="202.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="202.Content.text-javascript.Type" value="object"/>
+        <Var name="202.Content.text-javascript.Value.Properties.Additional" value="Yes"/>
+        <Var name="Other.Content.Defined" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="5" failure="true" name="202.Headers.x-my-app-header.Type=&apos;Not object&apos;">
+      <Has name="properties" value="202Content,202HeaderX-my-app-header,202Text-javascript,202Text-javascriptProperties,202Text-javascriptValue,status202"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="202"/>
+        <Var name="202.Headers.x-my-app-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-app-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="202.Headers.x-my-app-header.Type" value="Not object" failure="true"/>
+        <Var name="202.Headers.x-my-app-header.Value.Properties.Additional" NA="true"/>
+        <Var name="202.Content.Defined" value="Yes"/>
+        <Var name="202.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="202.Content.text-javascript.Type" value="object"/>
+        <Var name="202.Content.text-javascript.Value.Properties.Additional" value="Yes"/>
+        <Var name="Other.Content.Defined" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="6" failure="true" name="202.Content.Defined=&apos;No&apos;">
+      <Has name="properties" value="202HeaderX-my-app-header,202HeaderX-my-app-headerProperties,202HeaderX-my-app-headerValue,status202"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="202"/>
+        <Var name="202.Headers.x-my-app-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-app-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="202.Headers.x-my-app-header.Type" value="object"/>
+        <Var name="202.Headers.x-my-app-header.Value.Properties.Additional" value="Yes"/>
+        <Var name="202.Content.Defined" value="No" failure="true"/>
+        <Var name="202.Content.Media-Type" NA="true"/>
+        <Var name="202.Content.text-javascript.Type" NA="true"/>
+        <Var name="202.Content.text-javascript.Value.Properties.Additional" NA="true"/>
+        <Var name="Other.Content.Defined" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="7" failure="true" name="202.Content.Media-Type=&apos;Other&apos;">
+      <Has name="properties" value="202Content,202HeaderX-my-app-header,202HeaderX-my-app-headerProperties,202HeaderX-my-app-headerValue,status202"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="202"/>
+        <Var name="202.Headers.x-my-app-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-app-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="202.Headers.x-my-app-header.Type" value="object"/>
+        <Var name="202.Headers.x-my-app-header.Value.Properties.Additional" value="Yes"/>
+        <Var name="202.Content.Defined" value="Yes"/>
+        <Var name="202.Content.Media-Type" value="Other" failure="true">
+          <Has name="excluded" value="&apos;text/javascript&apos;"/>
+        </Var>
+        <Var name="202.Content.text-javascript.Type" NA="true"/>
+        <Var name="202.Content.text-javascript.Value.Properties.Additional" NA="true"/>
+        <Var name="Other.Content.Defined" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="8" failure="true" name="202.Content.text-javascript.Type=null">
+      <Has name="properties" value="202Content,202HeaderX-my-app-header,202HeaderX-my-app-headerProperties,202HeaderX-my-app-headerValue,202Text-javascript,status202"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="202"/>
+        <Var name="202.Headers.x-my-app-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-app-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="202.Headers.x-my-app-header.Type" value="object"/>
+        <Var name="202.Headers.x-my-app-header.Value.Properties.Additional" value="Yes"/>
+        <Var name="202.Content.Defined" value="Yes"/>
+        <Var name="202.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="202.Content.text-javascript.Type" value="null" failure="true"/>
+        <Var name="202.Content.text-javascript.Value.Properties.Additional" NA="true"/>
+        <Var name="Other.Content.Defined" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="9" failure="true" name="202.Content.text-javascript.Type=&apos;Not object&apos;">
+      <Has name="properties" value="202Content,202HeaderX-my-app-header,202HeaderX-my-app-headerProperties,202HeaderX-my-app-headerValue,202Text-javascript,status202"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="202"/>
+        <Var name="202.Headers.x-my-app-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-app-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="202.Headers.x-my-app-header.Type" value="object"/>
+        <Var name="202.Headers.x-my-app-header.Value.Properties.Additional" value="Yes"/>
+        <Var name="202.Content.Defined" value="Yes"/>
+        <Var name="202.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="202.Content.text-javascript.Type" value="Not object" failure="true"/>
+        <Var name="202.Content.text-javascript.Value.Properties.Additional" NA="true"/>
+        <Var name="Other.Content.Defined" NA="true"/>
+      </Input>
+    </TestCase>
+  </Function>
+</TestCases>

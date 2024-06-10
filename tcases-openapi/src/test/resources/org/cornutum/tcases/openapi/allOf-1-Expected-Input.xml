@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<System name="AllOf">
+  <Has name="server" value="/"/>
+  <Has name="title" value="AllOf"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="POST_allOf">
+    <Has name="operation" value="POST"/>
+    <Has name="path" value="/allOf"/>
+    <Input type="request">
+      <VarSet name="Body">
+        <Var name="Defined">
+          <Value name="Yes" property="bodyContent"/>
+          <Value name="No" failure="true"/>
+        </Var>
+        <Var name="Media-Type" when="bodyContent">
+          <Value name="application-json" property="bodyApplication-json">
+            <Has name="mediaType" value="application/json"/>
+          </Value>
+          <Value name="Other" failure="true">
+            <Has name="excluded" value="&apos;application/json&apos;"/>
+          </Value>
+        </Var>
+        <VarSet name="application-json" when="bodyApplication-json">
+          <Var name="Type">
+            <Value name="array" property="bodyApplication-jsonValue"/>
+            <Value name="null" failure="true"/>
+            <Value name="Not array" failure="true"/>
+          </Var>
+          <VarSet name="Items" when="bodyApplication-jsonValue">
+            <Var name="Size">
+              <Value name="0" property="bodyApplication-jsonItemsNone"/>
+              <Value name="1"/>
+              <Value name="&gt; 1" property="bodyApplication-jsonItemsMany"/>
+            </Var>
+            <VarSet name="Contains" whenNot="bodyApplication-jsonItemsNone">
+              <Var name="Type">
+                <Has name="itemType" value="integer"/>
+                <Value name="integer" property="bodyApplication-jsonItemsValue"/>
+                <Value name="null" failure="true"/>
+                <Value name="Not integer" failure="true"/>
+              </Var>
+              <VarSet name="Value" when="bodyApplication-jsonItemsValue">
+                <Var name="Is">
+                  <Value name="&lt; 0"/>
+                  <Value name="0"/>
+                  <Value name="&gt; 0"/>
+                </Var>
+              </VarSet>
+            </VarSet>
+            <Var name="Unique" when="bodyApplication-jsonItemsMany">
+              <Value name="Yes"/>
+              <Value name="No"/>
+            </Var>
+          </VarSet>
+        </VarSet>
+      </VarSet>
+    </Input>
+  </Function>
+</System>

@@ -1,0 +1,143 @@
+<System name="ApiMojo">
+  <Function name="execute">
+
+    <Input type="arg">
+
+      <VarSet name="ApiDefPatterns">
+        <Var name="Count">
+          <Value name="None"/>
+          <Value name="One" property="inputPatterns"/>
+          <Value name="Many" property="inputPatterns" when="apiDefs"/>
+        </Var>
+        <Var name="Defined-By" when="inputPatterns">
+          <Value name="apiDefs" property="apiDefs"/>
+          <Value name="apiDef"/>
+          <Value name="project"/>
+        </Var>
+        <Var name="Matched">
+          <Value name="None" once="true"/>
+          <Value name="One" property="apiDef"/>
+          <Value name="Many" property="apiDef"/>
+        </Var>
+      </VarSet>
+
+      <Var name="ContentType" when="inputPatterns, apiDef">
+        <Value name="Default"/>
+        <Value name="yaml" once="true"/>
+      </Var>
+
+      <Var name="InputDir">
+        <Value name="Default"/>
+        <Value name="Other" once="true"/>
+      </Var>
+
+      <Var name="OutDir" when="apiDef">
+        <Value name="Default"/>
+        <Value name="Other" once="true"/>
+      </Var>
+
+      <Var name="Junit" when="apiDef" whenNot="inputModels,requestCases,html,xslt">
+        <Value name="Default"/>
+        <Value name="Yes" once="true" property="junit"/>
+        <Value name="No" once="true"/>
+      </Var>
+
+      <Var name="Html" when="apiDef" whenNot="inputModels,requestCases,junit,xslt">
+        <Value name="Default"/>
+        <Value name="Yes" once="true" property="html"/>
+        <Value name="No" once="true"/>
+      </Var>
+
+      <VarSet name="TransformDef" when="apiDef" whenNot="inputModels,requestCases,html,junit">
+          <Var name="Defined">
+              <Value name="Yes" once="true" property="xslt"/>
+              <Value name="No"/>
+          </Var>
+          <Var name="Path" when="xslt">
+              <Value name="Relative"/>
+              <Value name="Absolute" once="true"/>
+          </Var>
+          <Var name="Params" when="xslt">
+              <Value name="Yes"/>
+              <Value name="No"/>
+          </Var>
+      </VarSet>
+
+      <Var name="TransformParams" when="xslt">
+          <Value name="Yes" once="true"/>
+          <Value name="No"/>
+      </Var>
+
+      <VarSet name="TransformOutFile" when="xslt">
+          <Var name="Defined">
+              <Value name="Yes" once="true" property="transformOutFile"/>
+              <Value name="No"/>
+          </Var>
+          <Var name="Params" when="transformOutFile">
+              <Value name="Yes"/>
+              <Value name="No"/>
+          </Var>
+          <Var name="Java" when="transformOutFile">
+              <Value name="Yes"/>
+              <Value name="No"/>
+          </Var>
+      </VarSet>
+
+      <Var name="InputModels" when="apiDef" whenNot="requestCases">
+        <Value name="Default"/>
+        <Value name="Yes" once="true" property="inputModels"/>
+        <Value name="No" once="true"/>
+      </Var>
+
+      <Var name="OnCondition" when="apiDef" whenNot="requestCases">
+        <Value name="Default"/>
+        <Value name="fail" failure="true"/>
+      </Var>
+
+      <Var name="ReadOnlyEnforced" when="apiDef">
+        <Value name="Default"/>
+        <Value name="Yes" once="true"/>
+        <Value name="No" once="true"/>
+      </Var>
+
+      <Var name="WriteOnlyEnforced" when="apiDef">
+        <Value name="Default"/>
+        <Value name="Yes" once="true"/>
+        <Value name="No" once="true"/>
+      </Var>
+
+      <Var name="RequestCases" when="apiDef">
+        <Value name="Default"/>
+        <Value name="Yes" property="requestCases"/>
+        <Value name="No"/>
+      </Var>
+
+      <Var name="OnModellingCondition" when="requestCases">
+        <Value name="Default"/>
+        <Value name="fail" failure="true"/>
+      </Var>
+
+      <Var name="OnResolverCondition" when="requestCases">
+        <Value name="Default"/>
+        <Value name="fail" failure="true"/>
+      </Var>
+
+      <Var name="MaxTries" when="requestCases">
+        <Value name="Default"/>
+        <Value name="Defined"/>
+      </Var>
+
+      <Var name="Random" when="requestCases">
+        <Value name="Default"/>
+        <Value name="Defined"/>
+      </Var>
+
+    </Input>
+
+    <Input type="env">
+
+      
+
+    </Input>
+  </Function>
+</System>

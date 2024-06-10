@@ -1,0 +1,157 @@
+<?xml version="1.0"?>
+<TestCases system="Tcases">
+  <Function name="run">
+    <TestCase id="0" name="outDir.defined=&apos;Yes&apos;">
+      <Has name="properties" value="inFile,outDir,outFile,params,testFile,transform"/>
+      <Input type="arg">
+        <Var name="outDir.defined" value="Yes"/>
+        <Var name="outFile.defined" value="Yes"/>
+        <Var name="outFile.path.isAbsolute" value="Yes"/>
+        <Var name="outFile.isTestFile" value="No"/>
+        <Var name="testFile.defined" value="Yes"/>
+        <Var name="inFile.defined" value="Yes"/>
+        <Var name="transform.defined" value="Yes"/>
+        <Var name="transform.path.isAbsolute" value="Yes"/>
+        <Var name="transform.path.exists" value="Yes"/>
+        <Var name="transformParams.count" value="One"/>
+        <Var name="transformParams.assignsValue" value="Yes"/>
+        <Var name="transformParams.nameDefined" value="Yes"/>
+        <Var name="transformParams.valueDefined" value="Yes"/>
+        <Var name="isJUnit" value="No"/>
+      </Input>
+    </TestCase>
+    <TestCase id="1" name="outDir.defined=&apos;No&apos;">
+      <Has name="properties" value="isJUnit,params"/>
+      <Input type="arg">
+        <Var name="outDir.defined" value="No"/>
+        <Var name="outFile.defined" value="No"/>
+        <Var name="outFile.path.isAbsolute" NA="true"/>
+        <Var name="outFile.isTestFile" NA="true"/>
+        <Var name="testFile.defined" value="No"/>
+        <Var name="inFile.defined" value="No"/>
+        <Var name="transform.defined" value="No"/>
+        <Var name="transform.path.isAbsolute" NA="true"/>
+        <Var name="transform.path.exists" NA="true"/>
+        <Var name="transformParams.count" value="Many"/>
+        <Var name="transformParams.assignsValue" value="Yes"/>
+        <Var name="transformParams.nameDefined" value="Yes"/>
+        <Var name="transformParams.valueDefined" value="No"/>
+        <Var name="isJUnit" value="Yes"/>
+      </Input>
+    </TestCase>
+    <TestCase id="2" name="outFile.path.isAbsolute=&apos;No&apos;">
+      <Has name="properties" value="inFile,outDir,outFile,testFile,transform"/>
+      <Input type="arg">
+        <Var name="outDir.defined" value="Yes"/>
+        <Var name="outFile.defined" value="Yes"/>
+        <Var name="outFile.path.isAbsolute" value="No"/>
+        <Var name="outFile.isTestFile" value="No"/>
+        <Var name="testFile.defined" value="Yes"/>
+        <Var name="inFile.defined" value="Yes"/>
+        <Var name="transform.defined" value="Yes"/>
+        <Var name="transform.path.isAbsolute" value="No"/>
+        <Var name="transform.path.exists" value="Yes"/>
+        <Var name="transformParams.count" value="None"/>
+        <Var name="transformParams.assignsValue" NA="true"/>
+        <Var name="transformParams.nameDefined" NA="true"/>
+        <Var name="transformParams.valueDefined" NA="true"/>
+        <Var name="isJUnit" value="No"/>
+      </Input>
+    </TestCase>
+    <TestCase id="3" failure="true" name="outFile.isTestFile=&apos;Yes&apos;">
+      <Has name="properties" value="isJUnit,outFile,params"/>
+      <Input type="arg">
+        <Var name="outDir.defined" value="No"/>
+        <Var name="outFile.defined" value="Yes"/>
+        <Var name="outFile.path.isAbsolute" value="Yes"/>
+        <Var name="outFile.isTestFile" value="Yes" failure="true"/>
+        <Var name="testFile.defined" value="No"/>
+        <Var name="inFile.defined" value="No"/>
+        <Var name="transform.defined" value="No"/>
+        <Var name="transform.path.isAbsolute" NA="true"/>
+        <Var name="transform.path.exists" NA="true"/>
+        <Var name="transformParams.count" value="One"/>
+        <Var name="transformParams.assignsValue" value="Yes"/>
+        <Var name="transformParams.nameDefined" value="Yes"/>
+        <Var name="transformParams.valueDefined" value="Yes"/>
+        <Var name="isJUnit" value="Yes"/>
+      </Input>
+    </TestCase>
+    <TestCase id="4" failure="true" name="transform.path.exists=&apos;No&apos;">
+      <Has name="properties" value="params,transform"/>
+      <Input type="arg">
+        <Var name="outDir.defined" value="No"/>
+        <Var name="outFile.defined" value="No"/>
+        <Var name="outFile.path.isAbsolute" NA="true"/>
+        <Var name="outFile.isTestFile" NA="true"/>
+        <Var name="testFile.defined" value="No"/>
+        <Var name="inFile.defined" value="No"/>
+        <Var name="transform.defined" value="Yes"/>
+        <Var name="transform.path.isAbsolute" value="Yes"/>
+        <Var name="transform.path.exists" value="No" failure="true"/>
+        <Var name="transformParams.count" value="One"/>
+        <Var name="transformParams.assignsValue" value="Yes"/>
+        <Var name="transformParams.nameDefined" value="Yes"/>
+        <Var name="transformParams.valueDefined" value="Yes"/>
+        <Var name="isJUnit" value="No"/>
+      </Input>
+    </TestCase>
+    <TestCase id="5" failure="true" name="transformParams.assignsValue=&apos;No&apos;">
+      <Has name="properties" value="isJUnit,params"/>
+      <Input type="arg">
+        <Var name="outDir.defined" value="No"/>
+        <Var name="outFile.defined" value="No"/>
+        <Var name="outFile.path.isAbsolute" NA="true"/>
+        <Var name="outFile.isTestFile" NA="true"/>
+        <Var name="testFile.defined" value="No"/>
+        <Var name="inFile.defined" value="No"/>
+        <Var name="transform.defined" value="No"/>
+        <Var name="transform.path.isAbsolute" NA="true"/>
+        <Var name="transform.path.exists" NA="true"/>
+        <Var name="transformParams.count" value="One"/>
+        <Var name="transformParams.assignsValue" value="No" failure="true"/>
+        <Var name="transformParams.nameDefined" value="Yes"/>
+        <Var name="transformParams.valueDefined" value="Yes"/>
+        <Var name="isJUnit" value="Yes"/>
+      </Input>
+    </TestCase>
+    <TestCase id="6" failure="true" name="transformParams.nameDefined=&apos;No&apos;">
+      <Has name="properties" value="isJUnit,params"/>
+      <Input type="arg">
+        <Var name="outDir.defined" value="No"/>
+        <Var name="outFile.defined" value="No"/>
+        <Var name="outFile.path.isAbsolute" NA="true"/>
+        <Var name="outFile.isTestFile" NA="true"/>
+        <Var name="testFile.defined" value="No"/>
+        <Var name="inFile.defined" value="No"/>
+        <Var name="transform.defined" value="No"/>
+        <Var name="transform.path.isAbsolute" NA="true"/>
+        <Var name="transform.path.exists" NA="true"/>
+        <Var name="transformParams.count" value="One"/>
+        <Var name="transformParams.assignsValue" value="Yes"/>
+        <Var name="transformParams.nameDefined" value="No" failure="true"/>
+        <Var name="transformParams.valueDefined" value="Yes"/>
+        <Var name="isJUnit" value="Yes"/>
+      </Input>
+    </TestCase>
+    <TestCase id="7" failure="true" name="isJUnit=&apos;NotAllowed&apos;">
+      <Has name="properties" value="params,transform"/>
+      <Input type="arg">
+        <Var name="outDir.defined" value="No"/>
+        <Var name="outFile.defined" value="No"/>
+        <Var name="outFile.path.isAbsolute" NA="true"/>
+        <Var name="outFile.isTestFile" NA="true"/>
+        <Var name="testFile.defined" value="No"/>
+        <Var name="inFile.defined" value="No"/>
+        <Var name="transform.defined" value="Yes"/>
+        <Var name="transform.path.isAbsolute" value="Yes"/>
+        <Var name="transform.path.exists" value="Yes"/>
+        <Var name="transformParams.count" value="One"/>
+        <Var name="transformParams.assignsValue" value="Yes"/>
+        <Var name="transformParams.nameDefined" value="Yes"/>
+        <Var name="transformParams.valueDefined" value="Yes"/>
+        <Var name="isJUnit" value="NotAllowed" failure="true"/>
+      </Input>
+    </TestCase>
+  </Function>
+</TestCases>

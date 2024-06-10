@@ -1,0 +1,241 @@
+
+[
+    {
+        "id": 0,
+        "name": "Body.Defined='Yes'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AnyOf",
+        "path": "/anyOf",
+        "operation": "POST",
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "number",
+                "value": 102.0
+            },
+            "valid": true
+        }
+    },
+    {
+        "id": 1,
+        "name": "Body.application-json.Alternative.Used='1'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AnyOf",
+        "path": "/anyOf",
+        "operation": "POST",
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "number",
+                "value": -2.0
+            },
+            "valid": true
+        }
+    },
+    {
+        "id": 2,
+        "name": "Body.application-json.Alternative.Used='2'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AnyOf",
+        "path": "/anyOf",
+        "operation": "POST",
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "number",
+                "value": -2.0
+            },
+            "valid": true
+        }
+    },
+    {
+        "id": 3,
+        "name": "Body.application-json.Alternative.0.Value.Is='> 102.0'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AnyOf",
+        "path": "/anyOf",
+        "operation": "POST",
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "number",
+                "value": 2150773644752428472.0
+            },
+            "valid": true
+        }
+    },
+    {
+        "id": 4,
+        "name": "Body.application-json.Alternative.2.Value.Is='< -2.0'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AnyOf",
+        "path": "/anyOf",
+        "operation": "POST",
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "number",
+                "value": -4429955601570505196.0
+            },
+            "valid": true
+        }
+    },
+    {
+        "id": 5,
+        "name": "Body.Defined='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AnyOf",
+        "path": "/anyOf",
+        "operation": "POST",
+        "body": {
+            "data": null,
+            "valid": false
+        },
+        "invalidInput": "Body.Defined=No"
+    },
+    {
+        "id": 6,
+        "name": "Body.Media-Type='Other'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AnyOf",
+        "path": "/anyOf",
+        "operation": "POST",
+        "body": {
+            "mediaType": "application/xml",
+            "data": {
+                "type": "number",
+                "value": 33.3
+            },
+            "valid": false
+        },
+        "invalidInput": "Body.Media-Type=Other"
+    },
+    {
+        "id": 7,
+        "name": "Body.application-json.Alternative.0.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AnyOf",
+        "path": "/anyOf",
+        "operation": "POST",
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "null",
+                "value": null
+            },
+            "valid": false
+        },
+        "invalidInput": "Body.application-json.Alternative.0.Type=null"
+    },
+    {
+        "id": 8,
+        "name": "Body.application-json.Alternative.0.Type='Not number'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AnyOf",
+        "path": "/anyOf",
+        "operation": "POST",
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "array",
+                "value": [
+                    {
+                        "type": "string",
+                        "value": "]%`4'D{w"
+                    },
+                    {
+                        "type": "string",
+                        "value": "*"
+                    },
+                    {
+                        "type": "string",
+                        "value": "*b<L"
+                    }
+                ]
+            },
+            "valid": false
+        },
+        "invalidInput": "Body.application-json.Alternative.0.Type=Not number"
+    },
+    {
+        "id": 9,
+        "name": "Body.application-json.Alternative.0.Value.Is='100.0'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AnyOf",
+        "path": "/anyOf",
+        "operation": "POST",
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "number",
+                "value": 100.0
+            },
+            "valid": false
+        },
+        "invalidInput": "Body.application-json.Alternative.0.Value.Is=100.0"
+    },
+    {
+        "id": 10,
+        "name": "Body.application-json.Alternative.0.Value.Multiple-Of.2d0='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AnyOf",
+        "path": "/anyOf",
+        "operation": "POST",
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "number",
+                "value": 822598788478072481.2
+            },
+            "valid": false
+        },
+        "invalidInput": "Body.application-json.Alternative.0.Value.Multiple-Of.2d0=No"
+    },
+    {
+        "id": 11,
+        "name": "Body.application-json.Alternative.1.Value.Is='-4.0'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AnyOf",
+        "path": "/anyOf",
+        "operation": "POST",
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "number",
+                "value": -4.0
+            },
+            "valid": false
+        },
+        "invalidInput": "Body.application-json.Alternative.1.Value.Is=-4.0"
+    },
+    {
+        "id": 12,
+        "name": "Body.application-json.Alternative.1.Value.Is='0.0'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AnyOf",
+        "path": "/anyOf",
+        "operation": "POST",
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "number",
+                "value": 0.0
+            },
+            "valid": false
+        },
+        "invalidInput": "Body.application-json.Alternative.1.Value.Is=0.0"
+    }
+]

@@ -1,0 +1,137 @@
+
+[
+    {
+        "id": 0,
+        "name": "id.Defined='Yes'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Operations",
+        "path": "/operations",
+        "operation": "DELETE",
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "integer",
+                    "value": -286487905,
+                    "format": "int32"
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "id.Defined='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Operations",
+        "path": "/operations",
+        "operation": "DELETE",
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": null,
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "id.Value.Is='0'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Operations",
+        "path": "/operations",
+        "operation": "DELETE",
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "integer",
+                    "value": 0,
+                    "format": "int32"
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "id.Value.Is='> 0'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Operations",
+        "path": "/operations",
+        "operation": "DELETE",
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "integer",
+                    "value": 132042357,
+                    "format": "int32"
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "id.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Operations",
+        "path": "/operations",
+        "operation": "DELETE",
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "null",
+                    "value": null
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "id.Type=null"
+    },
+    {
+        "id": 5,
+        "name": "id.Type='Not integer'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Operations",
+        "path": "/operations",
+        "operation": "DELETE",
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "boolean",
+                    "value": true
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "id.Type=Not integer"
+    }
+]

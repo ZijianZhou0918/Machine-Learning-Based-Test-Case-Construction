@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<System name="AllOf">
+  <Has name="server" value="/"/>
+  <Has name="title" value="AllOf"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="POST_allOf">
+    <Has name="operation" value="POST"/>
+    <Has name="path" value="/allOf"/>
+    <Input type="cookie">
+      <VarSet name="param0">
+        <Has name="paramName" value="param0"/>
+        <Var name="Defined">
+          <Has name="explode" value="true"/>
+          <Has name="style" value="form"/>
+          <Value name="Yes" property="param0"/>
+          <Value name="No"/>
+        </Var>
+        <Var name="Type" when="param0">
+          <Value name="object" property="param0Value"/>
+          <Value name="null" failure="true"/>
+          <Value name="Not object" failure="true"/>
+        </Var>
+        <VarSet name="Value" when="param0Value">
+          <VarSet name="Properties">
+            <VarSet name="alpha">
+              <Var name="Defined">
+                <Has name="propertyName" value="alpha"/>
+                <Value name="Yes" property="param0Alpha, param0Properties"/>
+                <Value name="No" failure="true"/>
+              </Var>
+              <Var name="Type" when="param0Alpha">
+                <Value name="string" property="param0AlphaValue"/>
+                <Value name="null" failure="true"/>
+                <Value name="Not string" failure="true"/>
+              </Var>
+              <VarSet name="Value" when="param0AlphaValue">
+                <Var name="Length">
+                  <Value name="&gt; 0" property="param0AlphaLengthValid, param0AlphaNotEmpty"/>
+                  <Value name="0" property="param0AlphaLengthValid"/>
+                </Var>
+              </VarSet>
+            </VarSet>
+            <Var name="Additional">
+              <Value name="Yes" failure="true"/>
+              <Value name="No"/>
+            </Var>
+          </VarSet>
+        </VarSet>
+      </VarSet>
+    </Input>
+  </Function>
+</System>

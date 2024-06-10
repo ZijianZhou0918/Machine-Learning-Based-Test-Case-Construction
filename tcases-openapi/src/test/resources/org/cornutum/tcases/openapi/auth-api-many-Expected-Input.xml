@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<System name="Authenticated">
+  <Has name="server" value="/"/>
+  <Has name="title" value="Authenticated"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="GET_resource">
+    <Has name="operation" value="GET"/>
+    <Has name="path" value="/resource"/>
+    <Input type="implicit">
+      <VarSet name="None">
+        <Var name="Defined">
+          <Value name="No"/>
+        </Var>
+      </VarSet>
+    </Input>
+  </Function>
+  <Function name="POST_resource">
+    <Has name="operation" value="POST"/>
+    <Has name="path" value="/resource"/>
+    <Input type="request">
+      <VarSet name="Body">
+        <Var name="Defined">
+          <Value name="Yes" property="bodyContent"/>
+          <Value name="No" failure="true"/>
+        </Var>
+        <Var name="Media-Type" when="bodyContent">
+          <Value name="application-json" property="bodyApplication-json">
+            <Has name="mediaType" value="application/json"/>
+          </Value>
+          <Value name="Other" failure="true">
+            <Has name="excluded" value="&apos;application/json&apos;"/>
+          </Value>
+        </Var>
+        <VarSet name="application-json" when="bodyApplication-json">
+          <Var name="Type">
+            <Value name="integer" property="bodyApplication-jsonValue"/>
+            <Value name="null" failure="true"/>
+            <Value name="Not integer" failure="true"/>
+          </Var>
+          <VarSet name="Value" when="bodyApplication-jsonValue">
+            <Var name="Is">
+              <Value name="-1" failure="true"/>
+              <Value name="0"/>
+              <Value name="&gt; 0"/>
+            </Var>
+          </VarSet>
+        </VarSet>
+      </VarSet>
+    </Input>
+    <Input type="security">
+      <VarSet name="Auth">
+        <VarSet name="opKeyQuery">
+          <Var name="Defined">
+            <Value name="Yes" property="secRecOpKeyQuery"/>
+            <Value name="No" failure="true">
+              <Has name="authFailure" value="true"/>
+            </Value>
+          </Var>
+          <Var name="Type" when="secRecOpKeyQuery">
+            <Value name="apiKey"/>
+          </Var>
+          <Var name="Location" when="secRecOpKeyQuery">
+            <Value name="query"/>
+          </Var>
+          <Var name="Name" when="secRecOpKeyQuery">
+            <Value name="opKey"/>
+          </Var>
+        </VarSet>
+      </VarSet>
+    </Input>
+  </Function>
+  <Function name="DELETE_resource">
+    <Has name="operation" value="DELETE"/>
+    <Has name="path" value="/resource"/>
+    <Input type="query">
+      <VarSet name="id">
+        <Has name="paramName" value="id"/>
+        <Var name="Defined">
+          <Has name="style" value="form"/>
+          <Value name="Yes" property="id"/>
+          <Value name="No"/>
+        </Var>
+        <Var name="Type" when="id">
+          <Value name="integer" property="idValue"/>
+          <Value name="null" failure="true"/>
+          <Value name="Not integer" failure="true"/>
+        </Var>
+        <VarSet name="Value" when="idValue">
+          <Var name="Is">
+            <Value name="-1" failure="true"/>
+            <Value name="0"/>
+            <Value name="&gt; 0"/>
+          </Var>
+        </VarSet>
+      </VarSet>
+    </Input>
+    <Input type="security">
+      <VarSet name="Auth">
+        <Var name="Satisfied">
+          <Value name="Yes">
+            <When>
+              <Equals property="secRec" count="1"/>
+            </When>
+          </Value>
+          <Value name="No" failure="true">
+            <Has name="authFailure" value="true"/>
+            <When>
+              <Equals property="secRec" count="0"/>
+            </When>
+          </Value>
+        </Var>
+        <VarSet name="0">
+          <Var name="Defined">
+            <Value name="Yes" property="secRec, secRec0"/>
+            <Value name="No"/>
+          </Var>
+          <VarSet name="apiHttpBasic" when="secRec0">
+            <Var name="Type">
+              <Value name="http"/>
+            </Var>
+            <Var name="Scheme">
+              <Value name="basic"/>
+            </Var>
+          </VarSet>
+        </VarSet>
+        <VarSet name="1">
+          <Var name="Defined">
+            <Value name="Yes" property="secRec, secRec1"/>
+            <Value name="No"/>
+          </Var>
+          <VarSet name="apiHttpBearer" when="secRec1">
+            <Var name="Defined">
+              <Value name="Yes" property="secRec1ApiHttpBearer"/>
+              <Value name="No" failure="true">
+                <Has name="authFailure" value="true"/>
+              </Value>
+            </Var>
+            <Var name="Type" when="secRec1ApiHttpBearer">
+              <Value name="http"/>
+            </Var>
+            <Var name="Scheme" when="secRec1ApiHttpBearer">
+              <Value name="bearer"/>
+            </Var>
+          </VarSet>
+          <VarSet name="apiKeyCookie" when="secRec1">
+            <Var name="Defined">
+              <Value name="Yes" property="secRec1ApiKeyCookie"/>
+              <Value name="No" failure="true">
+                <Has name="authFailure" value="true"/>
+              </Value>
+            </Var>
+            <Var name="Type" when="secRec1ApiKeyCookie">
+              <Value name="apiKey"/>
+            </Var>
+            <Var name="Location" when="secRec1ApiKeyCookie">
+              <Value name="cookie"/>
+            </Var>
+            <Var name="Name" when="secRec1ApiKeyCookie">
+              <Value name="apiKey"/>
+            </Var>
+          </VarSet>
+        </VarSet>
+      </VarSet>
+    </Input>
+  </Function>
+</System>

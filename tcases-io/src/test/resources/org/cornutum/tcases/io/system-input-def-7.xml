@@ -1,0 +1,33 @@
+<System name="System-7">
+  <Function name="Function-0">
+
+    <Input type="arg">
+      <Has name="A0" value="AV0"/>
+      <Has name="A1" value="AV1"/>
+      <Var name="arg-0-0">
+        <Value name="value-0" property="P1">
+          <When>
+            <AllOf property="R1"/>
+          </When>
+          <Property name="P3, P4, P5"/>
+          <Property name="P6,P7"/>
+        </Value>
+      </Var>
+    </Input>
+    
+    <Input type="env">
+      <Has name="A3" value="AV3"/>
+      <Has name="A4" value="AV4"/>
+      <VarSet name="env-0-0">
+        <Has name="A3" value="NV3"/>
+        <When>
+          <AnyOf property="P1"/>
+        </When>
+        <Var name="member-0">
+          <Value name="value-1" property="R1"/>
+        </Var>
+      </VarSet>
+    </Input>    
+
+  </Function>
+</System>

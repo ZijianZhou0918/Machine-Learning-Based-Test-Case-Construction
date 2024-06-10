@@ -1,0 +1,198 @@
+<?xml version="1.0"?>
+<System name="Swagger-Petstore">
+  <Has name="server" value="http://petstore.swagger.io/api"/>
+  <Has name="title" value="Swagger Petstore"/>
+  <Has name="version" value="1.0.0"/>
+  <Function name="GET_pets">
+    <Has name="operation" value="GET"/>
+    <Has name="path" value="/pets"/>
+    <Input type="query">
+      <VarSet name="tags">
+        <Has name="paramName" value="tags"/>
+        <Var name="Defined">
+          <Has name="explode" value="true"/>
+          <Has name="style" value="form"/>
+          <Value name="Yes" property="tags"/>
+          <Value name="No"/>
+        </Var>
+        <Var name="Type" when="tags">
+          <Value name="array" property="tagsValue"/>
+          <Value name="null" failure="true"/>
+          <Value name="Not array" failure="true"/>
+        </Var>
+        <VarSet name="Items" when="tagsValue">
+          <Var name="Size">
+            <Value name="0" property="tagsItemsNone"/>
+            <Value name="1"/>
+            <Value name="&gt; 1" property="tagsItemsMany"/>
+          </Var>
+          <VarSet name="Contains" whenNot="tagsItemsNone">
+            <Var name="Type">
+              <Has name="itemType" value="string"/>
+              <Value name="string" property="tagsItemsValue"/>
+              <Value name="null" failure="true"/>
+              <Value name="Not string" failure="true"/>
+            </Var>
+            <VarSet name="Value" when="tagsItemsValue">
+              <Var name="Length">
+                <Has name="itemMinLength" value="0"/>
+                <Value name="&gt; 0" property="tagsItemsLengthValid, tagsItemsNotEmpty"/>
+                <Value name="0" property="tagsItemsLengthValid"/>
+              </Var>
+            </VarSet>
+          </VarSet>
+          <Var name="Unique" when="tagsItemsMany">
+            <Value name="Yes"/>
+            <Value name="No"/>
+          </Var>
+        </VarSet>
+      </VarSet>
+      <VarSet name="limit">
+        <Has name="paramName" value="limit"/>
+        <Var name="Defined">
+          <Has name="style" value="form"/>
+          <Value name="Yes" property="limit"/>
+          <Value name="No"/>
+        </Var>
+        <Var name="Type" when="limit">
+          <Value name="integer" property="limitValue"/>
+          <Value name="null" failure="true"/>
+          <Value name="Not integer" failure="true"/>
+        </Var>
+        <VarSet name="Value" when="limitValue">
+          <Has name="format" value="int32"/>
+          <Var name="Is">
+            <Value name="&lt; 0"/>
+            <Value name="0"/>
+            <Value name="&gt; 0"/>
+          </Var>
+        </VarSet>
+      </VarSet>
+    </Input>
+  </Function>
+  <Function name="POST_pets">
+    <Has name="operation" value="POST"/>
+    <Has name="path" value="/pets"/>
+    <Input type="request">
+      <VarSet name="Body">
+        <Var name="Defined">
+          <Value name="Yes" property="bodyContent"/>
+          <Value name="No" failure="true"/>
+        </Var>
+        <Var name="Media-Type" when="bodyContent">
+          <Value name="application-json" property="bodyApplication-json">
+            <Has name="mediaType" value="application/json"/>
+          </Value>
+          <Value name="Other" failure="true">
+            <Has name="excluded" value="&apos;application/json&apos;"/>
+          </Value>
+        </Var>
+        <VarSet name="application-json" when="bodyApplication-json">
+          <Var name="Type">
+            <Value name="object" property="bodyApplication-jsonValue"/>
+            <Value name="null" failure="true"/>
+            <Value name="Not object" failure="true"/>
+          </Var>
+          <VarSet name="Value" when="bodyApplication-jsonValue">
+            <VarSet name="Properties">
+              <VarSet name="name">
+                <Var name="Defined">
+                  <Has name="propertyName" value="name"/>
+                  <Value name="Yes" property="bodyApplication-jsonName, bodyApplication-jsonProperties"/>
+                  <Value name="No" failure="true"/>
+                </Var>
+                <Var name="Type" when="bodyApplication-jsonName">
+                  <Value name="string" property="bodyApplication-jsonNameValue"/>
+                  <Value name="null" failure="true"/>
+                  <Value name="Not string" failure="true"/>
+                </Var>
+                <VarSet name="Value" when="bodyApplication-jsonNameValue">
+                  <Var name="Length">
+                    <Value name="&gt; 0" property="bodyApplication-jsonNameLengthValid, bodyApplication-jsonNameNotEmpty"/>
+                    <Value name="0" property="bodyApplication-jsonNameLengthValid"/>
+                  </Var>
+                </VarSet>
+              </VarSet>
+              <VarSet name="tag">
+                <Var name="Defined">
+                  <Has name="propertyName" value="tag"/>
+                  <Value name="Yes" property="bodyApplication-jsonProperties, bodyApplication-jsonTag"/>
+                  <Value name="No"/>
+                </Var>
+                <Var name="Type" when="bodyApplication-jsonTag">
+                  <Value name="string" property="bodyApplication-jsonTagValue"/>
+                  <Value name="null" failure="true"/>
+                  <Value name="Not string" failure="true"/>
+                </Var>
+                <VarSet name="Value" when="bodyApplication-jsonTagValue">
+                  <Var name="Length">
+                    <Value name="&gt; 0" property="bodyApplication-jsonTagLengthValid, bodyApplication-jsonTagNotEmpty"/>
+                    <Value name="0" property="bodyApplication-jsonTagLengthValid"/>
+                  </Var>
+                </VarSet>
+              </VarSet>
+              <Var name="Additional">
+                <Value name="Yes" property="bodyApplication-jsonProperties"/>
+                <Value name="No"/>
+              </Var>
+            </VarSet>
+          </VarSet>
+        </VarSet>
+      </VarSet>
+    </Input>
+  </Function>
+  <Function name="GET_pets-id">
+    <Has name="operation" value="GET"/>
+    <Has name="path" value="/pets/{id}"/>
+    <Input type="path">
+      <VarSet name="id">
+        <Has name="paramName" value="id"/>
+        <Var name="Defined">
+          <Has name="style" value="simple"/>
+          <Value name="Yes" property="id"/>
+          <Value name="No" failure="true"/>
+        </Var>
+        <Var name="Type" when="id">
+          <Value name="integer" property="idValue"/>
+          <Value name="null" failure="true"/>
+          <Value name="Not integer" failure="true"/>
+        </Var>
+        <VarSet name="Value" when="idValue">
+          <Has name="format" value="int64"/>
+          <Var name="Is">
+            <Value name="&lt; 0"/>
+            <Value name="0"/>
+            <Value name="&gt; 0"/>
+          </Var>
+        </VarSet>
+      </VarSet>
+    </Input>
+  </Function>
+  <Function name="DELETE_pets-id">
+    <Has name="operation" value="DELETE"/>
+    <Has name="path" value="/pets/{id}"/>
+    <Input type="path">
+      <VarSet name="id">
+        <Has name="paramName" value="id"/>
+        <Var name="Defined">
+          <Has name="style" value="simple"/>
+          <Value name="Yes" property="id"/>
+          <Value name="No" failure="true"/>
+        </Var>
+        <Var name="Type" when="id">
+          <Value name="integer" property="idValue"/>
+          <Value name="null" failure="true"/>
+          <Value name="Not integer" failure="true"/>
+        </Var>
+        <VarSet name="Value" when="idValue">
+          <Has name="format" value="int64"/>
+          <Var name="Is">
+            <Value name="&lt; 0"/>
+            <Value name="0"/>
+            <Value name="&gt; 0"/>
+          </Var>
+        </VarSet>
+      </VarSet>
+    </Input>
+  </Function>
+</System>

@@ -1,0 +1,87 @@
+{
+    "system": "Things",
+    "Make": {
+        "arg": {
+            "Color": {
+                "when": {
+                    "allOf": [ {"hasAll": ["small", "delicious"]},  {"not": {"hasAny": ["polygon"]}}
+                    ]
+                },
+                "members": {
+                    "Hue": {
+                        "values": {
+                            "Red": {
+                                "properties": ["red"]
+                            },
+                            "Green": {
+                                "properties": ["green"]
+                            },
+                            "Blue": {
+                                "properties": ["blue"]
+                            }
+                        }
+                    },
+                    "Lightness": {
+                        "values": {
+                            "Bright": {
+                                "when": {"hasAll": ["round", "delicious"]}
+                            },
+                            "Normal": {
+                            },
+                            "Dark": {
+                                "when": {"not": {"hasAny": ["round"]}}
+                            },
+                            "Transparent": {
+                                "failure": true,
+                                "when": {"not": {"hasAny": ["round"]}}
+                            }
+                        }
+                    },
+                    "Saturation": {
+                        "values": {
+                            "Pale": {
+                            },
+                            "Even": {
+                            },
+                            "Intense": {
+                            },
+                            "Undefined": {
+                                "failure": true
+                            }
+                        }
+                    }
+                }
+            },
+            "Size": {
+                "values": {
+                    "Ginormous": {
+                        "failure": true
+                    },
+                    "Small": {
+                        "properties": ["smallish"]
+                    },
+                    "Medium": {
+                        "when": {"allOf": [{"hasAll": ["polygon"]}]}
+                    },
+                    "Large": {
+                        "when": {"not": {"hasAny": ["polygon", "small"]}
+                        }
+                    }
+                }
+            },
+            "Shape": {
+                "values": {
+                    "Square": {
+                        "properties": ["polygon"]
+                    },
+                    "Circle": {
+                        "properties": ["round"]
+                    },
+                    "Heart": {
+                        "properties": ["red"]
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<TestCases system="Responses">
+  <Has name="server" value="/"/>
+  <Has name="title" value="Responses"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="POST_responses">
+    <Has name="server" value="/"/>
+    <Has name="title" value="Responses"/>
+    <Has name="version" value="0.0.0"/>
+    <TestCase id="0" name="Status-Code=&apos;Other&apos;">
+      <Has name="properties" value="statusOther"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="Other">
+          <Has name="excluded" value=""/>
+        </Var>
+        <Var name="Other.Content.Defined" value="No"/>
+      </Input>
+    </TestCase>
+  </Function>
+</TestCases>

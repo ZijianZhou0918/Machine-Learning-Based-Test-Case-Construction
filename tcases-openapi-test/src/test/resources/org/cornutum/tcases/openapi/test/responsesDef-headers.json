@@ -1,0 +1,369 @@
+{
+    "/responses": {
+        "delete": {
+            "200": {
+                "description": "Success",
+                "headers": {
+                    "My-Array": {
+                        "description": "array",
+                        "explode": false,
+                        "style": "simple",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "integer"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "400": {
+                "description": "Failure",
+                "headers": {
+                    "My-Simple-Integer": {
+                        "description": "integer",
+                        "style": "simple",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "integer",
+                                    "minimum": -1,
+                                    "maximum": 1
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "get": {
+            "200": {
+                "description": "Success",
+                "headers": {
+                    "Content-Type": {
+                        "description": "Ignored",
+                        "required": true
+                    },
+                    "My-String": {
+                        "description": "string",
+                        "required": false,
+                        "explode": false,
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "My-Simple-Array": {
+                        "description": "array",
+                        "required": true,
+                        "explode": true,
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "integer",
+                                        "nullable": true
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "My-Mixed-Array": {
+                        "description": "array",
+                        "explode": true,
+                        "schema": {
+                            "type": "array",
+                            "minItems": 1,
+                            "items": {
+                                "anyOf": [
+                                    {
+                                        "type": "number"
+                                    },
+                                    {
+                                        "type": "string"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "My-Number-Array": {
+                        "description": "array",
+                        "required": false,
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "number",
+                                        "multipleOf": 3
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "400": {
+                "description": "Failure",
+                "headers": {
+                    "My-Simple-String": {
+                        "description": "string",
+                        "required": "true",
+                        "style": "simple",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "patch": {
+            "200": {
+                "description": "Success",
+                "headers": {
+                    "My-Simple-Object": {
+                        "description": "object",
+                        "required": true,
+                        "explode": true,
+                        "style": "simple",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "A": {
+                                            "type": "string",
+                                            "format": "date"
+                                        },
+                                        "B": {
+                                            "type": "integer"
+                                        },
+                                        "C": {
+                                            "type": "number",
+                                            "nullable": true
+                                        }
+                                    },
+                                    "required": [ "A" ]
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "400": {
+                "description": "Failure",
+                "headers": {
+                    "My-Simple-Object": {
+                        "description": "object",
+                        "explode": false,
+                        "style": "simple",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "A": {
+                                    "type": "boolean"
+                                },
+                                "B": {
+                                    "type": "number",
+                                    "nullable": true
+                                },
+                                "C": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "post": {
+            "200": {
+                "description": "Success",
+                "headers": {
+                    "My-Json-String": {
+                        "explode": true,
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "My-Json-Integer": {
+                        "explode": false,
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "integer"
+                                }
+                            }
+                        }
+                    },
+                    "My-Json-Object": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "maxProperties": 1,
+                                    "nullable": true
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "204": {
+                "description": "Combined",
+                "headers": {
+                    "My-Numbers": {
+                        "description": "number list",
+                        "required": "true",
+                        "style": "simple",
+                        "content": {
+                            "text/plain": {
+                                "schema": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "number"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "put": {
+            "200": {
+                "description": "Success",
+                "headers": {
+                    "My-Form": {
+                        "explode": false,
+                        "content": {
+                            "application/x-www-form-urlencoded": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "O": {
+                                            "type": "object",
+                                            "properties": {
+                                                "X": "integer",
+                                                "Y": "integer"
+                                            },
+                                            "additionalProperties": false
+                                        },
+                                        "A": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "N": {
+                                            "type": "number"
+                                        },
+                                        "B": {
+                                            "type": "boolean"
+                                        },
+                                        "S": {
+                                            "type": "string",
+                                            "nullable": "true"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "My-Exploded-Form": {
+                        "explode": true,
+                        "content": {
+                            "application/x-www-form-urlencoded": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "O": {
+                                            "type": "object",
+                                            "properties": {
+                                                "X": "integer",
+                                                "Y": "integer"
+                                            },
+                                            "additionalProperties": false
+                                        },
+                                        "A": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "N": {
+                                            "type": "number"
+                                        },
+                                        "B": {
+                                            "type": "boolean"
+                                        },
+                                        "S": {
+                                            "type": "string",
+                                            "nullable": "true"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+
+    "/unvalidated": {
+        "delete": {
+            "200": {
+                "description": "Success",
+                "headers": {
+                    "X-Xml": {
+                        "description": "XML",
+                        "content": {
+                            "application/xml": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "400": {
+                "description": "Failure",
+                "headers": {
+                    "X-Undefined-Json": {
+                        "description": "JSON",
+                        "content": {
+                            "application/json": {
+                            }
+                        }
+                    }
+                }
+            },
+            "404": {
+                "description": "Not Found",
+                "headers": {
+                    "X-Unknown": {
+                        "description": "Unknown"
+                    }
+                }
+            }
+        }
+    }
+}

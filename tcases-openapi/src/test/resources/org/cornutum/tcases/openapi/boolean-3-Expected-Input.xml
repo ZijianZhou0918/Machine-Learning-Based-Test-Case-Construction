@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<System name="Boolean">
+  <Has name="server" value="/"/>
+  <Has name="title" value="Boolean"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="POST_boolean">
+    <Has name="operation" value="POST"/>
+    <Has name="path" value="/boolean"/>
+    <Input type="query">
+      <VarSet name="param0">
+        <Has name="paramName" value="param0"/>
+        <Var name="Defined">
+          <Has name="style" value="form"/>
+          <Value name="Yes" property="param0"/>
+          <Value name="No"/>
+        </Var>
+        <Var name="Type" when="param0">
+          <Value name="boolean" property="param0Value"/>
+          <Value name="null" once="true"/>
+          <Value name="Not boolean" failure="true"/>
+        </Var>
+        <Var name="Value" when="param0Value">
+          <Has name="default" value="true"/>
+          <Value name="true"/>
+          <Value name="false"/>
+        </Var>
+      </VarSet>
+    </Input>
+  </Function>
+</System>

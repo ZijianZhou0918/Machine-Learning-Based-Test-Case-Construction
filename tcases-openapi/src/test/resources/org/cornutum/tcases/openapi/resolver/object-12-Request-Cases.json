@@ -1,0 +1,258 @@
+
+[
+    {
+        "id": 0,
+        "name": "param0.Defined='Yes'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "x": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "jwcjcjlymlwyxwj": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "la": {
+                            "type": "boolean",
+                            "value": true
+                        }
+                    }
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "param0.Defined='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": null,
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "param0.Value.Properties.Additional.Value='false'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "r": {
+                            "type": "boolean",
+                            "value": false
+                        },
+                        "vehglmzhvr": {
+                            "type": "boolean",
+                            "value": false
+                        }
+                    }
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "param0.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "null",
+                    "value": null
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Type=null"
+    },
+    {
+        "id": 4,
+        "name": "param0.Type='Not object'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "string",
+                    "value": "]0nW0v+"
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Type=Not object"
+    },
+    {
+        "id": 5,
+        "name": "param0.Value.Properties.Additional.Defined='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.Additional.Defined=No"
+    },
+    {
+        "id": 6,
+        "name": "param0.Value.Properties.Additional.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "vzmgsfxsc": {
+                            "type": "null",
+                            "value": null
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.Additional.Type=null"
+    },
+    {
+        "id": 7,
+        "name": "param0.Value.Properties.Additional.Type='Not boolean'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "ncerecohwzk": {
+                            "type": "object",
+                            "value": {
+                                "ietsy": {
+                                    "type": "integer",
+                                    "value": -43,
+                                    "format": "int32"
+                                },
+                                "oqqgmof": {
+                                    "type": "number",
+                                    "value": -430.3
+                                },
+                                "tyazlj": {
+                                    "type": "boolean",
+                                    "value": true
+                                }
+                            }
+                        },
+                        "zmfncghy": {
+                            "type": "object",
+                            "value": {
+                                "txcpexsbwo": {
+                                    "type": "number",
+                                    "value": -780.7
+                                },
+                                "i": {
+                                    "type": "array",
+                                    "value": [
+                                        {
+                                            "type": "string",
+                                            "value": "Ln#`"
+                                        },
+                                        {
+                                            "type": "string",
+                                            "value": "']_6{"
+                                        },
+                                        {
+                                            "type": "string",
+                                            "value": ")_az"
+                                        }
+                                    ]
+                                },
+                                "hn": {
+                                    "type": "string",
+                                    "value": "I)3"
+                                }
+                            }
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.Additional.Type=Not boolean"
+    }
+]

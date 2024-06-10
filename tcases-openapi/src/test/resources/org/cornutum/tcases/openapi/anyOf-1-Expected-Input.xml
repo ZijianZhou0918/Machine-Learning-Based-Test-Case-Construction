@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<System name="AnyOf">
+  <Has name="server" value="/"/>
+  <Has name="title" value="AnyOf"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="POST_anyOf">
+    <Has name="operation" value="POST"/>
+    <Has name="path" value="/anyOf"/>
+    <Input type="request">
+      <VarSet name="Body">
+        <Var name="Defined">
+          <Value name="Yes" property="bodyContent"/>
+          <Value name="No" failure="true"/>
+        </Var>
+        <Var name="Media-Type" when="bodyContent">
+          <Value name="application-json" property="bodyApplication-json">
+            <Has name="mediaType" value="application/json"/>
+          </Value>
+          <Value name="Other" failure="true">
+            <Has name="excluded" value="&apos;application/json&apos;"/>
+          </Value>
+        </Var>
+        <VarSet name="application-json" when="bodyApplication-json">
+          <VarSet name="Alternative">
+            <Var name="Used">
+              <Value name="0" property="bodyApplication-jsonAlternative0"/>
+              <Value name="1" property="bodyApplication-jsonAlternative1"/>
+              <Value name="2" property="bodyApplication-jsonAlternative2"/>
+            </Var>
+            <VarSet name="0" when="bodyApplication-jsonAlternative0">
+              <Var name="Type">
+                <Value name="number" property="bodyApplication-jsonValue"/>
+                <Value name="null" failure="true"/>
+                <Value name="Not number" failure="true"/>
+              </Var>
+              <VarSet name="Value" when="bodyApplication-jsonValue">
+                <Var name="Is">
+                  <Value name="100.0" failure="true"/>
+                  <Value name="102.0"/>
+                  <Value name="&gt; 102.0" property="bodyApplication-jsonUnbounded"/>
+                </Var>
+                <VarSet name="Multiple-Of" when="bodyApplication-jsonUnbounded">
+                  <Var name="2d0">
+                    <Value name="Yes">
+                      <Has name="multipleOf" value="2.0"/>
+                    </Value>
+                    <Value name="No" failure="true">
+                      <Has name="multipleOf" value="2.0"/>
+                    </Value>
+                  </Var>
+                </VarSet>
+              </VarSet>
+            </VarSet>
+            <VarSet name="1" when="bodyApplication-jsonAlternative1">
+              <Var name="Type">
+                <Value name="number" property="bodyApplication-jsonValue"/>
+              </Var>
+              <VarSet name="Value" when="bodyApplication-jsonValue">
+                <Var name="Is">
+                  <Value name="-4.0" failure="true"/>
+                  <Value name="-2.0"/>
+                  <Value name="0.0" failure="true"/>
+                </Var>
+              </VarSet>
+            </VarSet>
+            <VarSet name="2" when="bodyApplication-jsonAlternative2">
+              <Var name="Type">
+                <Value name="number" property="bodyApplication-jsonValue"/>
+              </Var>
+              <VarSet name="Value" when="bodyApplication-jsonValue">
+                <Var name="Is">
+                  <Value name="-2.0"/>
+                  <Value name="&lt; -2.0" property="bodyApplication-jsonUnbounded"/>
+                </Var>
+                <VarSet name="Multiple-Of" when="bodyApplication-jsonUnbounded">
+                  <Var name="2d0">
+                    <Value name="Yes">
+                      <Has name="multipleOf" value="2.0"/>
+                    </Value>
+                  </Var>
+                </VarSet>
+              </VarSet>
+            </VarSet>
+          </VarSet>
+        </VarSet>
+      </VarSet>
+    </Input>
+  </Function>
+</System>

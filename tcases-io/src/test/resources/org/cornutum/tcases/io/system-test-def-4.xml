@@ -1,0 +1,51 @@
+<TestCases system="System-4">
+  <Function name="Function-0">
+    <TestCase id="0">
+      <Has name="AT00" value="VT00"/>
+      <Input>
+        <Var name="Var-00" value="Value-00">
+          <Has name="AV00" value="VV00"/>
+        </Var>
+        <Var name="Var-01" value="Value-01" failure="no"/>
+        <Var name="Var-02" value="Value-02"/>
+      </Input>      
+    </TestCase>
+    <TestCase id="1">
+      <Input>
+        <Var name="Var-10" value="Value-10" failure="false">
+          <Has name="AV10" value="VV10"/>
+          <Has name="AV11" value="VV11"/>
+          <Has name="AV12" value="VV12"/>
+        </Var>
+        <Var name="Var-11" value="Value-11"/>
+        <Var name="Var-12" value="Value-12"/>
+      </Input>      
+    </TestCase>
+  </Function>
+
+  <Has name="AS00" value="VS00"/>
+
+  <Function name="Function-1">
+    <TestCase id="2">
+      <Input>
+        <Var name="Var-00" value="Value-00" failure="no"/>
+        <Var name="Var-01" value="Value-01">
+          <Has name="AV20" value="VV20"/>
+        </Var>
+        <Var name="Var-02" value="Value-02"/>
+      </Input>      
+    </TestCase>
+    <TestCase id="3">
+      <Has name="AT30" value="VT30"/>
+      <Has name="AT31" value="VT31"/>
+      <Has name="AT32" value="VT32"/>
+      <Input>
+        <Var name="Var-10" value="Value-10"/>
+        <Var name="Var-11" value="Value-11"/>
+        <Var name="Var-12" value="Value-12" failure="false"/>
+      </Input>      
+    </TestCase>
+    <Has name="AF01" value="VF01"/>
+  </Function>
+
+</TestCases>

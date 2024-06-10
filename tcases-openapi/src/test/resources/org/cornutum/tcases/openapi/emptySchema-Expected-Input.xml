@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<System name="Empty">
+  <Has name="server" value="/"/>
+  <Has name="title" value="Empty"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="POST_empty">
+    <Has name="operation" value="POST"/>
+    <Has name="path" value="/empty"/>
+    <Input type="query">
+      <VarSet name="param0">
+        <Has name="paramName" value="param0"/>
+        <Var name="Defined">
+          <Has name="explode" value="true"/>
+          <Has name="style" value="form"/>
+          <Value name="Yes" property="param0"/>
+          <Value name="No"/>
+        </Var>
+        <Var name="Type" when="param0">
+          <Value name="Not null" property="param0Value"/>
+          <Value name="null" once="true"/>
+        </Var>
+      </VarSet>
+      <VarSet name="param1">
+        <Has name="paramName" value="param1"/>
+        <Var name="Defined">
+          <Has name="style" value="form"/>
+          <Value name="Yes" property="param1"/>
+          <Value name="No"/>
+        </Var>
+        <VarSet name="Alternative">
+          <Var name="Used">
+            <Value name="0" property="param1Alternative0"/>
+            <Value name="1" property="param1Alternative1"/>
+            <Value name="2" property="param1Alternative2"/>
+          </Var>
+          <VarSet name="0" when="param1Alternative0">
+            <Var name="Type" when="param1">
+              <Value name="number" property="param1Value"/>
+              <Value name="null" failure="true"/>
+            </Var>
+            <VarSet name="Value" when="param1Value">
+              <Var name="Is">
+                <Value name="&lt; 0">
+                  <Has name="excluded" value="&apos;1&apos;,&apos;2&apos;,&apos;3&apos;"/>
+                </Value>
+                <Value name="0"/>
+                <Value name="1" failure="true"/>
+                <Value name="2" failure="true"/>
+                <Value name="3" failure="true"/>
+                <Value name="&gt; 0">
+                  <Has name="excluded" value="&apos;1&apos;,&apos;2&apos;,&apos;3&apos;"/>
+                </Value>
+              </Var>
+            </VarSet>
+          </VarSet>
+          <VarSet name="1" when="param1Alternative1">
+            <Var name="Type" when="param1">
+              <Value name="boolean" property="param1Value"/>
+            </Var>
+            <Var name="Value" when="param1Value">
+              <Value name="true"/>
+              <Value name="false" failure="true"/>
+            </Var>
+          </VarSet>
+          <VarSet name="2" when="param1Alternative2">
+            <Var name="Type" when="param1">
+              <Value name="Not boolean,number" property="param1Value"/>
+            </Var>
+          </VarSet>
+        </VarSet>
+      </VarSet>
+    </Input>
+  </Function>
+</System>

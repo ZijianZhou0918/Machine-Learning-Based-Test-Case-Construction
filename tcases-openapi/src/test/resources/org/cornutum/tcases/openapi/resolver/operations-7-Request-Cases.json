@@ -1,0 +1,125 @@
+
+[
+    {
+        "id": 0,
+        "name": "Body.Defined='Yes'",
+        "server": "http://www.cornutum.org/tcases/api",
+        "version": "0.0.0",
+        "api": "Operations",
+        "path": "/operations",
+        "operation": "POST",
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "object",
+                "value": {
+                    "x": {
+                        "type": "array",
+                        "value": [
+                            {
+                                "type": "string",
+                                "value": "hhlf~$]"
+                            }
+                        ]
+                    },
+                    "wyxwjwlawartveh": {
+                        "type": "integer",
+                        "value": 105,
+                        "format": "int32"
+                    },
+                    "zh": {
+                        "type": "number",
+                        "value": 694.6
+                    }
+                }
+            },
+            "valid": true
+        }
+    },
+    {
+        "id": 1,
+        "name": "Body.Defined='No'",
+        "server": "http://www.cornutum.org/tcases/api",
+        "version": "0.0.0",
+        "api": "Operations",
+        "path": "/operations",
+        "operation": "POST",
+        "body": {
+            "data": null,
+            "valid": true
+        }
+    },
+    {
+        "id": 2,
+        "name": "Body.application-json.Value.Properties.Additional='No'",
+        "server": "http://www.cornutum.org/tcases/api",
+        "version": "0.0.0",
+        "api": "Operations",
+        "path": "/operations",
+        "operation": "POST",
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "object",
+                "value": {
+                }
+            },
+            "valid": true
+        }
+    },
+    {
+        "id": 3,
+        "name": "Body.Media-Type='Other'",
+        "server": "http://www.cornutum.org/tcases/api",
+        "version": "0.0.0",
+        "api": "Operations",
+        "path": "/operations",
+        "operation": "POST",
+        "body": {
+            "mediaType": "text/plain",
+            "data": {
+                "type": "object",
+                "value": {
+                }
+            },
+            "valid": false
+        },
+        "invalidInput": "Body.Media-Type=Other"
+    },
+    {
+        "id": 4,
+        "name": "Body.application-json.Type=null",
+        "server": "http://www.cornutum.org/tcases/api",
+        "version": "0.0.0",
+        "api": "Operations",
+        "path": "/operations",
+        "operation": "POST",
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "null",
+                "value": null
+            },
+            "valid": false
+        },
+        "invalidInput": "Body.application-json.Type=null"
+    },
+    {
+        "id": 5,
+        "name": "Body.application-json.Type='Not object'",
+        "server": "http://www.cornutum.org/tcases/api",
+        "version": "0.0.0",
+        "api": "Operations",
+        "path": "/operations",
+        "operation": "POST",
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "boolean",
+                "value": true
+            },
+            "valid": false
+        },
+        "invalidInput": "Body.application-json.Type=Not object"
+    }
+]

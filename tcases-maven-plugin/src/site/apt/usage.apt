@@ -1,0 +1,631 @@
+ ------
+ Usage
+ ------
+
+Usage
+
+  You can use the Tcases Plugin to:
+
+  * {{{Running_Tcases}Generate test cases}} based on a {{{https://github.com/Cornutum/tcases/blob/master/Tcases-Guide.md#defining-system-functions} system input definition}} document
+
+  * {{{Reducing_Test_Cases}Reduce the number of test cases}} needed for specified level of coverage
+
+  * {{{Running_Tcases_For_OpenAPI}Generate API test cases}} based on an OpenAPI v3 definition
+  
+* {Running Tcases}
+
+  The {{{./tcases-mojo.html}tcases:tcases}} goal runs Tcases on the
+  {{{https://github.com/Cornutum/tcases/blob/master/Tcases-Guide.md#defining-system-functions} system input definition}} for
+  all of the Tcases {{{https://github.com/Cornutum/tcases/blob/master/Tcases-Guide.md#managing-a-tcases-project}projects}}
+  found in the <<inputDir>> specified by the plugin configuration. By default, the <<inputDir>> is
+  assumed to be <<$\{basedir\}/src/test/tcases>>.
+
+  Each project defines the input space model and coverage model for a specific system-under-test.
+  The {{{./tcases-mojo.html}tcases:tcases}} goal refers to all of the input files for a project named
+  <<$\{projectName\}>> using the following default conventions. The file <<$\{type\}>> extension can be
+  either "xml" or "json".
+
+  * <<$\{projectName\}-Input.$\{type\}>>: the {{{https://github.com/Cornutum/tcases/blob/master/Tcases-Guide.md#defining-system-functions} system input definition}} file
+
+  * <<$\{projectName\}-Generators.$\{type\}>>: the {{{https://github.com/Cornutum/tcases/blob/master/Tcases-Guide.md#defining-higher-coverage} generator definition}} file (optional)
+  
+  * <<$\{projectName\}-Test.$\{type\}>>: the {{{Extending_Previous_Test_Cases_Or_Not} base test case definition}} file (optional)
+
+  []
+
+  But you can customize these defaults using goal configuration parameters, either in your POM or
+  in the Maven command line.
+
+  When {{{./tcases-mojo.html}tcases:tcases}} runs, it executes each project by reading its input
+  files and generating test cases for the system-under-test in the <<outDir>> specified by the plugin configuration. By default,
+  the <<outDir>> is assumed to be <<$\{project.build.directory\}/tcases>>. By default, the name of the generated test definition file is either
+  <<$\{projectName\}-Test.xml>> or <<$\{projectName\}-Test.json>>, depending on the
+  {{{./tcases-mojo.html#contentType}content type configuration}}.
+  
+
+* {Using JSON}
+
+  Tcases can read and write documents using either XML or JSON data formats. Because XML is the original default format used by
+  Tcases, all of the examples in this guide assume you are using XML. But everything described here can also be done using JSON
+  files instead. To learn how, see {{{https://github.com/Cornutum/tcases/blob/master/Tcases-Guide.md}Tcases: The Complete Guide}}.
+
+
+* {Generating Test Cases}
+
+  Let's assume you are using the default Tcases configuration. Suppose you have a Tcases project
+  defined by a system input definition file named
+  <<<$\{basedir\}/src/test/tcases/org/cornutum/tcases/find-Input.xml>>> that looks like
+  {{{http://www.cornutum.org/tcases/docs/examples/xml/find-Input.xml}this}}.
+
+  What happens when you run the following command?
+
++--------
+mvn tcases:tcases
++--------
+
+  Tcases then generates a test definition file named
+  <<<$\{basedir\}/target/tcases/org/cornutum/tcases/find-Test.xml>>> that looks like this: for the
+  "find" function, a list of test case definitions, each of which defines values for all of the
+  function's input variables.
+
++--------
+<?xml version="1.0"?> 
+<TestCases system="Examples"> 
+  <Function name="find"> 
+    <TestCase id="0"> 
+      <Input type="arg"> 
+        <Var name="pattern.size" value="empty"/> 
+        <Var name="pattern.quoted" value="yes"/> 
+        <Var name="pattern.blanks" value="NA"/> 
+        <Var name="pattern.embeddedQuotes" value="NA"/> 
+        <Var name="fileName" value="defined"/> 
+      </Input> 
+      <Input type="env"> 
+        <Var name="file.exists" value="yes"/> 
+        <Var name="file.contents.linesLongerThanPattern" value="one"/> 
+        <Var name="file.contents.patterns" value="NA"/> 
+        <Var name="file.contents.patternsInLine" value="NA"/> 
+      </Input> 
+    </TestCase> 
+    ... 
+  </Function> 
+</TestCases> 
++--------
+
+
+* {Generating An HTML Report}
+
+  The basic form for test case definitions is pretty simple. But let's face it -- reading this document is not always a lot of fun.
+  It's not necessarily what you'd want to hand someone for guidance during manual testing.
+  So how about looking at the same information in a nice Web page on your browser?
+
+  Suppose you have a Tcases project defined by a system input definition file named
+  <<<$\{basedir\}/src/test/tcases/org/cornutum/tcases/find-Input.xml>>> that looks like
+  {{{http://www.cornutum.org/tcases/docs/examples/xml/find-Input.xml}this}}.
+
+  What happens when you run the following command?
+
++--------
+mvn tcases:tcases -Dhtml=true
++--------
+
+  Tcases then writes test definitions in the form of an HTML file named
+  <<<$\{basedir\}/target/tcases/org/cornutum/tcases/find-Test.htm>>> that looks like
+  {{{https://github.com/Cornutum/tcases/blob/master/Tcases-Guide.md#creating-an-html-report}this}}.
+
+
+* {Generating JUnit/TestNG Tests}
+
+  Suppose you have a Tcases project defined by a system input definition file named
+  <<<$\{basedir\}/src/test/tcases/org/cornutum/tcases/find-Input.xml>>> that looks like
+  {{{http://www.cornutum.org/tcases/docs/examples/xml/find-Input.xml}this}}.
+
+  What happens when you run the following command?
+
++--------
+mvn tcases:tcases -Djunit=true
++--------
+
+  Tcases then generates a test definition file named
+  <<<$\{basedir\}/target/tcases/org/cornutum/tcases/findTest.java>>> that looks like this: a template for
+  a JUnit or TestNG test class.
+
++--------
+/** 
+  * Tests {@link Examples#find find()} using the following inputs.
+  * <P>
+  * <TABLE border="1" cellpadding="8">
+  * <TR align="left"><TH colspan=2> 0. find (Success) </TH></TR>
+  * <TR align="left"><TH> Input Choice </TH> <TH> Value </TH></TR>
+  * <TR><TD> pattern.size </TD> <TD> empty </TD> </TR>
+  * <TR><TD> pattern.quoted </TD> <TD> yes </TD> </TR>
+  * <TR><TD> pattern.blanks </TD> <TD> NA </TD> </TR>
+  * <TR><TD> pattern.embeddedQuotes </TD> <TD> NA </TD> </TR>
+  * <TR><TD> fileName </TD> <TD> defined </TD> </TR>
+  * <TR><TD> file.exists </TD> <TD> yes </TD> </TR>
+  * <TR><TD> file.contents.linesLongerThanPattern </TD> <TD> one </TD> </TR>
+  * <TR><TD> file.contents.patterns </TD> <TD> NA </TD> </TR>
+  * <TR><TD> file.contents.patternsInLine </TD> <TD> NA </TD> </TR>
+  * </TABLE>
+  * </P>
+  */
+  @Test
+  public void find_0()
+    {
+    // Given...
+
+    // When...
+
+    // Then...
+    } 
+  ...
++--------
+
+    Notice that each test case definition has been transformed into a <<<@Test>>> method. The name
+    of the method is based on the <<<Function>>> name in the system input definition. And the
+    Javadoc comments describe the input values for this test case. The body of the method is empty,
+    waiting for the implementation to be filled in by you.
+
+* {Selecting Projects To Execute}
+
+  You can control which Tcases projects are executed using the <<inputDef>> configuration parameter. By default,
+  the <<inputDef>> is "\*\*/\*-Input.xml", which will execute any system input definition within the <<inputDir>> that
+  matches this pattern.
+
+  To execute system input definitions that match multiple patterns, use the <<inputDefs>> list:
+
++--------
+<plugins>
+  <plugin>
+    <groupId>org.cornutum.tcases</groupId>
+    <artifactId>tcases-maven-plugin</artifactId>
+    ...
+    <configuration>
+      <inputDefs>
+        <inputDef>**/*-This.xml</inputDef>
+        <inputDef>**/*-That.xml</inputDef>
+        <inputDef>**/*-The-Other.xml</inputDef>
+      </inputDefs>
+      ...
+    </configuration>
+  </plugin>
+  ...
+</plugins>
++--------
+
+  You can execute exactly one system input definition using the <<inputDef>> parameter like this:
+
++--------
+mvn tcases:tcases -DinputDef="**/My-Project-Input.xml"
++--------
+
+  You can do the same thing even more simply using the <<project>> parameter, which matches the input definition for the
+  given {{{https://github.com/Cornutum/tcases/blob/master/Tcases-Guide.md#managing-a-tcases-project}project}} anywhere in the <<inputDir>>. For example:
+
++--------
+mvn tcases:tcases -Dproject=My-Project
++--------
+  
+* {Modeling The Input Space}
+
+  Tcases creates test definitions based on a <system input definition> that you create. But how do you do that? 
+  Learn the answer {{{https://github.com/Cornutum/tcases/blob/master/Tcases-Guide.md#modeling-the-input-space}here}}.
+
+  Often, some of the "dimensions of variation" in the input space are not entirely independent of
+  each other. Instead, there are relationships among these variables that constrain which
+  combinations of values are feasible. You need a way to define those relationships so that
+  infeasible combinations can be excluded from your test cases. And that's where
+  {{{https://github.com/Cornutum/tcases/blob/master/Tcases-Guide.md#defining-constraints-properties-and-conditions} properties and conditions}}
+  come into play.
+
+* {Defining Input Coverage}
+
+  Tcases generates test case definitions by creating combinations of values for all input
+  variables. But how does it come up with these combinations? And why these particular combinations
+  and not others? And just how good are these test cases? Can you rely on them to test your system
+  thoroughly?
+
+  Good questions. And here's the basic answer: Tcases generates the minimum number of test cases
+  needed to meet the coverage requirements that you specify. But to understand what that means, you
+  need to understand {{{https://github.com/Cornutum/tcases/blob/master/Tcases-Guide.md#defining-input-coverage}how Tcases
+  measures coverage}}.
+
+  When you look carefully at the functions of your system-under-test, you may well find that some
+  of them call for more intense testing than others. That's what a generator definition allows you
+  to do. In fact, when you look carefully at a single function, you may be more concerned about the
+  interactions between certain specific variables. You may even want to test every possible
+  permutation for a small subset of key variables. Is it possible to get high coverage in a few
+  areas and basic coverage everywhere else? Why, yes, you can. It's all explained
+  {{{https://github.com/Cornutum/tcases/blob/master/Tcases-Guide.md#defining-multiple-levels-of-coverage}here}}.
+
+* {Extending Previous Test Cases (Or Not)}
+
+  You know the feeling. You've spent days figuring out a minimal set of test cases that covers all
+  test requirements. Then the developer walks up with the great news: they've decided to add a new
+  feature with some new parameters. And they've changed their minds about some things. You know
+  that required parameter? Well, it's optional now, so leaving it blank is no longer an error.
+  Sheesh! Looks like it's back to the ol' test drawing board.
+
+  Or is it? You're not changing everything. Why can't you just tweak the test cases you already
+  have? Funny you should ask. Because that's exactly what Tcases does by default. 
+
+  Here's how it works. Tcases input files will normally be located within the <<<src>>> directory of your project,
+  while generated test case definition files will be output to the <<<target>>> directory. But if you have
+  a <base test definition file> for the project in the same directory as the project system input definition file,
+  Tcases will reuse as much of the base test cases as possible, extending or modifying them only as needed. 
+
+  The base test definition file for the project is specified by the <<testDef>> configuration
+  parameter. By default, this is <<*-Test.xml>>, where the <<*>> wildcard stands for the <<$\{projectName\}>> for
+  the project. For example, if the project input definition file is <<<find-Input.xml>>>, then the default
+  base test definition file is <<<find-Test.xml>>>.
+
+  If a base definition file matching the <<testDef>> pattern exists in the project directory,
+  Tcases will use it by default. But you might prefer to ignore previous test cases and just create
+  new ones from scratch. That's especially true in the early stages of your project while you're
+  still working out the details of the system input definition. If so, you can use the <<newTests>> parameter to
+  always create new tests cases, ignoring any previous ones. For example:
+
++--------
+mvn tcases:tcases -DnewTests=true
++--------
+
+* {Reducing Test Cases}
+
+  A {{{Random_Combinations} random walk through the combinations}} may lead Tcases to a smaller set
+  of test cases. So you could try repeatedly altering your generator definition with a bunch of
+  different seed values, searching for one that minimizes the size of the generated test definition
+  file. Sounds tedious, huh? So, don't do that -- use the {{{./reduce-mojo.html} tcases:reduce}}
+  goal instead.
+
+  For example, let's assume you are using the default Tcases configuration, and you have a Tcases
+  project defined by a system input definition file named
+  <<<$\{basedir\}/src/test/tcases/org/cornutum/tcases/find-Input.xml>>>. What happens when you run the following command?
+
++--------
+mvn tcases:reduce -DinputDef="**/find-Input.xml"
++--------
+
+  Now there is a new <<<find-Generators.xml>>> file that looks something like this: a
+  generator definition that uses a random seed for all functions.
+
++--------
+<Generators>
+  <TupleGenerator function="*" seed="1909310132352748544" tuples="1">
+  </TupleGenerator>
+</Generators>
++--------
+
+  But why this seed value? Because, after trying several different values, this one produced the
+  fewest test cases.
+
+  The {{{./reduce-mojo.html} tcases:reduce}} goal runs the
+  {{{https://github.com/Cornutum/tcases/blob/master/Tcases-Guide.md#reducing-test-cases-a-random-walk} Tcases Reducer}}, and here's how
+  it works.  The reducing process operates as a sequence of "rounds". Each round consists of a
+  series of test case generations executions called "samples". Each sample uses a new random seed
+  to generate test cases for a specified function (or, by default, all functions) in an attempt to
+  find a seed that produces the fewest test cases. If all samples in a round complete without
+  reducing the current minimum test case count, the reducing process terminates. Otherwise, as soon
+  as a new minimum is reached, a new round begins. The number of samples in each subsequent round
+  is determined using a "resample factor". At the end of the reducing process, the generator
+  definition file for each specified system input definition is updated with the random seed value
+  that produces the minimum test case count.
+
+* {Simple Generator Definitions}
+
+   The Tcases Plugin provides configuration parameters to make it easier to create and update a
+   simple {{{https://github.com/Cornutum/tcases/blob/master/Tcases-Guide.md#defining-higher-coverage} generator
+   definition}} document.
+
+** {Defining A Random Seed}
+
+   To define a {{{Random_Combinations}random combination seed}}, use the <<seed>> parameter. For
+   example, the following command generates test cases with a default TupleGenerator that uses the
+   specified seed value.
+
++--------
+mvn tcases:tcases -Dseed=299293214
++--------
+
+  If you already have a generator definition file for a project, this parameter will update the
+  file by adding or changing the default seed value, as shown below. If no <<genDef>> file exists,
+  it will create one.
+
++--------
+<Generators> 
+  <TupleGenerator seed="299293214"/> 
+</Generators> 
++--------
+
+  If you'd like to randomize combinations but you're not particular about the seed value, set the
+  <<newSeed>> parameter to true, and Tcases will choose a random seed value for you. This
+  option can be handy when you want to see if a different seed value might produce more interesting
+  test case combinations.
+
+** Defining The Default Coverage Level
+
+  To define the default coverage level for all functions, use the <<defaultTupleSize>>
+  parameter. For example, the following command generates test cases with a default TupleGenerator
+  that uses the specified coverage level.
+
+
++--------
+mvn tcases:tcases -DdefaultTupleSize=2
++--------
+
+  If you already have a generator definition file for a project, this parameter will update the
+  file by adding or changing the default tuple size value, as shown below. If no <<genDef>> file exists,
+  it will create one.
+
++--------
+<Generators> 
+  <TupleGenerator tuples="2"/> 
+</Generators> 
++--------
+
+
+* {More Tips}
+
+** Mix It Up: {Random Combinations}
+
+  By default, Tcases creates combinations of input variables by marching through the system input
+  definition top-to-bottom, picking things up in the order in which it finds them. You might try to
+  exploit that natural order, although satisfying constraints can take things off a predictable
+  sequence. That's why you really shouldn't care too much about which combinations Tcases comes up
+  with. Even better? Ask Tcases to randomize its combination procedure.
+
+  You can define random combinations in your
+  {{{https://github.com/Cornutum/tcases/blob/master/Tcases-Guide.md#defining-higher-coverage} generator definition}} by
+  using the seed attribute \-\-\- see the example below. This integer value acts as the seed for a
+  random number generator that controls the combination process. Alternatively, you can (re)define
+  the seed value using {{{Defining_A_Random_Seed} a configuration parameter}}. By specifying the
+  seed explicitly, you ensure that exactly the same random combinations will be used every time you
+  run Tcases with this generator definition.
+
++--------
+<Generators> 
+  <TupleGenerator function="find" seed="200712190644"> 
+    ... 
+  </TupleGenerator> 
+</Generators> 
++--------
+
+  The results of random combination can be very interesting. First, you can end up with test cases
+  that you might not have considered, even though they are perfectly valid and produce the same
+  coverage. Sometimes that's just enough to expose a defect that might otherwise have been
+  overlooked, simply because no one thought to try that case. This is an application of the
+  principle of "gratuitous variety" to improve your tests. This also produces another benefit \-\-\-
+  sometimes an unusual combination can demonstrate a flaw in your test design. If a combination
+  just doesn't make sense, then it's likely that a constraint is missing or incorrect.
+
+  Finally, random combinations can occasionally reduce the number of test cases needed to meet your
+  coverage requirements. That's because some combinations may "consume" variable tuples more
+  efficiently than other equally-valid combinations. Tcases does not attempt to spend the enormous
+  effort needed to guarantee an optimally minimal set of test cases. It simply starts at the
+  beginning and does its best to get quickly to the end. But a random walk through the combinations
+  may lead Tcases to a more efficient path. If you're concerned about the size of your test suite,
+  try using the {{{Reducing_Test_Cases} tcases:reduce}} goal.
+
+** Avoiding Unneeded Combinations
+
+  Even when Tcases is generating test cases for the default 1-tuple coverage, it's typical to see
+  some input values used many times. This is most likely for those <<Var>> elements that contain only a
+  few <<Value>> definitions. Even after these values have been used, Tcases will continue to reuse them
+  to fill out the remaining test cases needed to complete the test suite. In some situations, this
+  can be a bit of a pain. Sometimes there is a <<Value>> that you need to test at least once, but for
+  various reasons, including it multiple times adds complexity without really increasing the
+  likelihood of finding new failures. In this case, you can use the <<once>> attribute as a hint to
+  avoiding reusing a value more than once.
+
+  For example, consider the {{{https://github.com/Cornutum/tcases/blob/master/Tcases-Guide.md#an-example-the-find-command}find
+  command example}}. The <<find>> command requires that the pattern must not exceed the maximum length
+  of a line in the file. Even one line longer than the pattern would be enough to avoid this error
+  condition. In fact, the principles of boundary value testing suggest that it's a good idea to
+  have a test case that has exactly one line longer. Therefore:
+
++--------
+<VarSet name="file" when="fileName"> 
+  ... 
+  <VarSet name="contents" when="fileExists"> 
+    <Var name="linesLongerThanPattern"> 
+      <Value name="one" property="matchable"/> 
+      ...
+    </Var> 
+    ... 
+  </VarSet> 
+</VarSet> 
++--------
+
+  But this is a corner case that doesn't bear repeating. It's a chore to create a test file that
+  meets this special condition, and it's complicated to stretch such a file to meet additional
+  conditions. Moreover, it's unlikely that this special condition will have higher-order
+  interactions with other variable combinations. So let's add <<once="true">> to request Tcases to
+  include this value in only one test case.
+
++--------
+<VarSet name="file" when="fileName"> 
+  ... 
+  <VarSet name="contents" when="fileExists"> 
+    <Var name="linesLongerThanPattern"> 
+      <Value name="one" property="matchable" once="true"/> 
+      ...
+    </Var> 
+    ... 
+  </VarSet> 
+</VarSet> 
++--------
+  
+  Nice! But keep in mind that this hint may not always be respected. Even when <<once="true">>, a <<Value>>
+  may be used more than once if it is needed to satisfy a constraint in remaining test cases.
+
+  Although the <<once>> shortcut applies only to a default 1-tuple for a single variable, there is also a more
+  general way to define once-only exceptions to higher-order combinations, by adding
+  {{{https://github.com/Cornutum/tcases/blob/master/Tcases-Guide.md#avoiding-unneeded-combinations} <<Once>>}} elements to your generator
+  definition.
+
+
+** {Transforming Test Cases}
+
+  The test case definitions that Tcases produces are not directly executable. Their purpose is to
+  specify and guide the construction of actual tests. But because test case definitions appear in a
+  well-defined XML document, it's not hard to transform them into a more concrete form, using XSLT
+  stylesheets and {{{https://github.com/Cornutum/tcases/blob/master/Tcases-Guide.md#using-output-annotations} output annotations}}. 
+
+  For example, the following configuration sends Tcases output to a file named
+  <<$\{projectName\}-Output.doc>>. But first it transforms the standard test case definition
+  output document using the XSLT stylesheet in the myStylesheet.xsl file.
+
++--------
+<plugins>
+  <plugin>
+    <groupId>org.cornutum.tcases</groupId>
+    <artifactId>tcases-maven-plugin</artifactId>
+    ...
+    <configuration>
+      <outFile>*-Output.doc</outFile>
+      <transformDef>${basedir}/src/test/tcases/myStylesheet.xsl</transformDef>
+    </configuration>
+  </plugin>
+  ...
+</plugins>
++--------
+
+  If your XSLT stylesheet uses parameters, you can assign them values using the <<transformParams>>
+  configuration. For example:
+
++--------
+<plugins>
+  <plugin>
+    <groupId>org.cornutum.tcases</groupId>
+    <artifactId>tcases-maven-plugin</artifactId>
+    ...
+    <configuration>
+      <outFile>*-Output.doc</outFile>
+      <transformDef>${basedir}/src/test/tcases/myStylesheet.xsl</transformDef>
+      <transformParams>
+        <param1>value1</param1>
+        <param2>value2</param2>
+        ...
+      </transformParams>
+    </configuration>
+  </plugin>
+  ...
+</plugins>
++--------
+
+  You can even transform test case definitions into executable source code! But to do so, you may need more information
+  about the functions, variables, and values in your input model.  Try extending your input model with
+  {{{https://github.com/Cornutum/tcases/blob/master/Tcases-Guide.md#using-output-annotations} output annotations}} that are propagated to your
+  XSLT transform.
+
+* {Running Tcases For OpenAPI}
+
+  {{{https://github.com/Cornutum/tcases/blob/master/tcases-openapi/README.md#tcases-for-openapi-from-rest-ful-to-test-ful}Tcases for OpenAPI}}
+  generates test cases for your API directly from an OpenAPI v3 definition. To
+  run it, use the {{{./api-mojo.html}tcases:api}} goal.
+
+  You can even translate an OpenAPI v3 definition directly into an {{{Generating_Executable_API_Tests} executable test program}},
+  using the {{{./api-test-mojo.html}tcases:api-test}} goal.
+
+** {Generating API Test Cases}
+
+  Let's assume you are using the default configuration for <<<tcases:api>>>. Suppose you have an OpenAPI definition
+  named <<<$\{basedir\}/src/test/tcases/openapi/org/myapp/My-API.yaml>>> 
+
+  What happens when you run the following command?
+
++--------
+mvn tcases:api
++--------
+
+  API test cases happen! You'll find them in the <<<$\{basedir\}/target/tcases/openapi/org/myapp>>>
+  directory, in two new files named <<<My-API-Requests-Test.json>>> and
+  <<<My-API-Responses-Test.json>>>. These JSON files describe the inputs needed for tests that fully
+  cover both the requests and the responses defined by <<<My-API.yaml>>>. Each file is an example of
+  a Tcases "test definition document" -- for details, see
+  {{{https://github.com/Cornutum/tcases/blob/master/Tcases-Guide.md#understanding-tcases-results}Tcases: The Complete Guide}}.
+
+  These tests "fully cover" the API? And exactly sort of "coverage" is this? Good questions. For answers, see
+  {{{https://github.com/Cornutum/tcases/blob/master/tcases-openapi/README.md#why-tcases-for-openapi}Why Tcases for OpenAPI?}}.
+
+  Why separate test cases for requests and responses? Because there are
+  {{{https://github.com/Cornutum/tcases/blob/master/tcases-openapi/README.md#is-your-openapi-spec-an-input-model-no-its-two}two sides to the input space}}
+  for your API.
+
+  This simple command will actually run Tcases for OpenAPI on all OpenAPI definitions (i.e. any <<<*.json>>> or <<<*.yaml>>> file) in the default
+  <<<inputDir>>>. You can use the <<<apiDefs>>>, <<<apiDef>>>, or <<<project>>> parameters to process only specific API definitions. For example
+  the following command will run Tcases for OpenAPI only on the spec(s) named <<<My-API.json>>> or <<<My-API.yaml>>>.
+
++--------
+mvn tcases:api -Dproject=My-API
++--------
+
+** {Generating Executable API Tests}
+
+  Let's assume you are using the default configuration for <<<tcases:api>>>. Suppose you have an OpenAPI definition
+  named <<<$\{basedir\}/src/test/tcases/openapi/org/myapp/My-API.yaml>>> 
+
+  What happens when you run the following command, this time using the {{{./api-test-mojo.html}api-test}} goal
+
++--------
+mvn tcases:api-test -Dproject=My-API 
++--------
+
+  Congratulations! You just created a new JUnit test for your API! You'll find the source for the new
+  test class in <<<$\{basedir\}/target/generated-test-sources/java/org/myapp/MyApiTest.java>>>.
+  Build and execute this test to run all test cases for every request defined in <<<My-API.yaml>>>.
+
+  How was this test constructed? And what does it really do? For answers, see
+  {{{https://github.com/Cornutum/tcases/blob/master/tcases-openapi/Running-Api-Test-Cases.md#generating-executable-tests}Generating executable tests}}.
+
+** {Generating Request Inputs}
+
+  Let's assume you are using the default configuration for <<<tcases:api>>>. Suppose you have an OpenAPI definition
+  named <<<$\{basedir\}/src/test/tcases/openapi/org/myapp/My-API.yaml>>> 
+
+  What happens when you run the following command?
+
++--------
+mvn tcases:api -Dproject=My-API -DrequestCases=true
++--------
+
+  Instead of the usual descriptions of API test cases, you'll find a different file in the
+  <<<$\{basedir\}/target/tcases/openapi/org/myapp>>> directory named <<<My-API-Request-Cases.json>>>. This is a
+  {{{https://github.com/Cornutum/tcases/blob/master/tcases-openapi/Request-Test-Definition.md#request-test-definition-guide}request
+  test definition}} that lists actual input values for all API requests defined in <<<My-API.yaml>>>.
+
+  Why is this useful? A request test definition automates one step in the creation of a test program that executes all API
+  request test cases against an actual API server.  For details, see
+  {{{https://github.com/Cornutum/tcases/blob/master/tcases-openapi/Running-Api-Test-Cases.md#running-api-test-cases}Running
+  API Test Cases}}.
+
+** {Handling API Input Modelling Conditions}
+
+  Tcases for OpenAPI reports
+  {{{https://github.com/Cornutum/tcases/blob/master/tcases-openapi/README.md#semantic-linting-with-tcases-for-openapi}conditions in your OpenAPI definition}}
+  that will affect how test cases are generated. Warning conditions are
+  reported with an explanation of the situation. Error conditions report elements in your definition that
+  may need to be changed to generate tests correctly. By default, conditions are reported by writing
+  log messages. But you can use the <<<onModellingCondition>>> parameter to request different handling of
+  such conditions.
+
+  For example, when you run the following command, any input modelling condition in your definitions will cause <<<tcases:api>>> to report a failure.
+
++--------
+mvn tcases:api -DonModellingCondition=fail
++--------
+
+** {What is the API Input Space?}
+
+  Tcases for OpenAPI generates tests cases from the API "input space" models that it automatically derives from your OpenAPI definition.
+  But what are they? To find out, run the following command.
+
++--------
+mvn tcases:api -DinputModels=true
++--------
+
+  Again, assuming the default configuration for <<<tcases:api>>> and an OpenAPI definition
+  named <<<$\{basedir\}/src/test/tcases/openapi/org/myapp/My-API.yaml>>>,
+  the result will be two new files named <<<My-API-Requests-Input.json>>> and
+  <<<My-API-Responses-Input.json>>>. Each file is an example of
+  a Tcases "input definition document" -- for details, see
+  {{{https://github.com/Cornutum/tcases/blob/master/Tcases-Guide.md#defining-system-functions}Tcases: The Complete Guide}}.

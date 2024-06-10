@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<TestCases system="Operations">
+  <Has name="server" value="/"/>
+  <Has name="title" value="Operations"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="DELETE_operations">
+    <Has name="operation" value="DELETE"/>
+    <Has name="path" value="/operations"/>
+    <Has name="server" value="/"/>
+    <Has name="title" value="Operations"/>
+    <Has name="version" value="0.0.0"/>
+    <TestCase id="0" name="id.Defined=&apos;Yes&apos;">
+      <Has name="operation" value="DELETE"/>
+      <Has name="path" value="/operations"/>
+      <Has name="properties" value="id,idValue"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Operations"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="id.Defined" value="Yes">
+          <Has name="paramName" value="id"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="id.Type" value="integer">
+          <Has name="paramName" value="id"/>
+        </Var>
+        <Var name="id.Value.Is" value="&lt; 0">
+          <Has name="paramName" value="id"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="1" name="id.Defined=&apos;No&apos;">
+      <Has name="operation" value="DELETE"/>
+      <Has name="path" value="/operations"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Operations"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="id.Defined" value="No">
+          <Has name="paramName" value="id"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="id.Type" NA="true">
+          <Has name="paramName" value="id"/>
+        </Var>
+        <Var name="id.Value.Is" NA="true">
+          <Has name="paramName" value="id"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="2" name="id.Value.Is=&apos;0&apos;">
+      <Has name="operation" value="DELETE"/>
+      <Has name="path" value="/operations"/>
+      <Has name="properties" value="id,idValue"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Operations"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="id.Defined" value="Yes">
+          <Has name="paramName" value="id"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="id.Type" value="integer">
+          <Has name="paramName" value="id"/>
+        </Var>
+        <Var name="id.Value.Is" value="0">
+          <Has name="paramName" value="id"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="3" name="id.Value.Is=&apos;&gt; 0&apos;">
+      <Has name="operation" value="DELETE"/>
+      <Has name="path" value="/operations"/>
+      <Has name="properties" value="id,idValue"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Operations"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="id.Defined" value="Yes">
+          <Has name="paramName" value="id"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="id.Type" value="integer">
+          <Has name="paramName" value="id"/>
+        </Var>
+        <Var name="id.Value.Is" value="&gt; 0">
+          <Has name="paramName" value="id"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="4" failure="true" name="id.Type=null">
+      <Has name="operation" value="DELETE"/>
+      <Has name="path" value="/operations"/>
+      <Has name="properties" value="id"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Operations"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="id.Defined" value="Yes">
+          <Has name="paramName" value="id"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="id.Type" value="null" failure="true">
+          <Has name="paramName" value="id"/>
+        </Var>
+        <Var name="id.Value.Is" NA="true">
+          <Has name="paramName" value="id"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="5" failure="true" name="id.Type=&apos;Not integer&apos;">
+      <Has name="operation" value="DELETE"/>
+      <Has name="path" value="/operations"/>
+      <Has name="properties" value="id"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Operations"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="id.Defined" value="Yes">
+          <Has name="paramName" value="id"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="id.Type" value="Not integer" failure="true">
+          <Has name="paramName" value="id"/>
+        </Var>
+        <Var name="id.Value.Is" NA="true">
+          <Has name="paramName" value="id"/>
+        </Var>
+      </Input>
+    </TestCase>
+  </Function>
+</TestCases>

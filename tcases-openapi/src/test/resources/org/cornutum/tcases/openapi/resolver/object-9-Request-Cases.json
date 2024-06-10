@@ -1,0 +1,673 @@
+
+[
+    {
+        "id": 0,
+        "name": "param0.Defined='Yes'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "string",
+                            "value": ">#<KFcS(=UPgf1ur(vw[!&aWx6Pp{za|Kpne}]0nW0v+vSzABaBn'*TqsjaV#]X-ST`V}(1/*8V-S%cq{VHyTpYF/IOaB'"
+                        },
+                        "myBoolean": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "myNumber": {
+                            "type": "number",
+                            "value": -4081016827265161023.5
+                        }
+                    }
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "param0.Defined='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": null,
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "param0.Value.Properties.myString.Defined='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myNumber": {
+                            "type": "number",
+                            "value": 0
+                        },
+                        "myInteger": {
+                            "type": "integer",
+                            "value": -184459035,
+                            "format": "int32"
+                        },
+                        "zmfncghy": {
+                            "type": "boolean",
+                            "value": true
+                        }
+                    }
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "param0.Value.Properties.myString.Value.Length='0'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "myBoolean": {
+                            "type": "boolean",
+                            "value": false
+                        },
+                        "myNumber": {
+                            "type": "number",
+                            "value": 754136968926406458.3
+                        }
+                    }
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "param0.Value.Properties.myInteger.Value.Is='0'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myNumber": {
+                            "type": "number",
+                            "value": -4280503944217793149.5
+                        },
+                        "myInteger": {
+                            "type": "integer",
+                            "value": 0,
+                            "format": "int32"
+                        },
+                        "p": {
+                            "type": "object",
+                            "value": {
+                            }
+                        }
+                    }
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "param0.Value.Properties.myInteger.Value.Is='> 0'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "string",
+                            "value": "|H}:Lt@N2:0Ln#`{']_6{q)_azDfneBI)3hWE0UXk`&vxx*U/bX9hjt2aw|o}Qg86e1kU`o&$eT4n_h]^A9=f22xRDHJh`(o/2WA(+9zu~"
+                        },
+                        "myNumber": {
+                            "type": "number",
+                            "value": 0
+                        },
+                        "myInteger": {
+                            "type": "integer",
+                            "value": 446299180,
+                            "format": "int32"
+                        }
+                    }
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "param0.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "null",
+                    "value": null
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Type=null"
+    },
+    {
+        "id": 7,
+        "name": "param0.Type='Not object'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "integer",
+                    "value": -595,
+                    "format": "int32"
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Type=Not object"
+    },
+    {
+        "id": 8,
+        "name": "param0.Value.Property-Count='> 3'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "myBoolean": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "myNumber": {
+                            "type": "number",
+                            "value": 402292574578406476.6
+                        },
+                        "myInteger": {
+                            "type": "integer",
+                            "value": -540231401,
+                            "format": "int32"
+                        },
+                        "qe": {
+                            "type": "integer",
+                            "value": -935,
+                            "format": "int32"
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Property-Count=> 3"
+    },
+    {
+        "id": 9,
+        "name": "param0.Value.Properties.myString.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "null",
+                            "value": null
+                        },
+                        "myBoolean": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "myNumber": {
+                            "type": "number",
+                            "value": 597168889136860692.1
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.myString.Type=null"
+    },
+    {
+        "id": 10,
+        "name": "param0.Value.Properties.myString.Type='Not string'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "array",
+                            "value": [
+                                {
+                                    "type": "string",
+                                    "value": "M<qmRXc"
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "2mn"
+                                },
+                                {
+                                    "type": "string",
+                                    "value": ""
+                                }
+                            ]
+                        },
+                        "myBoolean": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "myNumber": {
+                            "type": "number",
+                            "value": 443243535163781078.4
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.myString.Type=Not string"
+    },
+    {
+        "id": 11,
+        "name": "param0.Value.Properties.myBoolean.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myBoolean": {
+                            "type": "null",
+                            "value": null
+                        },
+                        "myNumber": {
+                            "type": "number",
+                            "value": 348588708282420896.1
+                        },
+                        "mmpqfu": {
+                            "type": "array",
+                            "value": [
+                                {
+                                    "type": "string",
+                                    "value": ""
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "l"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.myBoolean.Type=null"
+    },
+    {
+        "id": 12,
+        "name": "param0.Value.Properties.myBoolean.Type='Not boolean'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myBoolean": {
+                            "type": "object",
+                            "value": {
+                                "bxzmnaiwm": {
+                                    "type": "array",
+                                    "value": [
+                                        {
+                                            "type": "string",
+                                            "value": "3$N`8jK"
+                                        }
+                                    ]
+                                },
+                                "mihwtlstzp": {
+                                    "type": "number",
+                                    "value": 32.5
+                                },
+                                "ioimlurvy": {
+                                    "type": "number",
+                                    "value": -548.1
+                                }
+                            }
+                        },
+                        "myNumber": {
+                            "type": "number",
+                            "value": 488444491415805630.1
+                        },
+                        "oqzmmbvrezkjgmba": {
+                            "type": "boolean",
+                            "value": true
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.myBoolean.Type=Not boolean"
+    },
+    {
+        "id": 13,
+        "name": "param0.Value.Properties.myNumber.Defined='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myBoolean": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "bjxevstlmngwv": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "kiohmejom": {
+                            "type": "array",
+                            "value": [
+                                {
+                                    "type": "string",
+                                    "value": "Jcle"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.myNumber.Defined=No"
+    },
+    {
+        "id": 14,
+        "name": "param0.Value.Properties.myNumber.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myBoolean": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "myNumber": {
+                            "type": "null",
+                            "value": null
+                        },
+                        "xqrtwnoiummgqk": {
+                            "type": "array",
+                            "value": [
+                                {
+                                    "type": "string",
+                                    "value": "zL"
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "7-Y.V5?"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.myNumber.Type=null"
+    },
+    {
+        "id": 15,
+        "name": "param0.Value.Properties.myNumber.Type='Not number'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myBoolean": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "myNumber": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "ujogjixineeufck": {
+                            "type": "object",
+                            "value": {
+                            }
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.myNumber.Type=Not number"
+    },
+    {
+        "id": 16,
+        "name": "param0.Value.Properties.myInteger.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myBoolean": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "myNumber": {
+                            "type": "number",
+                            "value": 816067612927109402.4
+                        },
+                        "myInteger": {
+                            "type": "null",
+                            "value": null
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.myInteger.Type=null"
+    },
+    {
+        "id": 17,
+        "name": "param0.Value.Properties.myInteger.Type='Not integer'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myBoolean": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "myNumber": {
+                            "type": "number",
+                            "value": 503351477846709081.2
+                        },
+                        "myInteger": {
+                            "type": "boolean",
+                            "value": true
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.myInteger.Type=Not integer"
+    }
+]

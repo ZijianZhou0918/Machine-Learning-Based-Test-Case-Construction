@@ -1,0 +1,2033 @@
+<?xml version="1.0"?>
+<TestCases system="Not">
+  <Has name="server" value="/"/>
+  <Has name="title" value="Not"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="POST_not">
+    <Has name="operation" value="POST"/>
+    <Has name="path" value="/not"/>
+    <Has name="server" value="/"/>
+    <Has name="title" value="Not"/>
+    <Has name="version" value="0.0.0"/>
+    <TestCase id="0" name="param0.Defined=&apos;Yes&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param0,param0Alpha,param0AlphaLengthValid,param0AlphaNotEmpty,param0AlphaValue,param0Bravo,param0BravoItemsNone,param0BravoValue,param0Properties,param0Value,param1,param1LengthValid,param1NotEmpty,param1NotExcluded,param1Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="object">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" value="&gt;= 1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" value="string">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" value="&gt; 0">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" value="No">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" value="array">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" value="0">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" NA="true">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" value="Yes">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="Yes">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" value="string">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" value="5">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" value="No">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" value="Any">
+          <Has name="excluded" value="&apos;ABCDE&apos;,&apos;FGHIJK&apos;"/>
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="1" name="param0.Defined=&apos;No&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="No">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" NA="true">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="No">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" NA="true">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" NA="true">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" NA="true">
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="2" name="param0.Value.Properties.alpha.Defined=&apos;No&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param0,param0Bravo,param0BravoItemsLengthValid,param0BravoItemsNotEmpty,param0BravoItemsNotExcluded,param0BravoItemsValue,param0BravoValue,param0Properties,param0Value,param1,param1LengthValid,param1NotEmpty,param1NotExcluded,param1Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="object">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" value="&gt;= 1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" value="No">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" value="array">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" value="1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" value="string">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" value="&gt; 0">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" value="Any">
+          <Has name="excluded" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" value="No">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="Yes">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" value="string">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" value="&gt; 5">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" value="No">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" value="Any">
+          <Has name="excluded" value="&apos;ABCDE&apos;,&apos;FGHIJK&apos;"/>
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="3" name="param0.Value.Properties.alpha.Value.Length=&apos;0&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param0,param0Alpha,param0AlphaLengthValid,param0AlphaValue,param0Properties,param0Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="object">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" value="&gt;= 1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" value="string">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" value="0">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" value="No">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" value="No">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" NA="true">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" value="Yes">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="No">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" NA="true">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" NA="true">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" NA="true">
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="4" name="param0.Value.Properties.bravo.Items.Size=&apos;&gt; 1&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param0,param0Bravo,param0BravoItemsLengthValid,param0BravoItemsMany,param0BravoItemsNotExcluded,param0BravoItemsValue,param0BravoValue,param0Properties,param0Value,param1,param1LengthValid,param1NotEmpty,param1NotExcluded,param1Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="object">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" value="&gt;= 1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" value="No">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" value="array">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" value="&gt; 1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" value="string">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" value="0">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" value="Any">
+          <Has name="excluded" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" value="Yes">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" value="No">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="Yes">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" value="string">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" value="5">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" value="No">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" value="Any">
+          <Has name="excluded" value="&apos;ABCDE&apos;,&apos;FGHIJK&apos;"/>
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="5" name="param0.Value.Properties.bravo.Items.Unique=&apos;No&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param0,param0Alpha,param0AlphaLengthValid,param0AlphaNotEmpty,param0AlphaValue,param0Bravo,param0BravoItemsLengthValid,param0BravoItemsMany,param0BravoItemsNotEmpty,param0BravoItemsNotExcluded,param0BravoItemsValue,param0BravoValue,param0Properties,param0Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="object">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" value="&gt;= 1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" value="string">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" value="&gt; 0">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" value="No">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" value="array">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" value="&gt; 1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" value="string">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" value="&gt; 0">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" value="Any">
+          <Has name="excluded" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" value="No">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" value="Yes">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="No">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" NA="true">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" NA="true">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" NA="true">
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="6" failure="true" name="param0.Type=null">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param0,param1,param1LengthValid,param1NotEmpty,param1NotExcluded,param1Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="null" failure="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" NA="true">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="Yes">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" value="string">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" value="&gt; 5">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" value="No">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" value="Any">
+          <Has name="excluded" value="&apos;ABCDE&apos;,&apos;FGHIJK&apos;"/>
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="7" failure="true" name="param0.Type=&apos;Not object&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param0,param1,param1LengthValid,param1NotEmpty,param1NotExcluded,param1Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="Not object" failure="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" NA="true">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="Yes">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" value="string">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" value="&gt; 5">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" value="No">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" value="Any">
+          <Has name="excluded" value="&apos;ABCDE&apos;,&apos;FGHIJK&apos;"/>
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="8" failure="true" name="param0.Value.Property-Count=&apos;&lt; 1&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param0,param0Value,param1,param1LengthValid,param1NotEmpty,param1NotExcluded,param1Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="object">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" value="&lt; 1" failure="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" value="No">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" value="No">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" NA="true">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" value="No">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="Yes">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" value="string">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" value="&gt; 5">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" value="No">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" value="Any">
+          <Has name="excluded" value="&apos;ABCDE&apos;,&apos;FGHIJK&apos;"/>
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="9" failure="true" name="param0.Value.Properties.alpha.Type=null">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param0,param0Alpha,param0Properties,param0Value,param1,param1LengthValid,param1NotEmpty,param1NotExcluded,param1Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="object">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" value="&gt;= 1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" value="null" failure="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" value="No">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" NA="true">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" value="No">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="Yes">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" value="string">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" value="&gt; 5">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" value="No">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" value="Any">
+          <Has name="excluded" value="&apos;ABCDE&apos;,&apos;FGHIJK&apos;"/>
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="10" failure="true" name="param0.Value.Properties.alpha.Type=&apos;Not string&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param0,param0Alpha,param0Properties,param0Value,param1,param1LengthValid,param1NotEmpty,param1NotExcluded,param1Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="object">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" value="&gt;= 1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" value="Not string" failure="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" value="No">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" NA="true">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" value="No">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="Yes">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" value="string">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" value="&gt; 5">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" value="No">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" value="Any">
+          <Has name="excluded" value="&apos;ABCDE&apos;,&apos;FGHIJK&apos;"/>
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="11" failure="true" name="param0.Value.Properties.alpha.Value.Matches-Pattern=&apos;Yes&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param0,param0Alpha,param0AlphaLengthValid,param0AlphaNotEmpty,param0AlphaValue,param0Properties,param0Value,param1,param1LengthValid,param1NotEmpty,param1NotExcluded,param1Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="object">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" value="&gt;= 1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" value="string">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" value="&gt; 0">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" value="Yes" failure="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" value="No">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" NA="true">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" value="No">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="Yes">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" value="string">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" value="&gt; 5">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" value="No">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" value="Any">
+          <Has name="excluded" value="&apos;ABCDE&apos;,&apos;FGHIJK&apos;"/>
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="12" failure="true" name="param0.Value.Properties.bravo.Type=null">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param0,param0Bravo,param0Properties,param0Value,param1,param1LengthValid,param1NotEmpty,param1NotExcluded,param1Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="object">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" value="&gt;= 1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" value="No">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" value="null" failure="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" NA="true">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" value="No">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="Yes">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" value="string">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" value="&gt; 5">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" value="No">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" value="Any">
+          <Has name="excluded" value="&apos;ABCDE&apos;,&apos;FGHIJK&apos;"/>
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="13" failure="true" name="param0.Value.Properties.bravo.Type=&apos;Not array&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param0,param0Bravo,param0Properties,param0Value,param1,param1LengthValid,param1NotEmpty,param1NotExcluded,param1Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="object">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" value="&gt;= 1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" value="No">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" value="Not array" failure="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" NA="true">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" value="No">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="Yes">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" value="string">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" value="&gt; 5">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" value="No">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" value="Any">
+          <Has name="excluded" value="&apos;ABCDE&apos;,&apos;FGHIJK&apos;"/>
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="14" failure="true" name="param0.Value.Properties.bravo.Items.Contains.Type=null">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param0,param0Bravo,param0BravoValue,param0Properties,param0Value,param1,param1LengthValid,param1NotEmpty,param1NotExcluded,param1Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="object">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" value="&gt;= 1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" value="No">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" value="array">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" value="1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" value="null" failure="true">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" NA="true">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" value="No">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="Yes">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" value="string">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" value="&gt; 5">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" value="No">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" value="Any">
+          <Has name="excluded" value="&apos;ABCDE&apos;,&apos;FGHIJK&apos;"/>
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="15" failure="true" name="param0.Value.Properties.bravo.Items.Contains.Type=&apos;Not string&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param0,param0Bravo,param0BravoValue,param0Properties,param0Value,param1,param1LengthValid,param1NotEmpty,param1NotExcluded,param1Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="object">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" value="&gt;= 1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" value="No">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" value="array">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" value="1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" value="Not string" failure="true">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" NA="true">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" value="No">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="Yes">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" value="string">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" value="&gt; 5">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" value="No">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" value="Any">
+          <Has name="excluded" value="&apos;ABCDE&apos;,&apos;FGHIJK&apos;"/>
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="16" failure="true" name="param0.Value.Properties.bravo.Items.Contains.Value.Is=&apos;A&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param0,param0Bravo,param0BravoItemsValue,param0BravoValue,param0Properties,param0Value,param1,param1LengthValid,param1NotEmpty,param1NotExcluded,param1Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="object">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" value="&gt;= 1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" value="No">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" value="array">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" value="1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" value="string">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" NA="true">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" value="A" failure="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" value="No">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="Yes">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" value="string">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" value="&gt; 5">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" value="No">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" value="Any">
+          <Has name="excluded" value="&apos;ABCDE&apos;,&apos;FGHIJK&apos;"/>
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="17" failure="true" name="param0.Value.Properties.bravo.Items.Contains.Value.Is=&apos;B&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param0,param0Bravo,param0BravoItemsValue,param0BravoValue,param0Properties,param0Value,param1,param1LengthValid,param1NotEmpty,param1NotExcluded,param1Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="object">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" value="&gt;= 1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" value="No">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" value="array">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" value="1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" value="string">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" NA="true">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" value="B" failure="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" value="No">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="Yes">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" value="string">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" value="&gt; 5">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" value="No">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" value="Any">
+          <Has name="excluded" value="&apos;ABCDE&apos;,&apos;FGHIJK&apos;"/>
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="18" failure="true" name="param0.Value.Properties.bravo.Items.Contains.Value.Is=&apos;C&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param0,param0Bravo,param0BravoItemsValue,param0BravoValue,param0Properties,param0Value,param1,param1LengthValid,param1NotEmpty,param1NotExcluded,param1Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="object">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" value="&gt;= 1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" value="No">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" value="array">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" value="1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" value="string">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" NA="true">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" value="C" failure="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" value="No">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="Yes">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" value="string">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" value="&gt; 5">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" value="No">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" value="Any">
+          <Has name="excluded" value="&apos;ABCDE&apos;,&apos;FGHIJK&apos;"/>
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="19" failure="true" name="param1.Type=null">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param1"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="No">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" NA="true">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="Yes">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" value="null" failure="true">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" NA="true">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" NA="true">
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="20" failure="true" name="param1.Type=&apos;Not string&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param1"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="No">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" NA="true">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="Yes">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" value="Not string" failure="true">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" NA="true">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" NA="true">
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="21" failure="true" name="param1.Value.Length=&apos;4&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param1,param1NotExcluded,param1Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="No">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" NA="true">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="Yes">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" value="string">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" value="4" failure="true">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" value="Any">
+          <Has name="excluded" value="&apos;ABCDE&apos;,&apos;FGHIJK&apos;"/>
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="22" failure="true" name="param1.Value.Matches-Pattern=&apos;Yes&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param1,param1LengthValid,param1NotEmpty,param1NotExcluded,param1Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="No">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" NA="true">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="Yes">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" value="string">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" value="&gt; 5">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" value="Yes" failure="true">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" value="Any">
+          <Has name="excluded" value="&apos;ABCDE&apos;,&apos;FGHIJK&apos;"/>
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="23" failure="true" name="param1.Value.Is=&apos;ABCDE&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param1,param1Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="No">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" NA="true">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="Yes">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" value="string">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" NA="true">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" value="ABCDE" failure="true">
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="24" failure="true" name="param1.Value.Is=&apos;FGHIJK&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/not"/>
+      <Has name="properties" value="param1,param1Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Not"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="No">
+          <Has name="explode" value="true"/>
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Property-Count" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Defined" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="alpha"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.alpha.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="1999-.*"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Defined" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="propertyName" value="bravo"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Size" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="string"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Length" NA="true">
+          <Has name="itemMinLength" value="0"/>
+          <Has name="itemNotEnums" value="&apos;A&apos;,&apos;B&apos;,&apos;C&apos;"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Contains.Value.Is" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.bravo.Items.Unique" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Properties.Additional" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param1.Defined" value="Yes">
+          <Has name="paramName" value="param1"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param1.Type" value="string">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Length" NA="true">
+          <Has name="paramName" value="param1"/>
+        </Var>
+        <Var name="param1.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param1"/>
+          <Has name="pattern" value="WTF"/>
+        </Var>
+        <Var name="param1.Value.Is" value="FGHIJK" failure="true">
+          <Has name="paramName" value="param1"/>
+        </Var>
+      </Input>
+    </TestCase>
+  </Function>
+</TestCases>

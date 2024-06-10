@@ -1,0 +1,1402 @@
+<?xml version="1.0"?>
+<TestCases system="Responses">
+  <Has name="server" value="/"/>
+  <Has name="title" value="Responses"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="PATCH_responses">
+    <Has name="server" value="/"/>
+    <Has name="title" value="Responses"/>
+    <Has name="version" value="0.0.0"/>
+    <TestCase id="0" name="Status-Code=&apos;200&apos;">
+      <Has name="properties" value="200Application-json,200Application-jsonValue,200Content,200HeaderX-my-secret-header,200HeaderX-my-secret-headerItemsNone,200HeaderX-my-secret-headerValue,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="array"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" value="0"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" NA="true">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" NA="true"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" value="object"/>
+        <Var name="200.Content.application-json.Value.Property-Count" value="0"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" value="No">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="1" name="Status-Code=&apos;4XX&apos;">
+      <Has name="properties" value="4XXApplication-json,4XXApplication-jsonProperties,4XXApplication-jsonValue,4XXContent,status4XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="4XX"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" NA="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" NA="true"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" NA="true"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" NA="true">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" NA="true"/>
+        <Var name="200.Content.Defined" NA="true"/>
+        <Var name="200.Content.Media-Type" NA="true"/>
+        <Var name="200.Content.application-json.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" value="Yes"/>
+        <Var name="4XX.Content.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="4XX.Content.application-json.Type" value="object"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" value="Yes"/>
+      </Input>
+    </TestCase>
+    <TestCase id="2" name="Status-Code=&apos;Other&apos;">
+      <Has name="properties" value="statusOther"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="Other">
+          <Has name="excluded" value="&apos;200&apos;,&apos;4XX&apos;"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Defined" NA="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" NA="true"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" NA="true"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" NA="true">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" NA="true"/>
+        <Var name="200.Content.Defined" NA="true"/>
+        <Var name="200.Content.Media-Type" NA="true"/>
+        <Var name="200.Content.application-json.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="3" name="200.Headers.x-my-secret-header.Items.Size=&apos;1&apos;">
+      <Has name="properties" value="200Content,200HeaderX-my-secret-header,200HeaderX-my-secret-headerItemsValue,200HeaderX-my-secret-headerValue,200Text-javascript,200Text-javascriptAdditional,200Text-javascriptAdditionalValue,200Text-javascriptProperties,200Text-javascriptValue,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="array"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" value="1"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" value="integer">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" value="&lt; 0">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" NA="true"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" value="object"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" value="&gt;= 1"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" value="Yes">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" value="boolean"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" value="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="4" name="200.Headers.x-my-secret-header.Items.Size=&apos;&gt; 1&apos;">
+      <Has name="properties" value="200Application-json,200Application-jsonAdditional,200Application-jsonAdditionalValue,200Application-jsonProperties,200Application-jsonValue,200Content,200HeaderX-my-secret-header,200HeaderX-my-secret-headerItemsMany,200HeaderX-my-secret-headerItemsValue,200HeaderX-my-secret-headerValue,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="array"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" value="&gt; 1"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" value="integer">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" value="0">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" value="Yes"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" value="object"/>
+        <Var name="200.Content.application-json.Value.Property-Count" value="&lt;= 1"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" value="Yes">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" value="number"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" value="&lt; 0"/>
+        <Var name="200.Content.text-javascript.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="5" name="200.Headers.x-my-secret-header.Items.Contains.Value.Is=&apos;&gt; 0&apos;">
+      <Has name="properties" value="200Content,200HeaderX-my-secret-header,200HeaderX-my-secret-headerItemsValue,200HeaderX-my-secret-headerValue,200Text-javascript,200Text-javascriptAdditional,200Text-javascriptAdditionalValue,200Text-javascriptProperties,200Text-javascriptValue,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="array"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" value="1"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" value="integer">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" value="&gt; 0">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" NA="true"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" value="object"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" value="&gt;= 1"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" value="Yes">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" value="boolean"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" value="false"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="6" name="200.Headers.x-my-secret-header.Items.Unique=&apos;No&apos;">
+      <Has name="properties" value="200Application-json,200Application-jsonValue,200Content,200HeaderX-my-secret-header,200HeaderX-my-secret-headerItemsMany,200HeaderX-my-secret-headerItemsValue,200HeaderX-my-secret-headerValue,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="array"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" value="&gt; 1"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" value="integer">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" value="&lt; 0">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" value="No"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" value="object"/>
+        <Var name="200.Content.application-json.Value.Property-Count" value="&lt;= 1"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" value="No">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="7" name="200.Content.application-json.Value.Properties.Additional.Value.Is=&apos;0&apos;">
+      <Has name="properties" value="200Application-json,200Application-jsonAdditional,200Application-jsonAdditionalValue,200Application-jsonProperties,200Application-jsonValue,200Content,200HeaderX-my-secret-header,200HeaderX-my-secret-headerItemsNone,200HeaderX-my-secret-headerValue,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="array"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" value="0"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" NA="true">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" NA="true"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" value="object"/>
+        <Var name="200.Content.application-json.Value.Property-Count" value="&lt;= 1"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" value="Yes">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" value="number"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" value="0"/>
+        <Var name="200.Content.text-javascript.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="8" name="200.Content.application-json.Value.Properties.Additional.Value.Is=&apos;&gt; 0&apos;">
+      <Has name="properties" value="200Application-json,200Application-jsonAdditional,200Application-jsonAdditionalValue,200Application-jsonProperties,200Application-jsonValue,200Content,200HeaderX-my-secret-header,200HeaderX-my-secret-headerItemsValue,200HeaderX-my-secret-headerValue,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="array"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" value="1"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" value="integer">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" value="0">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" NA="true"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" value="object"/>
+        <Var name="200.Content.application-json.Value.Property-Count" value="&lt;= 1"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" value="Yes">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" value="number"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" value="&gt; 0"/>
+        <Var name="200.Content.text-javascript.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="9" name="4XX.Content.application-json.Value.Properties.Additional=&apos;No&apos;">
+      <Has name="properties" value="4XXApplication-json,4XXApplication-jsonValue,4XXContent,status4XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="4XX"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" NA="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" NA="true"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" NA="true"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" NA="true">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" NA="true"/>
+        <Var name="200.Content.Defined" NA="true"/>
+        <Var name="200.Content.Media-Type" NA="true"/>
+        <Var name="200.Content.application-json.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" value="Yes"/>
+        <Var name="4XX.Content.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="4XX.Content.application-json.Type" value="object"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" value="No"/>
+      </Input>
+    </TestCase>
+    <TestCase id="10" failure="true" name="200.Headers.x-my-secret-header.Defined=&apos;No&apos;">
+      <Has name="properties" value="200Content,200Text-javascript,200Text-javascriptAdditional,200Text-javascriptAdditionalValue,200Text-javascriptProperties,200Text-javascriptValue,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="No" failure="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" NA="true"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" NA="true"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" NA="true">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" NA="true"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" value="object"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" value="&gt;= 1"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" value="Yes">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" value="boolean"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" value="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="11" failure="true" name="200.Headers.x-my-secret-header.Type=null">
+      <Has name="properties" value="200Content,200HeaderX-my-secret-header,200Text-javascript,200Text-javascriptAdditional,200Text-javascriptAdditionalValue,200Text-javascriptProperties,200Text-javascriptValue,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="null" failure="true"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" NA="true"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" NA="true">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" NA="true"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" value="object"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" value="&gt;= 1"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" value="Yes">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" value="boolean"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" value="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="12" failure="true" name="200.Headers.x-my-secret-header.Type=&apos;Not array&apos;">
+      <Has name="properties" value="200Content,200HeaderX-my-secret-header,200Text-javascript,200Text-javascriptAdditional,200Text-javascriptAdditionalValue,200Text-javascriptProperties,200Text-javascriptValue,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="Not array" failure="true"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" NA="true"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" NA="true">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" NA="true"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" value="object"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" value="&gt;= 1"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" value="Yes">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" value="boolean"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" value="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="13" failure="true" name="200.Headers.x-my-secret-header.Items.Contains.Type=null">
+      <Has name="properties" value="200Content,200HeaderX-my-secret-header,200HeaderX-my-secret-headerItemsMany,200HeaderX-my-secret-headerValue,200Text-javascript,200Text-javascriptAdditional,200Text-javascriptAdditionalValue,200Text-javascriptProperties,200Text-javascriptValue,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="array"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" value="&gt; 1"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" value="null" failure="true">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" NA="true">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" value="Yes"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" value="object"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" value="&gt;= 1"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" value="Yes">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" value="boolean"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" value="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="14" failure="true" name="200.Headers.x-my-secret-header.Items.Contains.Type=&apos;Not integer&apos;">
+      <Has name="properties" value="200Content,200HeaderX-my-secret-header,200HeaderX-my-secret-headerItemsMany,200HeaderX-my-secret-headerValue,200Text-javascript,200Text-javascriptAdditional,200Text-javascriptAdditionalValue,200Text-javascriptProperties,200Text-javascriptValue,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="array"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" value="&gt; 1"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" value="Not integer" failure="true">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" NA="true">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" value="Yes"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" value="object"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" value="&gt;= 1"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" value="Yes">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" value="boolean"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" value="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="15" failure="true" name="200.Content.Defined=&apos;No&apos;">
+      <Has name="properties" value="200HeaderX-my-secret-header,200HeaderX-my-secret-headerItemsMany,200HeaderX-my-secret-headerItemsValue,200HeaderX-my-secret-headerValue,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="array"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" value="&gt; 1"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" value="integer">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" value="&gt; 0">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" value="Yes"/>
+        <Var name="200.Content.Defined" value="No" failure="true"/>
+        <Var name="200.Content.Media-Type" NA="true"/>
+        <Var name="200.Content.application-json.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="16" failure="true" name="200.Content.Media-Type=&apos;Other&apos;">
+      <Has name="properties" value="200Content,200HeaderX-my-secret-header,200HeaderX-my-secret-headerItemsMany,200HeaderX-my-secret-headerItemsValue,200HeaderX-my-secret-headerValue,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="array"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" value="&gt; 1"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" value="integer">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" value="&gt; 0">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" value="Yes"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="Other" failure="true">
+          <Has name="excluded" value="&apos;application/json&apos;,&apos;text/javascript&apos;"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="17" failure="true" name="200.Content.application-json.Type=null">
+      <Has name="properties" value="200Application-json,200Content,200HeaderX-my-secret-header,200HeaderX-my-secret-headerItemsMany,200HeaderX-my-secret-headerItemsValue,200HeaderX-my-secret-headerValue,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="array"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" value="&gt; 1"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" value="integer">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" value="&gt; 0">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" value="Yes"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" value="null" failure="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="18" failure="true" name="200.Content.application-json.Type=&apos;Not object&apos;">
+      <Has name="properties" value="200Application-json,200Content,200HeaderX-my-secret-header,200HeaderX-my-secret-headerItemsMany,200HeaderX-my-secret-headerItemsValue,200HeaderX-my-secret-headerValue,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="array"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" value="&gt; 1"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" value="integer">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" value="&gt; 0">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" value="Yes"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" value="Not object" failure="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="19" failure="true" name="200.Content.application-json.Value.Property-Count=&apos;&gt; 1&apos;">
+      <Has name="properties" value="200Application-json,200Application-jsonAdditional,200Application-jsonAdditionalValue,200Application-jsonProperties,200Application-jsonValue,200Content,200HeaderX-my-secret-header,200HeaderX-my-secret-headerItemsMany,200HeaderX-my-secret-headerItemsValue,200HeaderX-my-secret-headerValue,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="array"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" value="&gt; 1"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" value="integer">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" value="&gt; 0">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" value="Yes"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" value="object"/>
+        <Var name="200.Content.application-json.Value.Property-Count" value="&gt; 1" failure="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" value="Yes">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" value="number"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" value="&lt; 0"/>
+        <Var name="200.Content.text-javascript.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="20" failure="true" name="200.Content.application-json.Value.Properties.Additional.Type=null">
+      <Has name="properties" value="200Application-json,200Application-jsonAdditional,200Application-jsonProperties,200Application-jsonValue,200Content,200HeaderX-my-secret-header,200HeaderX-my-secret-headerItemsMany,200HeaderX-my-secret-headerItemsValue,200HeaderX-my-secret-headerValue,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="array"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" value="&gt; 1"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" value="integer">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" value="&gt; 0">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" value="Yes"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" value="object"/>
+        <Var name="200.Content.application-json.Value.Property-Count" value="&lt;= 1"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" value="Yes">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" value="null" failure="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="21" failure="true" name="200.Content.application-json.Value.Properties.Additional.Type=&apos;Not number&apos;">
+      <Has name="properties" value="200Application-json,200Application-jsonAdditional,200Application-jsonProperties,200Application-jsonValue,200Content,200HeaderX-my-secret-header,200HeaderX-my-secret-headerItemsMany,200HeaderX-my-secret-headerItemsValue,200HeaderX-my-secret-headerValue,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="array"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" value="&gt; 1"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" value="integer">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" value="&gt; 0">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" value="Yes"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" value="object"/>
+        <Var name="200.Content.application-json.Value.Property-Count" value="&lt;= 1"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" value="Yes">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" value="Not number" failure="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="22" failure="true" name="200.Content.text-javascript.Type=null">
+      <Has name="properties" value="200Content,200HeaderX-my-secret-header,200HeaderX-my-secret-headerItemsMany,200HeaderX-my-secret-headerItemsValue,200HeaderX-my-secret-headerValue,200Text-javascript,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="array"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" value="&gt; 1"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" value="integer">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" value="&gt; 0">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" value="Yes"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" value="null" failure="true"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="23" failure="true" name="200.Content.text-javascript.Type=&apos;Not object&apos;">
+      <Has name="properties" value="200Content,200HeaderX-my-secret-header,200HeaderX-my-secret-headerItemsMany,200HeaderX-my-secret-headerItemsValue,200HeaderX-my-secret-headerValue,200Text-javascript,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="array"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" value="&gt; 1"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" value="integer">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" value="&gt; 0">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" value="Yes"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" value="Not object" failure="true"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="24" failure="true" name="200.Content.text-javascript.Value.Properties.Additional.Defined=&apos;No&apos;">
+      <Has name="properties" value="200Content,200HeaderX-my-secret-header,200HeaderX-my-secret-headerItemsMany,200HeaderX-my-secret-headerItemsValue,200HeaderX-my-secret-headerValue,200Text-javascript,200Text-javascriptValue,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="array"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" value="&gt; 1"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" value="integer">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" value="&gt; 0">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" value="Yes"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" value="object"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" value="&gt;= 1"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" value="No" failure="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="25" failure="true" name="200.Content.text-javascript.Value.Properties.Additional.Type=null">
+      <Has name="properties" value="200Content,200HeaderX-my-secret-header,200HeaderX-my-secret-headerItemsMany,200HeaderX-my-secret-headerItemsValue,200HeaderX-my-secret-headerValue,200Text-javascript,200Text-javascriptAdditional,200Text-javascriptProperties,200Text-javascriptValue,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="array"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" value="&gt; 1"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" value="integer">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" value="&gt; 0">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" value="Yes"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" value="object"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" value="&gt;= 1"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" value="Yes">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" value="null" failure="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="26" failure="true" name="200.Content.text-javascript.Value.Properties.Additional.Type=&apos;Not boolean&apos;">
+      <Has name="properties" value="200Content,200HeaderX-my-secret-header,200HeaderX-my-secret-headerItemsMany,200HeaderX-my-secret-headerItemsValue,200HeaderX-my-secret-headerValue,200Text-javascript,200Text-javascriptAdditional,200Text-javascriptProperties,200Text-javascriptValue,status200"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="200"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" value="Yes">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" value="array"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" value="&gt; 1"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" value="integer">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" value="&gt; 0">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" value="Yes"/>
+        <Var name="200.Content.Defined" value="Yes"/>
+        <Var name="200.Content.Media-Type" value="text-javascript">
+          <Has name="mediaType" value="text/javascript"/>
+        </Var>
+        <Var name="200.Content.application-json.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" value="object"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" value="&gt;= 1"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" value="Yes">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" value="Not boolean" failure="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" NA="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="27" failure="true" name="4XX.Content.Defined=&apos;No&apos;">
+      <Has name="properties" value="status4XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="4XX"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" NA="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" NA="true"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" NA="true"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" NA="true">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" NA="true"/>
+        <Var name="200.Content.Defined" NA="true"/>
+        <Var name="200.Content.Media-Type" NA="true"/>
+        <Var name="200.Content.application-json.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" value="No" failure="true"/>
+        <Var name="4XX.Content.Media-Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="28" failure="true" name="4XX.Content.Media-Type=&apos;Other&apos;">
+      <Has name="properties" value="4XXContent,status4XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="4XX"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" NA="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" NA="true"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" NA="true"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" NA="true">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" NA="true"/>
+        <Var name="200.Content.Defined" NA="true"/>
+        <Var name="200.Content.Media-Type" NA="true"/>
+        <Var name="200.Content.application-json.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" value="Yes"/>
+        <Var name="4XX.Content.Media-Type" value="Other" failure="true">
+          <Has name="excluded" value="&apos;application/json&apos;"/>
+        </Var>
+        <Var name="4XX.Content.application-json.Type" NA="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="29" failure="true" name="4XX.Content.application-json.Type=null">
+      <Has name="properties" value="4XXApplication-json,4XXContent,status4XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="4XX"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" NA="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" NA="true"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" NA="true"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" NA="true">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" NA="true"/>
+        <Var name="200.Content.Defined" NA="true"/>
+        <Var name="200.Content.Media-Type" NA="true"/>
+        <Var name="200.Content.application-json.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" value="Yes"/>
+        <Var name="4XX.Content.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="4XX.Content.application-json.Type" value="null" failure="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="30" failure="true" name="4XX.Content.application-json.Type=&apos;Not object&apos;">
+      <Has name="properties" value="4XXApplication-json,4XXContent,status4XX"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Responses"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="response">
+        <Var name="Status-Code" value="4XX"/>
+        <Var name="200.Headers.x-my-secret-header.Defined" NA="true">
+          <Has name="explode" value="false"/>
+          <Has name="headerName" value="x-my-secret-header"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Type" NA="true"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Size" NA="true"/>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Contains.Value.Is" NA="true">
+          <Has name="format" value="int64"/>
+        </Var>
+        <Var name="200.Headers.x-my-secret-header.Items.Unique" NA="true"/>
+        <Var name="200.Content.Defined" NA="true"/>
+        <Var name="200.Content.Media-Type" NA="true"/>
+        <Var name="200.Content.application-json.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.application-json.Value.Properties.Additional.Value.Is" NA="true"/>
+        <Var name="200.Content.text-javascript.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Property-Count" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Defined" NA="true">
+          <Has name="propertyName" value="Additional"/>
+        </Var>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Type" NA="true"/>
+        <Var name="200.Content.text-javascript.Value.Properties.Additional.Value" NA="true"/>
+        <Var name="4XX.Content.Defined" value="Yes"/>
+        <Var name="4XX.Content.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="4XX.Content.application-json.Type" value="Not object" failure="true"/>
+        <Var name="4XX.Content.application-json.Value.Properties.Additional" NA="true"/>
+      </Input>
+    </TestCase>
+  </Function>
+</TestCases>

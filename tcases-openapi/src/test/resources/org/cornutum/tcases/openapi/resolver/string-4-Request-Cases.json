@@ -1,0 +1,158 @@
+
+[
+    {
+        "id": 0,
+        "name": "param0.Defined='Yes'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "String",
+        "path": "/string",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "r"
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "param0.Defined='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "String",
+        "path": "/string",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": null,
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "param0.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "String",
+        "path": "/string",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "null",
+                    "value": null
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "param0.Value.Length='> 1'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "String",
+        "path": "/string",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "ioXCk5EIIRmP2A8wWkNicPdggEU8msVDiOTv80P3XHspepboKJ2dBEbnW3mpWDCM7e12yzZTwDLHaPWChikf2q5wjDUSL961TRrpyQ1afTn8PCRg4rFPvcUhIOverduIupLEccQ6NjG7aHfoNlvZ9YaUYfpwA0PnTWT0diPrz8f5Jjduaiu8WDyO5aYQOu8ILud0aXfM3Eoz6z60ej0RDqZ7prgL8sYGMfBOkQJ3h|hn"
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "param0.Type='Not string'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "String",
+        "path": "/string",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "integer",
+                    "value": -851,
+                    "format": "int32"
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Type=Not string"
+    },
+    {
+        "id": 5,
+        "name": "param0.Value.Length='0'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "String",
+        "path": "/string",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": ""
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Length=0"
+    },
+    {
+        "id": 6,
+        "name": "param0.Value.Matches-Pattern='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "String",
+        "path": "/string",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "^"
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Matches-Pattern=No"
+    }
+]

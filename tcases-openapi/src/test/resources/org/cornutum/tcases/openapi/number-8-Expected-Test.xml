@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<TestCases system="Number">
+  <Has name="server" value="/"/>
+  <Has name="title" value="Number"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="POST_number">
+    <Has name="operation" value="POST"/>
+    <Has name="path" value="/number"/>
+    <Has name="server" value="/"/>
+    <Has name="title" value="Number"/>
+    <Has name="version" value="0.0.0"/>
+    <TestCase id="0" name="param0.Defined=&apos;Yes&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/number"/>
+      <Has name="properties" value="param0,param0Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Number"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="number">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Is" value="-100.0">
+          <Has name="format" value="float"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="1" name="param0.Defined=&apos;No&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/number"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Number"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="No">
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Is" NA="true">
+          <Has name="format" value="float"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="2" name="param0.Value.Is=&apos;1.0&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/number"/>
+      <Has name="properties" value="param0,param0Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Number"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="number">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Is" value="1.0">
+          <Has name="format" value="float"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="3" name="param0.Value.Is=&apos;100.0&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/number"/>
+      <Has name="properties" value="param0,param0Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Number"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="number">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Is" value="100.0">
+          <Has name="format" value="float"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="4" failure="true" name="param0.Type=null">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/number"/>
+      <Has name="properties" value="param0"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Number"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="null" failure="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Is" NA="true">
+          <Has name="format" value="float"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="5" failure="true" name="param0.Type=&apos;Not number&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/number"/>
+      <Has name="properties" value="param0"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Number"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="Not number" failure="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Is" NA="true">
+          <Has name="format" value="float"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="6" failure="true" name="param0.Value.Is=&apos;Other&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/number"/>
+      <Has name="properties" value="param0,param0Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="Number"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="query">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Type" value="number">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Is" value="Other" failure="true">
+          <Has name="excluded" value="&apos;-100.0&apos;,&apos;1.0&apos;,&apos;100.0&apos;"/>
+          <Has name="format" value="float"/>
+          <Has name="paramName" value="param0"/>
+        </Var>
+      </Input>
+    </TestCase>
+  </Function>
+</TestCases>

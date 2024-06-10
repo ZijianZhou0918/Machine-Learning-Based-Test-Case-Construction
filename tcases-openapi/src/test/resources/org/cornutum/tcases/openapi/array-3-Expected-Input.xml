@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<System name="Array">
+  <Has name="server" value="/"/>
+  <Has name="title" value="Array"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="POST_array">
+    <Has name="operation" value="POST"/>
+    <Has name="path" value="/array"/>
+    <Input type="cookie">
+      <VarSet name="param0">
+        <Has name="paramName" value="param0"/>
+        <Var name="Defined">
+          <Has name="explode" value="true"/>
+          <Has name="style" value="form"/>
+          <Value name="Yes" property="param0"/>
+          <Value name="No"/>
+        </Var>
+        <Var name="Type" when="param0">
+          <Value name="array" property="param0Value"/>
+          <Value name="null" failure="true"/>
+          <Value name="Not array" failure="true"/>
+        </Var>
+        <VarSet name="Items" when="param0Value">
+          <Var name="Size">
+            <Value name="0" property="param0ItemsNone"/>
+            <Value name="1"/>
+            <Value name="&gt; 1" property="param0ItemsMany"/>
+          </Var>
+          <VarSet name="Contains" whenNot="param0ItemsNone">
+            <Var name="Type">
+              <Has name="itemType" value="object"/>
+              <Value name="object" property="param0ItemsValue"/>
+              <Value name="null" failure="true"/>
+              <Value name="Not object" failure="true"/>
+            </Var>
+            <VarSet name="Value" when="param0ItemsValue">
+              <VarSet name="Properties">
+                <Var name="Additional">
+                  <Value name="Yes" property="param0ItemsProperties"/>
+                  <Value name="No"/>
+                </Var>
+              </VarSet>
+            </VarSet>
+          </VarSet>
+          <Var name="Unique" when="param0ItemsMany">
+            <Value name="Yes"/>
+            <Value name="No"/>
+          </Var>
+        </VarSet>
+      </VarSet>
+    </Input>
+  </Function>
+</System>

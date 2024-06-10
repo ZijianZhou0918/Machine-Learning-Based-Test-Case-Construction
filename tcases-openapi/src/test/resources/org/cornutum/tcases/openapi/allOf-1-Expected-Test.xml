@@ -1,0 +1,241 @@
+<?xml version="1.0"?>
+<TestCases system="AllOf">
+  <Has name="server" value="/"/>
+  <Has name="title" value="AllOf"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="POST_allOf">
+    <Has name="operation" value="POST"/>
+    <Has name="path" value="/allOf"/>
+    <Has name="server" value="/"/>
+    <Has name="title" value="AllOf"/>
+    <Has name="version" value="0.0.0"/>
+    <TestCase id="0" name="Body.Defined=&apos;Yes&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/allOf"/>
+      <Has name="properties" value="bodyApplication-json,bodyApplication-jsonItemsNone,bodyApplication-jsonValue,bodyContent"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="AllOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="request">
+        <Var name="Body.Defined" value="Yes"/>
+        <Var name="Body.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="Body.application-json.Type" value="array"/>
+        <Var name="Body.application-json.Items.Size" value="0"/>
+        <Var name="Body.application-json.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="Body.application-json.Items.Contains.Value.Is" NA="true"/>
+        <Var name="Body.application-json.Items.Unique" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="1" name="Body.application-json.Items.Size=&apos;1&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/allOf"/>
+      <Has name="properties" value="bodyApplication-json,bodyApplication-jsonItemsValue,bodyApplication-jsonValue,bodyContent"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="AllOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="request">
+        <Var name="Body.Defined" value="Yes"/>
+        <Var name="Body.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="Body.application-json.Type" value="array"/>
+        <Var name="Body.application-json.Items.Size" value="1"/>
+        <Var name="Body.application-json.Items.Contains.Type" value="integer">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="Body.application-json.Items.Contains.Value.Is" value="&lt; 0"/>
+        <Var name="Body.application-json.Items.Unique" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="2" name="Body.application-json.Items.Size=&apos;&gt; 1&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/allOf"/>
+      <Has name="properties" value="bodyApplication-json,bodyApplication-jsonItemsMany,bodyApplication-jsonItemsValue,bodyApplication-jsonValue,bodyContent"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="AllOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="request">
+        <Var name="Body.Defined" value="Yes"/>
+        <Var name="Body.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="Body.application-json.Type" value="array"/>
+        <Var name="Body.application-json.Items.Size" value="&gt; 1"/>
+        <Var name="Body.application-json.Items.Contains.Type" value="integer">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="Body.application-json.Items.Contains.Value.Is" value="0"/>
+        <Var name="Body.application-json.Items.Unique" value="Yes"/>
+      </Input>
+    </TestCase>
+    <TestCase id="3" name="Body.application-json.Items.Contains.Value.Is=&apos;&gt; 0&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/allOf"/>
+      <Has name="properties" value="bodyApplication-json,bodyApplication-jsonItemsValue,bodyApplication-jsonValue,bodyContent"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="AllOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="request">
+        <Var name="Body.Defined" value="Yes"/>
+        <Var name="Body.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="Body.application-json.Type" value="array"/>
+        <Var name="Body.application-json.Items.Size" value="1"/>
+        <Var name="Body.application-json.Items.Contains.Type" value="integer">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="Body.application-json.Items.Contains.Value.Is" value="&gt; 0"/>
+        <Var name="Body.application-json.Items.Unique" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="4" name="Body.application-json.Items.Unique=&apos;No&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/allOf"/>
+      <Has name="properties" value="bodyApplication-json,bodyApplication-jsonItemsMany,bodyApplication-jsonItemsValue,bodyApplication-jsonValue,bodyContent"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="AllOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="request">
+        <Var name="Body.Defined" value="Yes"/>
+        <Var name="Body.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="Body.application-json.Type" value="array"/>
+        <Var name="Body.application-json.Items.Size" value="&gt; 1"/>
+        <Var name="Body.application-json.Items.Contains.Type" value="integer">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="Body.application-json.Items.Contains.Value.Is" value="&lt; 0"/>
+        <Var name="Body.application-json.Items.Unique" value="No"/>
+      </Input>
+    </TestCase>
+    <TestCase id="5" failure="true" name="Body.Defined=&apos;No&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/allOf"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="AllOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="request">
+        <Var name="Body.Defined" value="No" failure="true"/>
+        <Var name="Body.Media-Type" NA="true"/>
+        <Var name="Body.application-json.Type" NA="true"/>
+        <Var name="Body.application-json.Items.Size" NA="true"/>
+        <Var name="Body.application-json.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="Body.application-json.Items.Contains.Value.Is" NA="true"/>
+        <Var name="Body.application-json.Items.Unique" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="6" failure="true" name="Body.Media-Type=&apos;Other&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/allOf"/>
+      <Has name="properties" value="bodyContent"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="AllOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="request">
+        <Var name="Body.Defined" value="Yes"/>
+        <Var name="Body.Media-Type" value="Other" failure="true">
+          <Has name="excluded" value="&apos;application/json&apos;"/>
+        </Var>
+        <Var name="Body.application-json.Type" NA="true"/>
+        <Var name="Body.application-json.Items.Size" NA="true"/>
+        <Var name="Body.application-json.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="Body.application-json.Items.Contains.Value.Is" NA="true"/>
+        <Var name="Body.application-json.Items.Unique" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="7" failure="true" name="Body.application-json.Type=null">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/allOf"/>
+      <Has name="properties" value="bodyApplication-json,bodyContent"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="AllOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="request">
+        <Var name="Body.Defined" value="Yes"/>
+        <Var name="Body.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="Body.application-json.Type" value="null" failure="true"/>
+        <Var name="Body.application-json.Items.Size" NA="true"/>
+        <Var name="Body.application-json.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="Body.application-json.Items.Contains.Value.Is" NA="true"/>
+        <Var name="Body.application-json.Items.Unique" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="8" failure="true" name="Body.application-json.Type=&apos;Not array&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/allOf"/>
+      <Has name="properties" value="bodyApplication-json,bodyContent"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="AllOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="request">
+        <Var name="Body.Defined" value="Yes"/>
+        <Var name="Body.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="Body.application-json.Type" value="Not array" failure="true"/>
+        <Var name="Body.application-json.Items.Size" NA="true"/>
+        <Var name="Body.application-json.Items.Contains.Type" NA="true">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="Body.application-json.Items.Contains.Value.Is" NA="true"/>
+        <Var name="Body.application-json.Items.Unique" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="9" failure="true" name="Body.application-json.Items.Contains.Type=null">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/allOf"/>
+      <Has name="properties" value="bodyApplication-json,bodyApplication-jsonValue,bodyContent"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="AllOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="request">
+        <Var name="Body.Defined" value="Yes"/>
+        <Var name="Body.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="Body.application-json.Type" value="array"/>
+        <Var name="Body.application-json.Items.Size" value="1"/>
+        <Var name="Body.application-json.Items.Contains.Type" value="null" failure="true">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="Body.application-json.Items.Contains.Value.Is" NA="true"/>
+        <Var name="Body.application-json.Items.Unique" NA="true"/>
+      </Input>
+    </TestCase>
+    <TestCase id="10" failure="true" name="Body.application-json.Items.Contains.Type=&apos;Not integer&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/allOf"/>
+      <Has name="properties" value="bodyApplication-json,bodyApplication-jsonValue,bodyContent"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="AllOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="request">
+        <Var name="Body.Defined" value="Yes"/>
+        <Var name="Body.Media-Type" value="application-json">
+          <Has name="mediaType" value="application/json"/>
+        </Var>
+        <Var name="Body.application-json.Type" value="array"/>
+        <Var name="Body.application-json.Items.Size" value="1"/>
+        <Var name="Body.application-json.Items.Contains.Type" value="Not integer" failure="true">
+          <Has name="itemType" value="integer"/>
+        </Var>
+        <Var name="Body.application-json.Items.Contains.Value.Is" NA="true"/>
+        <Var name="Body.application-json.Items.Unique" NA="true"/>
+      </Input>
+    </TestCase>
+  </Function>
+</TestCases>

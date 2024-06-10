@@ -1,0 +1,670 @@
+
+[
+    {
+        "id": 0,
+        "name": "within.Defined='Yes'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Date",
+        "path": "/date",
+        "operation": "GET",
+        "parameters": [
+            {
+                "name": "within",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2024-01-04",
+                    "format": "date"
+                },
+                "valid": true
+            },
+            {
+                "name": "outside",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2024-12-25",
+                    "format": "date"
+                },
+                "valid": true
+            },
+            {
+                "name": "none",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2024-01-09",
+                    "format": "date"
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "within.Defined='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Date",
+        "path": "/date",
+        "operation": "GET",
+        "parameters": [
+            {
+                "name": "within",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": null,
+                "valid": true
+            },
+            {
+                "name": "outside",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": null,
+                "valid": true
+            },
+            {
+                "name": "none",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": null,
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "within.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Date",
+        "path": "/date",
+        "operation": "GET",
+        "parameters": [
+            {
+                "name": "within",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "null",
+                    "value": null
+                },
+                "valid": false
+            },
+            {
+                "name": "outside",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2024-10-23",
+                    "format": "date"
+                },
+                "valid": true
+            },
+            {
+                "name": "none",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2024-05-20",
+                    "format": "date"
+                },
+                "valid": true
+            }
+        ],
+        "invalidInput": "within.Type=null"
+    },
+    {
+        "id": 3,
+        "name": "within.Type='Not string'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Date",
+        "path": "/date",
+        "operation": "GET",
+        "parameters": [
+            {
+                "name": "within",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "lwyxwj": {
+                            "type": "integer",
+                            "value": 1014,
+                            "format": "int32"
+                        },
+                        "wartvehglmzhv": {
+                            "type": "number",
+                            "value": 995.8
+                        }
+                    }
+                },
+                "valid": false
+            },
+            {
+                "name": "outside",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2024-12-10",
+                    "format": "date"
+                },
+                "valid": true
+            },
+            {
+                "name": "none",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2024-10-19",
+                    "format": "date"
+                },
+                "valid": true
+            }
+        ],
+        "invalidInput": "within.Type=Not string"
+    },
+    {
+        "id": 4,
+        "name": "within.Value.Length='9'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Date",
+        "path": "/date",
+        "operation": "GET",
+        "parameters": [
+            {
+                "name": "within",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2023-05-0",
+                    "format": "date"
+                },
+                "valid": false
+            },
+            {
+                "name": "outside",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2023-04-05",
+                    "format": "date"
+                },
+                "valid": true
+            },
+            {
+                "name": "none",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2025-07-17",
+                    "format": "date"
+                },
+                "valid": true
+            }
+        ],
+        "invalidInput": "within.Value.Length=9"
+    },
+    {
+        "id": 5,
+        "name": "within.Value.Length='11'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Date",
+        "path": "/date",
+        "operation": "GET",
+        "parameters": [
+            {
+                "name": "within",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2025-04-260",
+                    "format": "date"
+                },
+                "valid": false
+            },
+            {
+                "name": "outside",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2024-03-25",
+                    "format": "date"
+                },
+                "valid": true
+            },
+            {
+                "name": "none",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2024-08-01",
+                    "format": "date"
+                },
+                "valid": true
+            }
+        ],
+        "invalidInput": "within.Value.Length=11"
+    },
+    {
+        "id": 6,
+        "name": "outside.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Date",
+        "path": "/date",
+        "operation": "GET",
+        "parameters": [
+            {
+                "name": "within",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2023-03-04",
+                    "format": "date"
+                },
+                "valid": true
+            },
+            {
+                "name": "outside",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "null",
+                    "value": null
+                },
+                "valid": false
+            },
+            {
+                "name": "none",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2025-10-24",
+                    "format": "date"
+                },
+                "valid": true
+            }
+        ],
+        "invalidInput": "outside.Type=null"
+    },
+    {
+        "id": 7,
+        "name": "outside.Type='Not string'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Date",
+        "path": "/date",
+        "operation": "GET",
+        "parameters": [
+            {
+                "name": "within",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2024-09-18",
+                    "format": "date"
+                },
+                "valid": true
+            },
+            {
+                "name": "outside",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "array",
+                    "value": [
+                        {
+                            "type": "string",
+                            "value": "^H"
+                        }
+                    ]
+                },
+                "valid": false
+            },
+            {
+                "name": "none",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2023-06-22",
+                    "format": "date"
+                },
+                "valid": true
+            }
+        ],
+        "invalidInput": "outside.Type=Not string"
+    },
+    {
+        "id": 8,
+        "name": "outside.Value.Length='9'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Date",
+        "path": "/date",
+        "operation": "GET",
+        "parameters": [
+            {
+                "name": "within",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2025-06-28",
+                    "format": "date"
+                },
+                "valid": true
+            },
+            {
+                "name": "outside",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2024-04-1",
+                    "format": "date"
+                },
+                "valid": false
+            },
+            {
+                "name": "none",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2023-08-27",
+                    "format": "date"
+                },
+                "valid": true
+            }
+        ],
+        "invalidInput": "outside.Value.Length=9"
+    },
+    {
+        "id": 9,
+        "name": "outside.Value.Length='11'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Date",
+        "path": "/date",
+        "operation": "GET",
+        "parameters": [
+            {
+                "name": "within",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2023-01-29",
+                    "format": "date"
+                },
+                "valid": true
+            },
+            {
+                "name": "outside",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2023-01-200",
+                    "format": "date"
+                },
+                "valid": false
+            },
+            {
+                "name": "none",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2023-08-11",
+                    "format": "date"
+                },
+                "valid": true
+            }
+        ],
+        "invalidInput": "outside.Value.Length=11"
+    },
+    {
+        "id": 10,
+        "name": "none.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Date",
+        "path": "/date",
+        "operation": "GET",
+        "parameters": [
+            {
+                "name": "within",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2023-06-09",
+                    "format": "date"
+                },
+                "valid": true
+            },
+            {
+                "name": "outside",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2024-04-05",
+                    "format": "date"
+                },
+                "valid": true
+            },
+            {
+                "name": "none",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "null",
+                    "value": null
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "none.Type=null"
+    },
+    {
+        "id": 11,
+        "name": "none.Type='Not string'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Date",
+        "path": "/date",
+        "operation": "GET",
+        "parameters": [
+            {
+                "name": "within",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2023-04-04",
+                    "format": "date"
+                },
+                "valid": true
+            },
+            {
+                "name": "outside",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2025-08-23",
+                    "format": "date"
+                },
+                "valid": true
+            },
+            {
+                "name": "none",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "number",
+                    "value": -430.3
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "none.Type=Not string"
+    },
+    {
+        "id": 12,
+        "name": "none.Value.Length='9'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Date",
+        "path": "/date",
+        "operation": "GET",
+        "parameters": [
+            {
+                "name": "within",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2024-04-05",
+                    "format": "date"
+                },
+                "valid": true
+            },
+            {
+                "name": "outside",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2024-06-07",
+                    "format": "date"
+                },
+                "valid": true
+            },
+            {
+                "name": "none",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2024-12-2",
+                    "format": "date"
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "none.Value.Length=9"
+    },
+    {
+        "id": 13,
+        "name": "none.Value.Length='11'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Date",
+        "path": "/date",
+        "operation": "GET",
+        "parameters": [
+            {
+                "name": "within",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2025-12-27",
+                    "format": "date"
+                },
+                "valid": true
+            },
+            {
+                "name": "outside",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2025-02-08",
+                    "format": "date"
+                },
+                "valid": true
+            },
+            {
+                "name": "none",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "2024-11-290",
+                    "format": "date"
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "none.Value.Length=11"
+    }
+]

@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<System name="Object">
+  <Has name="server" value="/"/>
+  <Has name="title" value="Object"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="POST_object">
+    <Has name="operation" value="POST"/>
+    <Has name="path" value="/object"/>
+    <Input type="query">
+      <VarSet name="param0">
+        <Has name="paramName" value="param0"/>
+        <Var name="Defined">
+          <Has name="explode" value="true"/>
+          <Has name="style" value="form"/>
+          <Value name="Yes" property="param0"/>
+          <Value name="No"/>
+        </Var>
+        <Var name="Type" when="param0">
+          <Value name="object" property="param0Value"/>
+          <Value name="null" failure="true"/>
+          <Value name="Not object" failure="true"/>
+        </Var>
+        <VarSet name="Value" when="param0Value">
+          <Var name="Property-Count">
+            <Value name="&gt;= 2">
+              <When>
+                <NotLessThan property="param0Properties" min="2"/>
+              </When>
+            </Value>
+            <Value name="&lt; 2" failure="true">
+              <When>
+                <LessThan property="param0Properties" max="2"/>
+              </When>
+            </Value>
+          </Var>
+          <VarSet name="Properties">
+            <VarSet name="alpha">
+              <Var name="Defined">
+                <Has name="propertyName" value="alpha"/>
+                <Value name="Yes" property="param0Alpha, param0Properties"/>
+                <Value name="No"/>
+              </Var>
+              <Var name="Type" when="param0Alpha">
+                <Value name="string" property="param0AlphaValue"/>
+                <Value name="null" failure="true"/>
+                <Value name="Not string" failure="true"/>
+              </Var>
+              <VarSet name="Value" when="param0AlphaValue">
+                <Var name="Length">
+                  <Value name="&gt; 0" property="param0AlphaLengthValid, param0AlphaNotEmpty"/>
+                  <Value name="0" property="param0AlphaLengthValid"/>
+                </Var>
+              </VarSet>
+            </VarSet>
+            <VarSet name="bravo">
+              <Var name="Defined">
+                <Has name="propertyName" value="bravo"/>
+                <Value name="Yes" property="param0Bravo, param0Properties"/>
+                <Value name="No"/>
+              </Var>
+              <Var name="Type" when="param0Bravo">
+                <Value name="string" property="param0BravoValue"/>
+                <Value name="null" failure="true"/>
+                <Value name="Not string" failure="true"/>
+              </Var>
+              <VarSet name="Value" when="param0BravoValue">
+                <Var name="Length">
+                  <Value name="&gt; 0" property="param0BravoLengthValid, param0BravoNotEmpty"/>
+                  <Value name="0" property="param0BravoLengthValid"/>
+                </Var>
+              </VarSet>
+            </VarSet>
+            <VarSet name="charlie">
+              <Var name="Defined">
+                <Has name="propertyName" value="charlie"/>
+                <Value name="Yes" property="param0Charlie, param0Properties"/>
+                <Value name="No"/>
+              </Var>
+              <Var name="Type" when="param0Charlie">
+                <Value name="boolean" property="param0CharlieValue"/>
+                <Value name="null" failure="true"/>
+                <Value name="Not boolean" failure="true"/>
+              </Var>
+              <Var name="Value" when="param0CharlieValue">
+                <Value name="true"/>
+                <Value name="false"/>
+              </Var>
+            </VarSet>
+            <VarSet name="delta">
+              <Var name="Defined">
+                <Has name="propertyName" value="delta"/>
+                <Value name="Yes" property="param0Delta, param0Properties"/>
+                <Value name="No"/>
+              </Var>
+              <Var name="Type" when="param0Delta">
+                <Value name="string" property="param0DeltaValue"/>
+                <Value name="null" failure="true"/>
+                <Value name="Not string" failure="true"/>
+              </Var>
+              <VarSet name="Value" when="param0DeltaValue">
+                <Var name="Length">
+                  <Value name="&gt; 0" property="param0DeltaLengthValid, param0DeltaNotEmpty"/>
+                  <Value name="0" property="param0DeltaLengthValid"/>
+                </Var>
+              </VarSet>
+            </VarSet>
+            <VarSet name="echo">
+              <Var name="Defined">
+                <Has name="propertyName" value="echo"/>
+                <Value name="Yes" property="param0Echo, param0Properties"/>
+                <Value name="No"/>
+              </Var>
+              <Var name="Type" when="param0Echo">
+                <Value name="integer" property="param0EchoValue"/>
+                <Value name="null" failure="true"/>
+                <Value name="Not integer" failure="true"/>
+              </Var>
+              <VarSet name="Value" when="param0EchoValue">
+                <Var name="Is">
+                  <Value name="&lt; 0"/>
+                  <Value name="0"/>
+                  <Value name="&gt; 0"/>
+                </Var>
+              </VarSet>
+            </VarSet>
+            <VarSet name="foxtrot">
+              <Var name="Defined">
+                <Has name="propertyName" value="foxtrot"/>
+                <Value name="Yes" property="param0Foxtrot, param0Properties"/>
+                <Value name="No"/>
+              </Var>
+              <Var name="Type" when="param0Foxtrot">
+                <Value name="number" property="param0FoxtrotValue"/>
+                <Value name="null" failure="true"/>
+                <Value name="Not number" failure="true"/>
+              </Var>
+              <VarSet name="Value" when="param0FoxtrotValue">
+                <Var name="Is">
+                  <Value name="&lt; 0"/>
+                  <Value name="0"/>
+                  <Value name="&gt; 0"/>
+                </Var>
+              </VarSet>
+            </VarSet>
+            <VarSet name="golf">
+              <Var name="Defined">
+                <Has name="propertyName" value="golf"/>
+                <Value name="Yes" property="param0Golf, param0Properties"/>
+                <Value name="No"/>
+              </Var>
+              <Var name="Type" when="param0Golf">
+                <Value name="object" property="param0GolfValue"/>
+                <Value name="null" failure="true"/>
+                <Value name="Not object" failure="true"/>
+              </Var>
+              <VarSet name="Value" when="param0GolfValue">
+                <VarSet name="Properties">
+                  <Var name="Additional">
+                    <Value name="Yes" property="param0GolfProperties"/>
+                    <Value name="No"/>
+                  </Var>
+                </VarSet>
+              </VarSet>
+            </VarSet>
+            <VarSet name="hotel">
+              <Var name="Defined">
+                <Has name="propertyName" value="hotel"/>
+                <Value name="Yes" property="param0Hotel, param0Properties"/>
+                <Value name="No"/>
+              </Var>
+              <Var name="Type" when="param0Hotel">
+                <Value name="object" property="param0HotelValue"/>
+                <Value name="null" failure="true"/>
+                <Value name="Not object" failure="true"/>
+              </Var>
+              <VarSet name="Value" when="param0HotelValue">
+                <Var name="Property-Count">
+                  <Value name="0" once="true" whenNot="param0HotelProperties"/>
+                  <Value name="&gt; 0" when="param0HotelProperties"/>
+                </Var>
+                <VarSet name="Properties">
+                  <VarSet name="rooms">
+                    <Var name="Defined">
+                      <Has name="propertyName" value="rooms"/>
+                      <Value name="Yes" property="param0HotelProperties, param0HotelRooms"/>
+                      <Value name="No"/>
+                    </Var>
+                    <Var name="Type" when="param0HotelRooms">
+                      <Value name="integer" property="param0HotelRoomsValue"/>
+                      <Value name="null" failure="true"/>
+                      <Value name="Not integer" failure="true"/>
+                    </Var>
+                    <VarSet name="Value" when="param0HotelRoomsValue">
+                      <Var name="Is">
+                        <Value name="&lt; 0"/>
+                        <Value name="0"/>
+                        <Value name="&gt; 0"/>
+                      </Var>
+                    </VarSet>
+                  </VarSet>
+                  <Var name="Additional">
+                    <Value name="Yes" property="param0HotelProperties"/>
+                    <Value name="No"/>
+                  </Var>
+                </VarSet>
+              </VarSet>
+            </VarSet>
+            <Var name="Additional">
+              <Value name="Yes" property="param0Properties"/>
+              <Value name="No"/>
+            </Var>
+          </VarSet>
+        </VarSet>
+      </VarSet>
+    </Input>
+  </Function>
+</System>

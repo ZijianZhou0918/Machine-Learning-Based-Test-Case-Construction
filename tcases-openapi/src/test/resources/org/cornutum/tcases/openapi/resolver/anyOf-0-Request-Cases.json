@@ -1,0 +1,158 @@
+
+[
+    {
+        "id": 0,
+        "name": "param0.Defined='Yes'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AnyOf",
+        "path": "/anyOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": ""
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "param0.Defined='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AnyOf",
+        "path": "/anyOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": false,
+                "data": null,
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "param0.Value.Length='128'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AnyOf",
+        "path": "/anyOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "XIJWCJCJLYMLWYXWJWLAWARTVEHGLMZHVRIWGNLFLRBHLVZMGSFXSCQWNCERECOHWZKWGIIETSYBNOOQQGMOFNIGVTYAZLJPIZMFNCGHYFHGTXCPEXSBWONEBWIHJRED"
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "param0.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AnyOf",
+        "path": "/anyOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "null",
+                    "value": null
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Type=null"
+    },
+    {
+        "id": 4,
+        "name": "param0.Type='Not string'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AnyOf",
+        "path": "/anyOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "boolean",
+                    "value": true
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Type=Not string"
+    },
+    {
+        "id": 5,
+        "name": "param0.Value.Length='129'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AnyOf",
+        "path": "/anyOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "`{']_6{q)_azDfneBI)3hWE0UXk`&vxx*U/bX9hjt2aw|o}Qg86e1kU`o&$eT4n_h]^A9=f22xRDHJh`(o/2WA(+9zu~jh(b)=v.TgJJsN'@XM<qmRXcB2mnH{'nX)7&d"
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Length=129"
+    },
+    {
+        "id": 6,
+        "name": "param0.Value.Matches-Pattern='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "AnyOf",
+        "path": "/anyOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "{Q!B]?-l0X'8:%oKXyo!7^b3$N`8jKDNihc~h1|`AJe[QR!3>+*Kf(:KxxX>{]zHVS4pF?Z%kTfyCXP)YGgUen#-0BaGbC{]sv@cdDR/P&Jcle=2!r^<j]!3sa&PJBGS"
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Matches-Pattern=No"
+    }
+]

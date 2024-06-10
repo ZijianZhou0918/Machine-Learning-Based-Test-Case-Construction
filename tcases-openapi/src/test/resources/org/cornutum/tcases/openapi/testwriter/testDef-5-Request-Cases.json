@@ -1,0 +1,1284 @@
+
+[
+    {
+        "id": 0,
+        "name": "param0.Defined='Yes'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/number",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "number",
+                    "value": -1.234,
+                    "format": "double"
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "param0.Defined='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/number",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": null,
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "param0.Value.Is='< -1.234'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/number",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "number",
+                    "value": -4608304788595797994.916,
+                    "format": "double"
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "param0.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/number",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "null",
+                    "value": null
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Type=null"
+    },
+    {
+        "id": 4,
+        "name": "param0.Type='Not number'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/number",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "$yhhlf"
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Type=Not number"
+    },
+    {
+        "id": 5,
+        "name": "param0.Value.Is='-1.233'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/number",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "number",
+                    "value": -1.233,
+                    "format": "double"
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Is=-1.233"
+    },
+    {
+        "id": 0,
+        "name": "param0.Defined='Yes'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                    }
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "param0.Defined='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": null,
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "param0.Value.Property-Count='<= 4'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "string",
+                            "value": ">#<KFcS(=UPgf1ur(vw[!&aWx6Pp{za|Kpne}]0nW0v+vSzABaBn'*TqsjaV#]X-ST`V}(1/*8V-S%cq{VHyTpYF/IOaB'"
+                        },
+                        "myBoolean": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "myNumber": {
+                            "type": "number",
+                            "value": -4081016827265161023.5
+                        },
+                        "myInteger": {
+                            "type": "integer",
+                            "value": -184459035,
+                            "format": "int32"
+                        }
+                    }
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "param0.Value.Properties.myString.Value.Length='0'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "mfncghyfhg": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "cp": {
+                            "type": "object",
+                            "value": {
+                            }
+                        }
+                    }
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "param0.Value.Properties.myBoolean.Value='false'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myBoolean": {
+                            "type": "boolean",
+                            "value": false
+                        },
+                        "myNumber": {
+                            "type": "number",
+                            "value": 0
+                        },
+                        "myInteger": {
+                            "type": "integer",
+                            "value": 0,
+                            "format": "int32"
+                        }
+                    }
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "param0.Value.Properties.myNumber.Value.Is='> 0'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "string",
+                            "value": "|H}:Lt@N2:0Ln#`{']_6{q)_azDfneBI)3hWE0UXk`&vxx*U/bX9hjt2aw|o}Qg86e1kU`o&$eT4n_h]^A9=f22xRDHJh`(o/2WA(+9zu~"
+                        },
+                        "myNumber": {
+                            "type": "number",
+                            "value": 191684037840470424.2
+                        },
+                        "xblbqey": {
+                            "type": "integer",
+                            "value": -835,
+                            "format": "int32"
+                        },
+                        "xmczosccg": {
+                            "type": "integer",
+                            "value": -178,
+                            "format": "int32"
+                        }
+                    }
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "param0.Value.Properties.myInteger.Value.Is='> 0'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myBoolean": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "myInteger": {
+                            "type": "integer",
+                            "value": 852676846,
+                            "format": "int32"
+                        }
+                    }
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "name": "param0.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "null",
+                    "value": null
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Type=null"
+    },
+    {
+        "id": 8,
+        "name": "param0.Type='Not object'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "integer",
+                    "value": 885,
+                    "format": "int32"
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Type=Not object"
+    },
+    {
+        "id": 9,
+        "name": "param0.Value.Property-Count='> 4'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "myBoolean": {
+                            "type": "boolean",
+                            "value": false
+                        },
+                        "myNumber": {
+                            "type": "number",
+                            "value": -3851170285209444851.0
+                        },
+                        "myInteger": {
+                            "type": "integer",
+                            "value": -532586911,
+                            "format": "int32"
+                        },
+                        "zmmpqfu": {
+                            "type": "array",
+                            "value": [
+                                {
+                                    "type": "string",
+                                    "value": ""
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "l"
+                                }
+                            ]
+                        },
+                        "ihbxzm": {
+                            "type": "number",
+                            "value": -563.9
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Property-Count=> 4"
+    },
+    {
+        "id": 10,
+        "name": "param0.Value.Properties.myString.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "null",
+                            "value": null
+                        },
+                        "myNumber": {
+                            "type": "number",
+                            "value": -4183744455879194658.8
+                        },
+                        "jkacjbd": {
+                            "type": "number",
+                            "value": -515.9
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.myString.Type=null"
+    },
+    {
+        "id": 11,
+        "name": "param0.Value.Properties.myString.Type='Not string'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "number",
+                            "value": -289.5
+                        },
+                        "myNumber": {
+                            "type": "number",
+                            "value": -3690907427763227964.9
+                        },
+                        "zpiwhvioimlurvy": {
+                            "type": "string",
+                            "value": "xxX"
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.myString.Type=Not string"
+    },
+    {
+        "id": 12,
+        "name": "param0.Value.Properties.myBoolean.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "myBoolean": {
+                            "type": "null",
+                            "value": null
+                        },
+                        "myNumber": {
+                            "type": "number",
+                            "value": -3710246829092381367.0
+                        },
+                        "zmmbvrezk": {
+                            "type": "number",
+                            "value": 176.5
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.myBoolean.Type=null"
+    },
+    {
+        "id": 13,
+        "name": "param0.Value.Properties.myBoolean.Type='Not boolean'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "myBoolean": {
+                            "type": "array",
+                            "value": [
+                                {
+                                    "type": "string",
+                                    "value": "XP)Y"
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "gUen#-0B"
+                                }
+                            ]
+                        },
+                        "myNumber": {
+                            "type": "number",
+                            "value": -3923678888095618734.3
+                        },
+                        "dki": {
+                            "type": "array",
+                            "value": [
+                                {
+                                    "type": "string",
+                                    "value": "c"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.myBoolean.Type=Not boolean"
+    },
+    {
+        "id": 14,
+        "name": "param0.Value.Properties.myNumber.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "myNumber": {
+                            "type": "null",
+                            "value": null
+                        },
+                        "mceiygxo": {
+                            "type": "boolean",
+                            "value": true
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.myNumber.Type=null"
+    },
+    {
+        "id": 15,
+        "name": "param0.Value.Properties.myNumber.Type='Not number'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "myNumber": {
+                            "type": "array",
+                            "value": [
+                            ]
+                        },
+                        "wnoiummgqkajnnsj": {
+                            "type": "integer",
+                            "value": -198,
+                            "format": "int32"
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.myNumber.Type=Not number"
+    },
+    {
+        "id": 16,
+        "name": "param0.Value.Properties.myInteger.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "myNumber": {
+                            "type": "number",
+                            "value": -4296979289022054183.3
+                        },
+                        "myInteger": {
+                            "type": "null",
+                            "value": null
+                        },
+                        "yz": {
+                            "type": "object",
+                            "value": {
+                                "jogjixineeufcksh": {
+                                    "type": "boolean",
+                                    "value": true
+                                },
+                                "ltsmpyfisrh": {
+                                    "type": "string",
+                                    "value": "-2)Uog#"
+                                },
+                                "gpibwbtvmzbsys": {
+                                    "type": "boolean",
+                                    "value": true
+                                }
+                            }
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.myInteger.Type=null"
+    },
+    {
+        "id": 17,
+        "name": "param0.Value.Properties.myInteger.Type='Not integer'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/object",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "myString": {
+                            "type": "string",
+                            "value": ""
+                        },
+                        "myNumber": {
+                            "type": "number",
+                            "value": -4358118265922029736.6
+                        },
+                        "myInteger": {
+                            "type": "number",
+                            "value": -970.7
+                        },
+                        "xymtvdyoers": {
+                            "type": "number",
+                            "value": 341.1
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.myInteger.Type=Not integer"
+    },
+    {
+        "id": 0,
+        "name": "Body.Defined='Yes'",
+        "server": "http://www.cornutum.org/tcases/api",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/operations",
+        "operation": "PATCH",
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "object",
+                "value": {
+                    "wjwlaw": {
+                        "type": "array",
+                        "value": [
+                            {
+                                "type": "string",
+                                "value": "L3"
+                            },
+                            {
+                                "type": "string",
+                                "value": "IRa"
+                            },
+                            {
+                                "type": "string",
+                                "value": "8C(`Kg"
+                            }
+                        ]
+                    },
+                    "lfl": {
+                        "type": "number",
+                        "value": 488.8
+                    },
+                    "vzmgsfxsc": {
+                        "type": "object",
+                        "value": {
+                            "c": {
+                                "type": "array",
+                                "value": [
+                                    {
+                                        "type": "string",
+                                        "value": "^H"
+                                    }
+                                ]
+                            },
+                            "wzkwgiietsyb": {
+                                "type": "number",
+                                "value": 119.1
+                            }
+                        }
+                    }
+                }
+            },
+            "valid": true
+        }
+    },
+    {
+        "id": 1,
+        "name": "Body.Defined='No'",
+        "server": "http://www.cornutum.org/tcases/api",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/operations",
+        "operation": "PATCH",
+        "body": {
+            "data": null,
+            "valid": true
+        }
+    },
+    {
+        "id": 2,
+        "name": "Body.application-json.Value.Properties.Additional='No'",
+        "server": "http://www.cornutum.org/tcases/api",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/operations",
+        "operation": "PATCH",
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "object",
+                "value": {
+                }
+            },
+            "valid": true
+        }
+    },
+    {
+        "id": 3,
+        "name": "Body.Media-Type='Other'",
+        "server": "http://www.cornutum.org/tcases/api",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/operations",
+        "operation": "PATCH",
+        "body": {
+            "mediaType": "text/xml",
+            "data": {
+                "type": "integer",
+                "value": 439,
+                "format": "int32"
+            },
+            "valid": false
+        },
+        "invalidInput": "Body.Media-Type=Other"
+    },
+    {
+        "id": 4,
+        "name": "Body.application-json.Type=null",
+        "server": "http://www.cornutum.org/tcases/api",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/operations",
+        "operation": "PATCH",
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "null",
+                "value": null
+            },
+            "valid": false
+        },
+        "invalidInput": "Body.application-json.Type=null"
+    },
+    {
+        "id": 5,
+        "name": "Body.application-json.Type='Not object'",
+        "server": "http://www.cornutum.org/tcases/api",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/operations",
+        "operation": "PATCH",
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "number",
+                "value": -807.5
+            },
+            "valid": false
+        },
+        "invalidInput": "Body.application-json.Type=Not object"
+    },
+    {
+        "id": 0,
+        "name": "id.Defined='Yes'",
+        "server": "http://www.cornutum.org/tcases/api",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/operationNew/{rev}/{newOp-id}",
+        "operation": "PATCH",
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "integer",
+                    "value": -953414454,
+                    "format": "int32"
+                },
+                "valid": true
+            }
+        ],
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "object",
+                "value": {
+                    "czosccgaahwfe": {
+                        "type": "integer",
+                        "value": 949,
+                        "format": "int32"
+                    },
+                    "azmmpqf": {
+                        "type": "array",
+                        "value": [
+                            {
+                                "type": "string",
+                                "value": "wp"
+                            }
+                        ]
+                    },
+                    "dihbxzmnaiwmybj": {
+                        "type": "object",
+                        "value": {
+                            "jbdhcmihwtlst": {
+                                "type": "string",
+                                "value": "}o"
+                            },
+                            "vi": {
+                                "type": "array",
+                                "value": [
+                                    {
+                                        "type": "string",
+                                        "value": "`dep5Ftn"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "value": "\":"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "value": "D4:uw"
+                                    }
+                                ]
+                            },
+                            "rezkjgmba": {
+                                "type": "boolean",
+                                "value": true
+                            }
+                        }
+                    }
+                }
+            },
+            "valid": true
+        }
+    },
+    {
+        "id": 1,
+        "name": "id.Defined='No'",
+        "server": "http://www.cornutum.org/tcases/api",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/operationNew/{rev}/{newOp-id}",
+        "operation": "PATCH",
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": null,
+                "valid": true
+            }
+        ],
+        "body": {
+            "data": null,
+            "valid": true
+        }
+    },
+    {
+        "id": 2,
+        "name": "id.Value.Is='0'",
+        "server": "http://www.cornutum.org/tcases/api",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/operationNew/{rev}/{newOp-id}",
+        "operation": "PATCH",
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "integer",
+                    "value": 0,
+                    "format": "int32"
+                },
+                "valid": true
+            }
+        ],
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "object",
+                "value": {
+                }
+            },
+            "valid": true
+        }
+    },
+    {
+        "id": 3,
+        "name": "id.Value.Is='> 0'",
+        "server": "http://www.cornutum.org/tcases/api",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/operationNew/{rev}/{newOp-id}",
+        "operation": "PATCH",
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "integer",
+                    "value": 318226760,
+                    "format": "int32"
+                },
+                "valid": true
+            }
+        ],
+        "body": {
+            "data": null,
+            "valid": true
+        }
+    },
+    {
+        "id": 4,
+        "name": "id.Type=null",
+        "server": "http://www.cornutum.org/tcases/api",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/operationNew/{rev}/{newOp-id}",
+        "operation": "PATCH",
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "null",
+                    "value": null
+                },
+                "valid": false
+            }
+        ],
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "object",
+                "value": {
+                    "jxevstlmngw": {
+                        "type": "string",
+                        "value": "b?lK{2h"
+                    },
+                    "omc": {
+                        "type": "integer",
+                        "value": 12,
+                        "format": "int32"
+                    },
+                    "gx": {
+                        "type": "object",
+                        "value": {
+                            "qr": {
+                                "type": "integer",
+                                "value": -208,
+                                "format": "int32"
+                            },
+                            "oiummgqkajnns": {
+                                "type": "boolean",
+                                "value": true
+                            },
+                            "cnzo": {
+                                "type": "number",
+                                "value": 461.0
+                            }
+                        }
+                    }
+                }
+            },
+            "valid": true
+        },
+        "invalidInput": "id.Type=null"
+    },
+    {
+        "id": 5,
+        "name": "id.Type='Not integer'",
+        "server": "http://www.cornutum.org/tcases/api",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/operationNew/{rev}/{newOp-id}",
+        "operation": "PATCH",
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "-G=V]L"
+                },
+                "valid": false
+            }
+        ],
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "object",
+                "value": {
+                    "eeu": {
+                        "type": "number",
+                        "value": 993.0
+                    }
+                }
+            },
+            "valid": true
+        },
+        "invalidInput": "id.Type=Not integer"
+    },
+    {
+        "id": 6,
+        "name": "Body.Media-Type='Other'",
+        "server": "http://www.cornutum.org/tcases/api",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/operationNew/{rev}/{newOp-id}",
+        "operation": "PATCH",
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": null,
+                "valid": true
+            }
+        ],
+        "body": {
+            "mediaType": "text/plain",
+            "data": {
+                "type": "object",
+                "value": {
+                }
+            },
+            "valid": false
+        },
+        "invalidInput": "Body.Media-Type=Other"
+    },
+    {
+        "id": 7,
+        "name": "Body.application-json.Type=null",
+        "server": "http://www.cornutum.org/tcases/api",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/operationNew/{rev}/{newOp-id}",
+        "operation": "PATCH",
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": null,
+                "valid": true
+            }
+        ],
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "null",
+                "value": null
+            },
+            "valid": false
+        },
+        "invalidInput": "Body.application-json.Type=null"
+    },
+    {
+        "id": 8,
+        "name": "Body.application-json.Type='Not object'",
+        "server": "http://www.cornutum.org/tcases/api",
+        "version": "0.0.0",
+        "api": "My API<0.1.2>: 05/12/20",
+        "path": "/operationNew/{rev}/{newOp-id}",
+        "operation": "PATCH",
+        "parameters": [
+            {
+                "name": "id",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": null,
+                "valid": true
+            }
+        ],
+        "body": {
+            "mediaType": "application/json",
+            "data": {
+                "type": "boolean",
+                "value": true
+            },
+            "valid": false
+        },
+        "invalidInput": "Body.application-json.Type=Not object"
+    }
+]

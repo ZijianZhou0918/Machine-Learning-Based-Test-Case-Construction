@@ -1,0 +1,56 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "AllOf",
+        "version": "0.0.0"
+    },
+    "paths": {
+        "/allOf": {
+            "post": {
+                "parameters": [
+                    {
+                        "name": "param0",
+                        "in": "header",
+
+                        "schema": {
+                            "type": "object",
+                            "allOf": [
+                                {
+                                    "properties": {
+                                        "alpha": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                {
+                                    "items": {
+                                        "type": "boolean"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "$ref": "#/components/responses/success"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "responses": {
+            "success": {
+                "description": "Success",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

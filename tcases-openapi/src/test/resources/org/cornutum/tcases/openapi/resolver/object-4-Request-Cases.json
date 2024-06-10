@@ -1,0 +1,133 @@
+
+[
+    {
+        "id": 0,
+        "name": "param0.Defined='Yes'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object/${param0}",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "path",
+                "style": "matrix",
+                "explode": false,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "x": {
+                            "type": "array",
+                            "value": [
+                                {
+                                    "type": "string",
+                                    "value": "hhlf~$]"
+                                }
+                            ]
+                        },
+                        "wyxwjwlawartveh": {
+                            "type": "integer",
+                            "value": 105,
+                            "format": "int32"
+                        },
+                        "zh": {
+                            "type": "number",
+                            "value": 694.6
+                        }
+                    }
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "param0.Value.Properties.Additional='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object/${param0}",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "path",
+                "style": "matrix",
+                "explode": false,
+                "data": {
+                    "type": "object",
+                    "value": {
+                    }
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "param0.Defined='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object/${param0}",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "path",
+                "style": "matrix",
+                "explode": false,
+                "data": null,
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Defined=No"
+    },
+    {
+        "id": 3,
+        "name": "param0.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object/${param0}",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "path",
+                "style": "matrix",
+                "explode": false,
+                "data": {
+                    "type": "null",
+                    "value": null
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Type=null"
+    },
+    {
+        "id": 4,
+        "name": "param0.Type='Not object'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Object",
+        "path": "/object/${param0}",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "path",
+                "style": "matrix",
+                "explode": false,
+                "data": {
+                    "type": "number",
+                    "value": 387.2
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Type=Not object"
+    }
+]

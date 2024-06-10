@@ -1,0 +1,86 @@
+<assembly 
+    xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+
+  <id>shell</id>
+  <formats>
+    <format>tar.gz</format>
+    <format>zip</format>
+  </formats>
+
+  <dependencySets>
+    <dependencySet>
+      <outputDirectory>lib</outputDirectory>
+      <useProjectArtifact>false</useProjectArtifact>
+    </dependencySet>
+    <dependencySet>
+      <outputDirectory>docs</outputDirectory>
+      <includes>
+          <include>org.cornutum.tcases:tcases-io</include>
+          <include>org.cornutum.tcases:tcases-openapi</include>
+          <include>org.cornutum.tcases:tcases-moco</include>
+      </includes>
+      <unpack>true</unpack>
+      <unpackOptions>
+          <includes>
+              <include>schema/*-schema.json</include>
+              <include>schema/*.xsd</include>
+          </includes>
+      </unpackOptions>
+    </dependencySet>
+  </dependencySets>
+
+  <fileSets>
+    <fileSet>
+      <directory>${project.basedir}/docs</directory>
+      <outputDirectory>docs</outputDirectory>
+      <includes>
+        <include>*.xsd</include>
+        <include>*.css</include>
+        <include>*.png</include>
+        <include>examples/**/*</include>
+      </includes>
+    </fileSet>
+    <fileSet>
+      <directory>${project.basedir}/docs</directory>
+      <outputDirectory>docs</outputDirectory>
+      <includes>
+        <include>*.htm</include>
+      </includes>
+      <filtered>true</filtered>
+    </fileSet>
+    <fileSet>
+      <directory>${project.basedir}/bin</directory>
+      <outputDirectory>bin</outputDirectory>
+      <includes>
+        <include>tcases-exec</include>
+        <include>tcases</include>
+        <include>tcases.bat</include>
+        <include>tcases-reducer</include>
+        <include>tcases-reducer.bat</include>
+        <include>tcases-api</include>
+        <include>tcases-api.bat</include>
+        <include>tcases-api-test</include>
+        <include>tcases-api-test.bat</include>
+        <include>tcases-anon</include>
+        <include>tcases-anon.bat</include>
+        <include>tcases-copy</include>
+        <include>tcases-copy.bat</include>
+      </includes>
+      <fileMode>0755</fileMode>
+    </fileSet>
+    <fileSet>
+      <directory>${project.basedir}/src/main/resources</directory>
+      <outputDirectory>lib</outputDirectory>
+      <includes>
+        <include>logback.xml</include>
+      </includes>
+    </fileSet>
+    <fileSet>
+      <directory>${project.basedir}/target/apidocs</directory>
+      <outputDirectory>docs/api</outputDirectory>
+    </fileSet>
+  </fileSets>
+
+</assembly>

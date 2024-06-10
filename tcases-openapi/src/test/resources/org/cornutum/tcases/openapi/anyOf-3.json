@@ -1,0 +1,78 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "AnyOf",
+        "version": "0.0.0"
+    },
+    "paths": {
+        "/anyOf": {
+            "post": {
+                "parameters": [
+                    {
+                        "name": "param0",
+                        "in": "cookie",
+
+                        "schema": {
+                            "type": "object",
+                            "anyOf": [
+                                {
+                                    "allOf": [
+                                        {
+                                            "oneOf": [
+                                                {
+                                                    "minProperties": 1
+                                                },
+                                                {
+                                                    "maxProperties": 10
+                                                },
+                                                {
+                                                    "minItems": 0
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "oneOf": [
+                                                {
+                                                    "maxItems": 1
+                                                },
+                                                {
+                                                    "properties": {
+                                                        "alpha": {
+                                                            "type": "integer"
+                                                        }
+                                                    }
+                                                },
+                                                {
+                                                    "required": [ "bravo" ]
+                                                }                                            
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "$ref": "#/components/responses/success"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "responses": {
+            "success": {
+                "description": "Success",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

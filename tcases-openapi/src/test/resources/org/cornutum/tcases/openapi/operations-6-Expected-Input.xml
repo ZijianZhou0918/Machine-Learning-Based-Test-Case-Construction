@@ -1,0 +1,103 @@
+<?xml version="1.0"?>
+<System name="Operations">
+  <Has name="server" value="/"/>
+  <Has name="title" value="Operations"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="POST_operations-param1-param0">
+    <Has name="operation" value="POST"/>
+    <Has name="path" value="/operations/${param1}/${param0}"/>
+    <Input type="path">
+      <VarSet name="param0">
+        <Has name="paramName" value="param0"/>
+        <Var name="Defined">
+          <Has name="style" value="simple"/>
+          <Value name="Yes" property="param0"/>
+          <Value name="No" failure="true"/>
+        </Var>
+        <Var name="Type" when="param0">
+          <Value name="integer" property="param0Value"/>
+          <Value name="null" failure="true"/>
+          <Value name="Not integer" failure="true"/>
+        </Var>
+        <VarSet name="Value" when="param0Value">
+          <Var name="Is">
+            <Value name="&lt; 0"/>
+            <Value name="0"/>
+            <Value name="&gt; 0"/>
+          </Var>
+        </VarSet>
+      </VarSet>
+      <VarSet name="param1">
+        <Has name="paramName" value="param1"/>
+        <Var name="Defined">
+          <Has name="explode" value="false"/>
+          <Has name="style" value="simple"/>
+          <Value name="Yes" property="param1"/>
+          <Value name="No" failure="true"/>
+        </Var>
+        <Var name="Type" when="param1">
+          <Value name="array" property="param1Value"/>
+          <Value name="null" failure="true"/>
+          <Value name="Not array" failure="true"/>
+        </Var>
+        <VarSet name="Items" when="param1Value">
+          <Var name="Size">
+            <Value name="0" failure="true"/>
+            <Value name="1"/>
+            <Value name="&gt; 1" property="param1ItemsMany"/>
+          </Var>
+          <VarSet name="Contains">
+            <Var name="Type">
+              <Has name="itemType" value="integer"/>
+              <Value name="integer" property="param1ItemsValue"/>
+              <Value name="null" failure="true"/>
+              <Value name="Not integer" failure="true"/>
+            </Var>
+            <VarSet name="Value" when="param1ItemsValue">
+              <Var name="Is">
+                <Value name="&lt; 0"/>
+                <Value name="0"/>
+                <Value name="&gt; 0"/>
+              </Var>
+            </VarSet>
+          </VarSet>
+          <Var name="Unique" when="param1ItemsMany">
+            <Value name="Yes"/>
+            <Value name="No"/>
+          </Var>
+        </VarSet>
+      </VarSet>
+    </Input>
+    <Input type="request">
+      <VarSet name="Body">
+        <Var name="Defined">
+          <Value name="Yes" property="bodyContent"/>
+          <Value name="No"/>
+        </Var>
+        <Var name="Media-Type" when="bodyContent">
+          <Value name="application-json" property="bodyApplication-json">
+            <Has name="mediaType" value="application/json"/>
+          </Value>
+          <Value name="Other" failure="true">
+            <Has name="excluded" value="&apos;application/json&apos;"/>
+          </Value>
+        </Var>
+        <VarSet name="application-json" when="bodyApplication-json">
+          <Var name="Type">
+            <Value name="object" property="bodyApplication-jsonValue"/>
+            <Value name="null" failure="true"/>
+            <Value name="Not object" failure="true"/>
+          </Var>
+          <VarSet name="Value" when="bodyApplication-jsonValue">
+            <VarSet name="Properties">
+              <Var name="Additional">
+                <Value name="Yes" property="bodyApplication-jsonProperties"/>
+                <Value name="No"/>
+              </Var>
+            </VarSet>
+          </VarSet>
+        </VarSet>
+      </VarSet>
+    </Input>
+  </Function>
+</System>

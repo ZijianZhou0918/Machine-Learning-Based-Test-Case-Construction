@@ -1,0 +1,88 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Not",
+        "version": "0.0.0"
+    },
+    "paths": {
+        "/not": {
+            "post": {
+                "parameters": [
+                    {
+                        "name": "param0",
+                        "in": "query",
+
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "alpha": {
+                                    "type": "string",
+                                    "not": {
+                                        "type": "string",
+                                        "format": "date",
+                                        "pattern": "1999-.*"
+                                    }
+                                },
+                                "bravo": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string",
+                                        "not": {
+                                            "type": "string",
+                                            "enum": [ "A", "B", "C" ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "name": "param1",
+                        "in": "query",
+
+                        "schema": {
+                            "type": "string",
+                            "not": {
+                                "anyOf": [
+                                    {
+                                        "maxLength": 4
+                                    },
+                                    {
+                                        "type": "string",
+                                        "enum": [ "ABCDE" ]
+                                    },
+                                    {
+                                        "pattern": "WTF"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "enum": [ "FGHIJK" ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "default": {
+                        "$ref": "#/components/responses/success"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "responses": {
+            "success": {
+                "description": "Success",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "object"
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

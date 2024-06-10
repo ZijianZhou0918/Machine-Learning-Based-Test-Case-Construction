@@ -1,0 +1,156 @@
+<?xml version="1.0"?>
+<TestCases system="AllOf">
+  <Has name="server" value="/"/>
+  <Has name="title" value="AllOf"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="POST_allOf">
+    <Has name="operation" value="POST"/>
+    <Has name="path" value="/allOf"/>
+    <Has name="server" value="/"/>
+    <Has name="title" value="AllOf"/>
+    <Has name="version" value="0.0.0"/>
+    <TestCase id="0" name="param0.Defined=&apos;Yes&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/allOf"/>
+      <Has name="properties" value="param0,param0LengthValid,param0Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="AllOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="header">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="param0.Type" value="string">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Length" value="0">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Matches-Pattern" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="^[A-Z]*$"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="1" name="param0.Defined=&apos;No&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/allOf"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="AllOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="header">
+        <Var name="param0.Defined" value="No">
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="param0.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="^[A-Z]*$"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="2" name="param0.Type=null">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/allOf"/>
+      <Has name="properties" value="param0"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="AllOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="header">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="param0.Type" value="null">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="^[A-Z]*$"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="3" name="param0.Value.Length=&apos;&gt; 0&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/allOf"/>
+      <Has name="properties" value="param0,param0LengthValid,param0NotEmpty,param0Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="AllOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="header">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="param0.Type" value="string">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Length" value="&gt; 0">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Matches-Pattern" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="^[A-Z]*$"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="4" failure="true" name="param0.Type=&apos;Not string&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/allOf"/>
+      <Has name="properties" value="param0"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="AllOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="header">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="param0.Type" value="Not string" failure="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Matches-Pattern" NA="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="^[A-Z]*$"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="5" failure="true" name="param0.Value.Matches-Pattern=&apos;No&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/allOf"/>
+      <Has name="properties" value="param0,param0LengthValid,param0NotEmpty,param0Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="AllOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="header">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="simple"/>
+        </Var>
+        <Var name="param0.Type" value="string">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Length" value="&gt; 0">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Value.Matches-Pattern" value="No" failure="true">
+          <Has name="paramName" value="param0"/>
+          <Has name="pattern" value="^[A-Z]*$"/>
+        </Var>
+      </Input>
+    </TestCase>
+  </Function>
+</TestCases>

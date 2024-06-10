@@ -1,0 +1,155 @@
+
+[
+    {
+        "id": 0,
+        "server": "https://jsonplaceholder.typicode.com",
+        "version": "0.16.0",
+        "api": "JsonPlaceholderTestCase",
+        "path": "/posts",
+        "operation": "GET",
+        "parameters": [
+            {
+                "name": "userId",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "integer",
+                    "value": 1,
+                    "format": "int32"
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "server": "https://jsonplaceholder.typicode.com",
+        "version": "0.16.0",
+        "api": "JsonPlaceholderTestCase",
+        "path": "/posts",
+        "operation": "GET",
+        "parameters": [
+            {
+                "name": "userId",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": null,
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "server": "https://jsonplaceholder.typicode.com",
+        "version": "0.16.0",
+        "api": "JsonPlaceholderTestCase",
+        "path": "/posts",
+        "operation": "GET",
+        "parameters": [
+            {
+                "name": "userId",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "integer",
+                    "value": 10,
+                    "format": "int32"
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "server": "https://jsonplaceholder.typicode.com",
+        "version": "0.16.0",
+        "api": "JsonPlaceholderTestCase",
+        "path": "/posts",
+        "operation": "GET",
+        "parameters": [
+            {
+                "name": "userId",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "null",
+                    "value": null
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "userId.Type=null"
+    },
+    {
+        "id": 4,
+        "server": "https://jsonplaceholder.typicode.com",
+        "version": "0.16.0",
+        "api": "JsonPlaceholderTestCase",
+        "path": "/posts",
+        "operation": "GET",
+        "parameters": [
+            {
+                "name": "userId",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "boolean",
+                    "value": true
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "userId.Type=Not integer"
+    },
+    {
+        "id": 5,
+        "server": "https://jsonplaceholder.typicode.com",
+        "version": "0.16.0",
+        "api": "JsonPlaceholderTestCase",
+        "path": "/posts",
+        "operation": "GET",
+        "parameters": [
+            {
+                "name": "userId",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "integer",
+                    "value": 0,
+                    "format": "int32"
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "userId.Value.Is=0"
+    },
+    {
+        "id": 6,
+        "server": "https://jsonplaceholder.typicode.com",
+        "version": "0.16.0",
+        "api": "JsonPlaceholderTestCase",
+        "path": "/posts",
+        "operation": "GET",
+        "parameters": [
+            {
+                "name": "userId",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "integer",
+                    "value": 11,
+                    "format": "int32"
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "userId.Value.Is=11"
+    }
+]

@@ -1,0 +1,135 @@
+
+[
+    {
+        "id": 0,
+        "name": "param0.Defined='Yes'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Number",
+        "path": "/number",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "number",
+                    "value": 10
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "param0.Defined='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Number",
+        "path": "/number",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": null,
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "param0.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Number",
+        "path": "/number",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "null",
+                    "value": null
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "param0.Type='Not number'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Number",
+        "path": "/number",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "boolean",
+                    "value": true
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Type=Not number"
+    },
+    {
+        "id": 4,
+        "name": "param0.Value.Is='8.0'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Number",
+        "path": "/number",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "number",
+                    "value": 8.0
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Is=8.0"
+    },
+    {
+        "id": 5,
+        "name": "param0.Value.Is='12.0'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Number",
+        "path": "/number",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "number",
+                    "value": 12.0
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Is=12.0"
+    }
+]

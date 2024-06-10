@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<System name="Objects">
+  <Has name="server" value="/"/>
+  <Has name="title" value="Objects"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="GET_objects">
+    <Input type="response">
+      <Var name="Status-Code">
+        <Value name="Other" property="statusOther">
+          <Has name="excluded" value=""/>
+        </Value>
+      </Var>
+      <VarSet name="Other" when="statusOther">
+        <VarSet name="Content">
+          <Var name="Defined">
+            <Value name="Yes" property="defaultContent"/>
+            <Value name="No" failure="true"/>
+          </Var>
+          <Var name="Media-Type" when="defaultContent">
+            <Value name="application-json" property="defaultApplication-json">
+              <Has name="mediaType" value="application/json"/>
+            </Value>
+            <Value name="Other" failure="true">
+              <Has name="excluded" value="&apos;application/json&apos;"/>
+            </Value>
+          </Var>
+          <VarSet name="application-json" when="defaultApplication-json">
+            <Var name="Type">
+              <Value name="object" property="defaultApplication-jsonValue"/>
+              <Value name="null" failure="true"/>
+              <Value name="Not object" failure="true"/>
+            </Var>
+            <VarSet name="Value" when="defaultApplication-jsonValue">
+              <VarSet name="Properties">
+                <VarSet name="alpha">
+                  <Has name="excludedType" value="string"/>
+                  <Var name="Defined">
+                    <Has name="propertyName" value="alpha"/>
+                    <Value name="Yes" failure="true"/>
+                    <Value name="No"/>
+                  </Var>
+                </VarSet>
+                <Var name="Additional">
+                  <Value name="Yes" property="defaultApplication-jsonProperties"/>
+                  <Value name="No"/>
+                </Var>
+              </VarSet>
+            </VarSet>
+          </VarSet>
+        </VarSet>
+      </VarSet>
+    </Input>
+  </Function>
+</System>

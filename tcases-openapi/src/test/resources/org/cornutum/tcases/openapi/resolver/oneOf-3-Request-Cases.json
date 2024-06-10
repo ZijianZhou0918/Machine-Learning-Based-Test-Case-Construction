@@ -1,0 +1,217 @@
+
+[
+    {
+        "id": 0,
+        "name": "param0.Defined='Yes'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "OneOf",
+        "path": "/oneOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "alpha": {
+                            "type": "integer",
+                            "value": -326,
+                            "format": "int32"
+                        },
+                        "jwcjcjlymlwyxwj": {
+                            "type": "object",
+                            "value": {
+                            }
+                        },
+                        "wartvehglmzhv": {
+                            "type": "boolean",
+                            "value": true
+                        }
+                    }
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "param0.Defined='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "OneOf",
+        "path": "/oneOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": null,
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "param0.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "OneOf",
+        "path": "/oneOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "null",
+                    "value": null
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Type=null"
+    },
+    {
+        "id": 3,
+        "name": "param0.Type='Not object'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "OneOf",
+        "path": "/oneOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "string",
+                    "value": "]0nW0v+"
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Type=Not object"
+    },
+    {
+        "id": 4,
+        "name": "param0.Value.Properties.alpha.Defined='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "OneOf",
+        "path": "/oneOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "vzmgsfxsc": {
+                            "type": "object",
+                            "value": {
+                                "c": {
+                                    "type": "array",
+                                    "value": [
+                                        {
+                                            "type": "string",
+                                            "value": "X-"
+                                        }
+                                    ]
+                                },
+                                "wzkwgiietsyb": {
+                                    "type": "number",
+                                    "value": 119.1
+                                }
+                            }
+                        },
+                        "qgmofnigvtya": {
+                            "type": "string",
+                            "value": "4W"
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.alpha.Defined=No"
+    },
+    {
+        "id": 5,
+        "name": "param0.Value.Properties.alpha.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "OneOf",
+        "path": "/oneOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "alpha": {
+                            "type": "null",
+                            "value": null
+                        },
+                        "mfncghyfhg": {
+                            "type": "boolean",
+                            "value": true
+                        },
+                        "cp": {
+                            "type": "object",
+                            "value": {
+                            }
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.alpha.Type=null"
+    },
+    {
+        "id": 6,
+        "name": "param0.Value.Properties.Additional='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "OneOf",
+        "path": "/oneOf",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "cookie",
+                "style": "form",
+                "explode": true,
+                "data": {
+                    "type": "object",
+                    "value": {
+                        "alpha": {
+                            "type": "integer",
+                            "value": -49,
+                            "format": "int32"
+                        }
+                    }
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Value.Properties.Additional=No"
+    }
+]

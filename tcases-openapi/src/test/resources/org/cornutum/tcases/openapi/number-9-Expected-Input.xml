@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<System name="Number">
+  <Has name="server" value="/"/>
+  <Has name="title" value="Number"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="POST_number">
+    <Has name="operation" value="POST"/>
+    <Has name="path" value="/number"/>
+    <Input type="query">
+      <VarSet name="param0">
+        <Has name="paramName" value="param0"/>
+        <Var name="Defined">
+          <Has name="style" value="form"/>
+          <Value name="Yes" property="param0"/>
+          <Value name="No"/>
+        </Var>
+        <Var name="Type" when="param0">
+          <Value name="number" property="param0Value"/>
+          <Value name="null" once="true"/>
+          <Value name="Not number" failure="true"/>
+        </Var>
+        <VarSet name="Value" when="param0Value">
+          <Has name="default" value="5"/>
+          <Var name="Is">
+            <Value name="1"/>
+            <Value name="3"/>
+            <Value name="4"/>
+            <Value name="5"/>
+            <Value name="Other" failure="true">
+              <Has name="excluded" value="&apos;1&apos;,&apos;3&apos;,&apos;4&apos;,&apos;5&apos;"/>
+            </Value>
+          </Var>
+        </VarSet>
+      </VarSet>
+    </Input>
+  </Function>
+</System>

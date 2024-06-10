@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<System name="AnyOf">
+  <Has name="server" value="/"/>
+  <Has name="title" value="AnyOf"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="POST_anyOf">
+    <Has name="operation" value="POST"/>
+    <Has name="path" value="/anyOf"/>
+    <Input type="cookie">
+      <VarSet name="param0">
+        <Has name="paramName" value="param0"/>
+        <Var name="Defined">
+          <Has name="style" value="form"/>
+          <Value name="Yes" property="param0"/>
+          <Value name="No"/>
+        </Var>
+        <Var name="Type" when="param0">
+          <Value name="string" property="param0Value"/>
+          <Value name="null" failure="true"/>
+          <Value name="Not string" failure="true"/>
+        </Var>
+        <VarSet name="Value" when="param0Value">
+          <Var name="Length">
+            <Value name="0" property="param0LengthValid"/>
+            <Value name="128" property="param0LengthValid, param0NotEmpty"/>
+            <Value name="129" failure="true"/>
+          </Var>
+          <Var name="Matches-Pattern" when="param0LengthValid">
+            <Has name="pattern" value="^[A-Z]*$"/>
+            <Value name="Yes"/>
+            <Value name="No" failure="true" when="param0NotEmpty"/>
+          </Var>
+        </VarSet>
+      </VarSet>
+    </Input>
+  </Function>
+</System>

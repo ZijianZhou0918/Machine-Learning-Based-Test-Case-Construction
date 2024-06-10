@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<System name="Number">
+  <Has name="server" value="/"/>
+  <Has name="title" value="Number"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="POST_number">
+    <Has name="operation" value="POST"/>
+    <Has name="path" value="/number"/>
+    <Input type="query">
+      <VarSet name="param0">
+        <Has name="paramName" value="param0"/>
+        <Var name="Defined">
+          <Has name="style" value="form"/>
+          <Value name="Yes" property="param0"/>
+          <Value name="No"/>
+        </Var>
+        <Var name="Type" when="param0">
+          <Value name="number" property="param0Value"/>
+          <Value name="null" once="true"/>
+          <Value name="Not number" failure="true"/>
+        </Var>
+        <VarSet name="Value" when="param0Value">
+          <Has name="default" value="0"/>
+          <Var name="Is">
+            <Value name="&lt; 0" property="param0Unbounded"/>
+            <Value name="0"/>
+            <Value name="&gt; 0" property="param0Unbounded"/>
+          </Var>
+          <VarSet name="Multiple-Of" when="param0Unbounded">
+            <Var name="1d234">
+              <Value name="Yes">
+                <Has name="multipleOf" value="1.234"/>
+              </Value>
+              <Value name="No" failure="true">
+                <Has name="multipleOf" value="1.234"/>
+              </Value>
+            </Var>
+          </VarSet>
+        </VarSet>
+      </VarSet>
+    </Input>
+  </Function>
+</System>

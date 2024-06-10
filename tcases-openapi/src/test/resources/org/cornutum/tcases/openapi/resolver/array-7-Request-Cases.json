@@ -1,0 +1,280 @@
+
+[
+    {
+        "id": 0,
+        "name": "param0.Defined='Yes'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Array",
+        "path": "/array",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "pipeDelimited",
+                "explode": false,
+                "data": {
+                    "type": "array",
+                    "value": [
+                        {
+                            "type": "string",
+                            "value": "v%.7jH9FoM}8A4\\iZO@id@jcc~6;6Qb7-I5&(ZY]iQkm?#MgV\\<#Cj n,w X#vh>3<?\"6nf,,SF}oi^4(>d(fY)x0-uFb7"
+                        },
+                        {
+                            "type": "string",
+                            "value": "wSh[(=u`&gX-S4k=B~DIB1(xCvSjHA{!<Ssg ml6)@v_ffklGo&,KuFqaY#)fH'4K;9r=f!v ~Uyi(vAP}GZw'L$FU5Pv(@H["
+                        }
+                    ]
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 1,
+        "name": "param0.Defined='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Array",
+        "path": "/array",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "pipeDelimited",
+                "explode": false,
+                "data": null,
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "name": "param0.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Array",
+        "path": "/array",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "pipeDelimited",
+                "explode": false,
+                "data": {
+                    "type": "null",
+                    "value": null
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "name": "param0.Items.Size='0'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Array",
+        "path": "/array",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "pipeDelimited",
+                "explode": false,
+                "data": {
+                    "type": "array",
+                    "value": [
+                    ]
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "param0.Items.Size='< 2'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Array",
+        "path": "/array",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "pipeDelimited",
+                "explode": false,
+                "data": {
+                    "type": "array",
+                    "value": [
+                        {
+                            "type": "string",
+                            "value": ""
+                        }
+                    ]
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "name": "param0.Items.Unique='No'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Array",
+        "path": "/array",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "pipeDelimited",
+                "explode": false,
+                "data": {
+                    "type": "array",
+                    "value": [
+                        {
+                            "type": "string",
+                            "value": "6/V{#@5osAGFb0`OmlxX_-C4ux%faYmh77-9/2LDD$f-F>)T4H}>p"
+                        },
+                        {
+                            "type": "string",
+                            "value": "6/V{#@5osAGFb0`OmlxX_-C4ux%faYmh77-9/2LDD$f-F>)T4H}>p"
+                        }
+                    ]
+                },
+                "valid": true
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "name": "param0.Type='Not array'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Array",
+        "path": "/array",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "form",
+                "explode": false,
+                "data": {
+                    "type": "string",
+                    "value": "8,"
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Type=Not array"
+    },
+    {
+        "id": 7,
+        "name": "param0.Items.Size='3'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Array",
+        "path": "/array",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "pipeDelimited",
+                "explode": false,
+                "data": {
+                    "type": "array",
+                    "value": [
+                        {
+                            "type": "string",
+                            "value": ""
+                        },
+                        {
+                            "type": "string",
+                            "value": ""
+                        },
+                        {
+                            "type": "string",
+                            "value": "I9<L\\.TI12%=WS-YyQa51:DSi&f]'v9od&U)<d4y!rJF<B68}u '',@molP{9xkH{\\<J'?(,OrWx<NS\"\"@Srs8wn?ui9[V1f\"Hv+D58]T]F$D+3 _1 ~znTLV`D4`B=Qm"
+                        }
+                    ]
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Items.Size=3"
+    },
+    {
+        "id": 8,
+        "name": "param0.Items.Contains.Type=null",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Array",
+        "path": "/array",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "pipeDelimited",
+                "explode": false,
+                "data": {
+                    "type": "array",
+                    "value": [
+                        {
+                            "type": "null",
+                            "value": null
+                        }
+                    ]
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Items.Contains.Type=null"
+    },
+    {
+        "id": 9,
+        "name": "param0.Items.Contains.Type='Not string'",
+        "server": "/",
+        "version": "0.0.0",
+        "api": "Array",
+        "path": "/array",
+        "operation": "POST",
+        "parameters": [
+            {
+                "name": "param0",
+                "in": "query",
+                "style": "pipeDelimited",
+                "explode": false,
+                "data": {
+                    "type": "array",
+                    "value": [
+                        {
+                            "type": "array",
+                            "value": [
+                                {
+                                    "type": "string",
+                                    "value": "k-I"
+                                },
+                                {
+                                    "type": "string",
+                                    "value": "GGoTr"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "valid": false
+            }
+        ],
+        "invalidInput": "param0.Items.Contains.Type=Not string"
+    }
+]

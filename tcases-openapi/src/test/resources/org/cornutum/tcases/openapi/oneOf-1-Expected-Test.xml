@@ -1,0 +1,216 @@
+<?xml version="1.0"?>
+<TestCases system="OneOf">
+  <Has name="server" value="/"/>
+  <Has name="title" value="OneOf"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="POST_oneOf">
+    <Has name="operation" value="POST"/>
+    <Has name="path" value="/oneOf"/>
+    <Has name="server" value="/"/>
+    <Has name="title" value="OneOf"/>
+    <Has name="version" value="0.0.0"/>
+    <TestCase id="0" name="param0.Defined=&apos;Yes&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/oneOf"/>
+      <Has name="properties" value="param0,param0Alternative0,param0Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="OneOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="cookie">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Alternative.Used" value="0">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.0.Type" value="boolean">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.0.Value" value="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.1.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.1.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="1" name="param0.Defined=&apos;No&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/oneOf"/>
+      <Has name="properties" value="param0Alternative1"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="OneOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="cookie">
+        <Var name="param0.Defined" value="No">
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Alternative.Used" value="1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.0.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.0.Value" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.1.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.1.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="2" name="param0.Alternative.0.Value=&apos;false&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/oneOf"/>
+      <Has name="properties" value="param0,param0Alternative0,param0Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="OneOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="cookie">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Alternative.Used" value="0">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.0.Type" value="boolean">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.0.Value" value="false">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.1.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.1.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="3" name="param0.Alternative.1.Type=&apos;string&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/oneOf"/>
+      <Has name="properties" value="param0,param0Alternative1,param0LengthValid,param0NotEmpty,param0Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="OneOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="cookie">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Alternative.Used" value="1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.0.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.0.Value" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.1.Type" value="string">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.1.Value.Length" value="&gt; 0">
+          <Has name="paramName" value="param0"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="4" name="param0.Alternative.1.Value.Length=&apos;0&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/oneOf"/>
+      <Has name="properties" value="param0,param0Alternative1,param0LengthValid,param0Value"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="OneOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="cookie">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Alternative.Used" value="1">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.0.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.0.Value" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.1.Type" value="string">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.1.Value.Length" value="0">
+          <Has name="paramName" value="param0"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="5" failure="true" name="param0.Alternative.0.Type=null">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/oneOf"/>
+      <Has name="properties" value="param0,param0Alternative0"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="OneOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="cookie">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Alternative.Used" value="0">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.0.Type" value="null" failure="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.0.Value" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.1.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.1.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+      </Input>
+    </TestCase>
+    <TestCase id="6" failure="true" name="param0.Alternative.0.Type=&apos;Not boolean,string&apos;">
+      <Has name="operation" value="POST"/>
+      <Has name="path" value="/oneOf"/>
+      <Has name="properties" value="param0,param0Alternative0"/>
+      <Has name="server" value="/"/>
+      <Has name="title" value="OneOf"/>
+      <Has name="version" value="0.0.0"/>
+      <Input type="cookie">
+        <Var name="param0.Defined" value="Yes">
+          <Has name="paramName" value="param0"/>
+          <Has name="style" value="form"/>
+        </Var>
+        <Var name="param0.Alternative.Used" value="0">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.0.Type" value="Not boolean,string" failure="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.0.Value" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.1.Type" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+        <Var name="param0.Alternative.1.Value.Length" NA="true">
+          <Has name="paramName" value="param0"/>
+        </Var>
+      </Input>
+    </TestCase>
+  </Function>
+</TestCases>

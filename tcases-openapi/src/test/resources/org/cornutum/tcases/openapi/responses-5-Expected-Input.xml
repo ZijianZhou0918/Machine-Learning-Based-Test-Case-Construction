@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<System name="Responses">
+  <Has name="server" value="/"/>
+  <Has name="title" value="Responses"/>
+  <Has name="version" value="0.0.0"/>
+  <Function name="TRACE_responses">
+    <Input type="response">
+      <Var name="Status-Code">
+        <Value name="2XX" property="status2XX"/>
+        <Value name="Other" property="statusOther">
+          <Has name="excluded" value="&apos;2XX&apos;"/>
+        </Value>
+      </Var>
+      <VarSet name="2XX" when="status2XX">
+        <VarSet name="Headers">
+          <VarSet name="x-standard-header">
+            <Var name="Defined">
+              <Has name="explode" value="false"/>
+              <Has name="headerName" value="x-standard-header"/>
+              <Has name="style" value="simple"/>
+              <Value name="Yes" property="2XXHeaderX-standard-header"/>
+              <Value name="No"/>
+            </Var>
+            <Var name="Type" when="2XXHeaderX-standard-header">
+              <Value name="string" property="2XXHeaderX-standard-headerValue"/>
+              <Value name="null" failure="true"/>
+              <Value name="Not string" failure="true"/>
+            </Var>
+            <VarSet name="Value" when="2XXHeaderX-standard-headerValue">
+              <Var name="Length">
+                <Value name="&gt; 0" property="2XXHeaderX-standard-headerLengthValid, 2XXHeaderX-standard-headerNotEmpty"/>
+                <Value name="0" property="2XXHeaderX-standard-headerLengthValid"/>
+              </Var>
+            </VarSet>
+          </VarSet>
+          <VarSet name="x-extra-header">
+            <Var name="Defined">
+              <Has name="explode" value="false"/>
+              <Has name="headerName" value="x-extra-header"/>
+              <Has name="style" value="simple"/>
+              <Value name="Yes" property="2XXHeaderX-extra-header"/>
+              <Value name="No"/>
+            </Var>
+            <Var name="Type" when="2XXHeaderX-extra-header">
+              <Value name="object" property="2XXHeaderX-extra-headerValue"/>
+              <Value name="null" failure="true"/>
+              <Value name="Not object" failure="true"/>
+            </Var>
+            <VarSet name="Value" when="2XXHeaderX-extra-headerValue">
+              <VarSet name="Properties">
+                <Var name="Additional">
+                  <Value name="Yes" property="2XXHeaderX-extra-headerProperties"/>
+                  <Value name="No"/>
+                </Var>
+              </VarSet>
+            </VarSet>
+          </VarSet>
+        </VarSet>
+        <VarSet name="Content">
+          <Var name="Defined">
+            <Value name="Yes" property="2XXContent"/>
+            <Value name="No" failure="true"/>
+          </Var>
+          <Var name="Media-Type" when="2XXContent">
+            <Value name="application-json" property="2XXApplication-json">
+              <Has name="mediaType" value="application/json"/>
+            </Value>
+            <Value name="text-javascript" property="2XXText-javascript">
+              <Has name="mediaType" value="text/javascript"/>
+            </Value>
+            <Value name="Other" failure="true">
+              <Has name="excluded" value="&apos;application/json&apos;,&apos;text/javascript&apos;"/>
+            </Value>
+          </Var>
+          <VarSet name="application-json" when="2XXApplication-json">
+            <Var name="Type">
+              <Value name="string" property="2XXApplication-jsonValue"/>
+              <Value name="null" failure="true"/>
+              <Value name="Not string" failure="true"/>
+            </Var>
+            <VarSet name="Value" when="2XXApplication-jsonValue">
+              <Var name="Length">
+                <Value name="15" failure="true"/>
+                <Value name="16" property="2XXApplication-jsonLengthValid, 2XXApplication-jsonNotEmpty"/>
+                <Value name="255" property="2XXApplication-jsonLengthValid, 2XXApplication-jsonNotEmpty"/>
+                <Value name="256" failure="true"/>
+              </Var>
+            </VarSet>
+          </VarSet>
+          <VarSet name="text-javascript" when="2XXText-javascript">
+            <Var name="Type">
+              <Value name="string" property="2XXText-javascriptValue"/>
+              <Value name="null" once="true"/>
+              <Value name="Not string" failure="true"/>
+            </Var>
+            <VarSet name="Value" when="2XXText-javascriptValue">
+              <Var name="Length">
+                <Value name="0" property="2XXText-javascriptLengthValid"/>
+                <Value name="16" property="2XXText-javascriptLengthValid, 2XXText-javascriptNotEmpty"/>
+                <Value name="17" failure="true"/>
+                <Value name="&lt; 16" property="2XXText-javascriptLengthValid, 2XXText-javascriptNotEmpty">
+                  <Has name="rangeMin" value="1"/>
+                </Value>
+              </Var>
+            </VarSet>
+          </VarSet>
+        </VarSet>
+      </VarSet>
+    </Input>
+  </Function>
+</System>
